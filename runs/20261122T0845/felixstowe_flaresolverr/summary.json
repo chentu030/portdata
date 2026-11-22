@@ -1,0 +1,29 @@
+{
+  "method": "flaresolverr",
+  "timestamp": "2026-11-22T08:45:31.776825+00:00",
+  "urls": [
+    {
+      "url": "https://www.portoffelixstowe.co.uk/",
+      "label": "homepage",
+      "success": true,
+      "status": 200,
+      "size": 89626,
+      "elapsed": 11.8,
+      "title": "Port of Felixstowe : Britain’s Biggest &amp; Busiest Container Port",
+      "flaresolverr_status": "ok",
+      "flaresolverr_message": "Challenge solved!"
+    },
+    {
+      "url": "https://www.portoffelixstowe.co.uk/shipping/vessel-schedule/",
+      "label": "vessel_schedule",
+      "success": true,
+      "status": 200,
+      "size": 63915,
+      "elapsed": 11.7,
+      "title": "Page not found • Port of Felixstowe",
+      "flaresolverr_status": "ok",
+      "flaresolverr_message": "Challenge solved!"
+    }
+  ],
+  "success": true
+}
