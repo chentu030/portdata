@@ -1,0 +1,122 @@
+# NOAA 美國 AIS 每日檔 → 只留五個港區（洛杉磯／長灘、紐約、薩凡納、休士頓、西雅圖）
+# ---------------------------------------------------------------------------
+# 來源：https://noaaocm.blob.core.windows.net/ais/csv2/csv{年}/ais-{YYYY-MM-DD}.csv.zst（單日壓縮約 300 MB）
+# NOAA 整季才上架，延遲約 4.5～5.5 個月，所以按季處理：
+#   - 每週一自動：找「最新一個已上架、還沒處理過」的季（往回到 2025Q1），一次處理一季，逐週回補
+#   - 手動：workflow_dispatch 指定 quarter（例如 2026Q2）
+# 結果：GitHub Release「ais-<季>」，每天一個 ais_ports_YYYY-MM-DD.csv.gz（欄位同原檔，只保留港區內的點）
+
+name: NOAA AIS port extracts
+run-name: noaa-ais ${{ inputs.quarter || 'auto' }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      quarter:
+        description: '要處理的季，例如 2026Q2（空白＝自動找最新未處理的季）'
+        required: false
+        default: ''
+        type: string
+  schedule:
+    - cron: '29 4 * * 1'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: noaa-ais
+  cancel-in-progress: false
+
+env:
+  SRC: https://noaaocm.blob.core.windows.net/ais/csv2
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      quarter: ${{ steps.p.outputs.quarter }}
+      days: ${{ steps.p.outputs.days }}
+    steps:
+      - id: p
+        env:
+          GH_TOKEN: ${{ github.token }}
+          WANT: ${{ inputs.quarter }}
+          REPO: ${{ github.repository }}
+        run: |
+          python3 - <<'PY'
+          import datetime as dt, json, os, subprocess, urllib.request
+          SRC = os.environ["SRC"]
+          def exists(d):
+              u = f"{SRC}/csv{d.year}/ais-{d:%Y-%m-%d}.csv.zst"
+              try:
+                  return urllib.request.urlopen(urllib.request.Request(u, method="HEAD"), timeout=30).status == 200
+              except Exception:
+                  return False
+          def qdays(y, q):
+              a = dt.date(y, 3 * q - 2, 1); b = dt.date(y + (q == 4), (3 * q) % 12 + 1, 1)
+              return [a + dt.timedelta(i) for i in range((b - a).days)]
+          def released(tag):
+              return subprocess.run(["gh", "release", "view", tag, "-R", os.environ["REPO"]], capture_output=True).returncode == 0
+          want = os.environ.get("WANT", "").strip().upper()
+          pick = None
+          if want:
+              pick = (int(want[:4]), int(want[-1]))
+          else:
+              t = dt.date.today(); y, q = t.year, (t.month - 1) // 3 + 1
+              while (y, q) >= (2025, 1):
+                  days = qdays(y, q)
+                  if exists(days[-1]) and not released(f"ais-{y}Q{q}"):
+                      pick = (y, q); break
+                  y, q = (y, q - 1) if q > 1 else (y - 1, 4)
+          out = open(os.environ["GITHUB_OUTPUT"], "a")
+          if not pick:
+              print("沒有需要處理的季"); out.write("quarter=\ndays=[]\n"); raise SystemExit
+          days = [d.isoformat() for d in qdays(*pick)]
+          print("處理", pick, len(days), "天")
+          out.write(f"quarter={pick[0]}Q{pick[1]}\ndays={json.dumps(days)}\n")
+          PY
+      - name: Create release
+        if: steps.p.outputs.quarter != ''
+        env:
+          GH_TOKEN: ${{ github.token }}
+          Q: ${{ steps.p.outputs.quarter }}
+        run: |
+          gh release view "ais-$Q" -R "$GITHUB_REPOSITORY" >/dev/null 2>&1 || \
+          gh release create "ais-$Q" -R "$GITHUB_REPOSITORY" --title "NOAA AIS 港區擷取 $Q" \
+            --notes "來源 NOAA Marine Cadastre AIS（$SRC）。每天一檔，只保留港區方框內的點：LA/LB 33.40–33.80N 118.50–117.95W；NY/NJ 40.40–40.75N 74.30–73.80W；Savannah 31.85–32.15N 81.20–80.70W；Houston 29.20–29.80N 95.30–94.50W；Seattle/Tacoma 47.20–47.70N 122.60–122.25W。"
+
+  extract:
+    needs: plan
+    if: needs.plan.outputs.quarter != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        day: ${{ fromJSON(needs.plan.outputs.days) }}
+    steps:
+      - name: Download, filter, upload
+        env:
+          GH_TOKEN: ${{ github.token }}
+          D: ${{ matrix.day }}
+          Q: ${{ needs.plan.outputs.quarter }}
+        run: |
+          set -o pipefail
+          command -v zstd >/dev/null || sudo apt-get install -y -q zstd
+          OUT="ais_ports_${D}.csv.gz"
+          if gh release view "ais-$Q" -R "$GITHUB_REPOSITORY" --json assets --jq '.assets[].name' | grep -qx "$OUT"; then
+            echo "已處理過"; exit 0
+          fi
+          U="$SRC/csv${D:0:4}/ais-${D}.csv.zst"
+          for i in 1 2 3; do
+            curl -sfL --retry 3 "$U" | zstd -dc | awk -F, 'NR==1 ||
+              ($4>=33.40&&$4<=33.80&&$3>=-118.50&&$3<=-117.95) || ($4>=40.40&&$4<=40.75&&$3>=-74.30&&$3<=-73.80) ||
+              ($4>=31.85&&$4<=32.15&&$3>=-81.20&&$3<=-80.70) || ($4>=29.20&&$4<=29.80&&$3>=-95.30&&$3<=-94.50) ||
+              ($4>=47.20&&$4<=47.70&&$3>=-122.60&&$3<=-122.25)' | gzip -9 > "$OUT" && break
+            echo "::warning::第 $i 次失敗，重試"; sleep 30
+          done
+          ls -la "$OUT"; echo "rows: $(zcat "$OUT" | wc -l)"
+          [ "$(zcat "$OUT" | wc -l)" -gt 1 ] || { echo "::error::沒有資料"; exit 1; }
+          for i in 1 2 3 4 5; do gh release upload "ais-$Q" "$OUT" -R "$GITHUB_REPOSITORY" --clobber && break || sleep $((RANDOM % 20 + 5)); done
