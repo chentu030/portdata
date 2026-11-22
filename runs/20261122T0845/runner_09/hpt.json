@@ -1,0 +1,124 @@
+{
+  "port": "hpt",
+  "name": "林查班 HPT (Hutchison)",
+  "protection": "Cloudflare",
+  "timestamp": "2026-11-22T08:50:13.195164+00:00",
+  "urls": [
+    {
+      "url": "https://hutchisonports.co.th/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://hutchisonports.co.th/",
+          "status": 200,
+          "size": 27797,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "595ac991c5852ca3",
+          "snippet": "��W�HM�\u0001�\b >������o����iS=��dK��� �<�y��sg{k��)a \u001budKW\u0012� ����^��\u0013\u0016@C�j� �|t�̀'K��Z\u001bT`E�K�-\u0003��wʛ�$�r�m��Tm� ��\u0010�EN) Ao�<�,� \u0000\u0012\u0018\u0000�\u0018��\u0011\u0011��Zc>Ī��\bj&�ˍɘU��/�\u0010B� c�3)\u0004���\\��O��_ ��N o\u0004kx��o\u000e�7���r��@�yr��\u0006K?\u0007иN�\u0000��a�Rmj\u0016]Dup�/�\u0016�<��w߼���\u001a��\u001b�*�\u0015��0�7���A��q��nnzG\u000f1:��=�]\"� P�!�_ w�:$��� w K� {�%Q�Z�5���n\u0004~\u000e�Vih�� O⼜ ��l^\u001bu�\u0012����16\u0007 �ଏ!kl\u0016\u000f��\u001b�� I�QG�w?�=��1�\u000eR\u001b9�\u000e���vso�6�9���{9R��\u000e��\u000f�S=J��s��Ķ�&� d�=�wߴw:A�:����x�QV�4}�/\u0010�l��@���a����<�[;Đu�v\u0006��!kl/� ���.����j�w1�\u0011p��#��̼[Du ��K�\u0007��8�@\u0018O�|R�"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 27797,
+      "saved_file": "hpt_homepage.html"
+    },
+    {
+      "url": "https://online.hutchisonports.co.th",
+      "label": "online_service",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 403,
+          "size": 6063,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "afc46e61acd708d1",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-PVpfEwDkb6IKMsntF1PDaA&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 403,
+          "size": 5961,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "b7d38211f68ae4bd",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-JI2KsxMjBxVsGE11voOVBk&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 403,
+          "size": 6004,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "574de42416ec5c18",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-yp1ixnBIzcTomNejbBW2Pl&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 403,
+          "size": 6085,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "c2c60c3dd54e0fb0",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-tdctxEUmeTzP8EyK7G5Vvc&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 403,
+          "size": 5684,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "9f23bdd8522f4b9d",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-yDJopGYuzghf1OzB7FmHyn&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 403,
+          "size": 6004,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "0eb90a63e00956c2",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-lNCPMAkvY398QsNcoTGSiX&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 403,
+          "size": 5769,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "3621f15cd08c452f",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-TzkVXzkhTnQbso3IU8Wfu9&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        }
+      ],
+      "success": false
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
