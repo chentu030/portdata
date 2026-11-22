@@ -1,0 +1,55 @@
+{
+  "port": "vancouver",
+  "name": "溫哥華 VFPA",
+  "protection": "Cloudflare",
+  "timestamp": "2026-11-22T08:49:29.630189+00:00",
+  "urls": [
+    {
+      "url": "https://www.portvancouver.com/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.portvancouver.com/",
+          "status": 200,
+          "size": 54110,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "3dd39c0631d2f290",
+          "snippet": "���\u0010EU��\"�j=\\\u0014R�z\u00004R\u0016��_\u0004�M|��|�����It.��F�M����.I�,Y�-K^�35�\u0005\u0012�$� @\u0001`/zk~�\u0017M������\u001a����~�f>I��݇�tﳬ�O�63�q�� �\u0012dH�����^.�� �\u00013\u000f\u0011~\u0003d\u00182��U7x�#�j�P# �H\u000e=Z��Y� i��(l:�\u000f9j��{\u0003\u00189j e\u001625_�cf��\u0004h�)rӜ\u0001`� ���7 t&�r�QSnk�U ��.��S�%\u0005D\u0005\u0006\u0016��]\u0007$����?3�/��d9�UHk`U\u0001Ī�\u0013�R�NU��њ�r�.�l�(��C��ݟÕ��c�m��XI��\u001a�� H�^Q�)�\u001b�\u0005�e��,��d�����;�\u0019S�\u0013�]��j�{��Q\u0011�7\u0004\u0012Bh� `�j�����^u�2 \u0000w�\"0Zj�~\u0019��\u0015�ޏ��|n�1 h��O�j\u0006�\u0014�U\u0001\u0000\u0016\u0003� ���2�|�e\u0000��l�^\u0004���o�ݱ8v��X����o����7��_��o�����~\u000f���/��y�������\u0019��1mI�W۾W=������[h�]�u/�~?�=,\u0005�>I��PK���s"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 54110,
+      "saved_file": "vancouver_homepage.html"
+    },
+    {
+      "url": "https://ehub.portvancouver.com/GPSDashboard",
+      "label": "gps_dashboard",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://ehub.portvancouver.com/GPSDashboard",
+          "status": 200,
+          "size": 9161,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "91d3aee8e7344906",
+          "snippet": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\" /> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /> <base href=\"/GPSDashboard/\" /> <script src=\"_content/Telerik.UI.for.Blazor/js/telerik-blazor.js\" defer></script> <link rel=\"stylesheet\" href=\"css/bootstrap/bootstrap.min.css\" /> <link rel=\"stylesheet\" href=\"_content/Telerik.UI.for.Blazor/css/kendo-theme-default/all.css\" /> <link rel=\"stylesheet\" href=\"css/three-dots.m"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 9161,
+      "saved_file": "vancouver_gps_dashboard.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
