@@ -1,0 +1,66 @@
+{
+  "runner_id": 8,
+  "ip": "104.28.233.73",
+  "timestamp": "2026-11-22T17:13:54.467639+00:00",
+  "ports_total": 11,
+  "ports_success": 7,
+  "ports_failed": 4,
+  "results": {
+    "algeciras": {
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "data_saved": true
+    },
+    "felixstowe": {
+      "success": false,
+      "winning_strategy": null,
+      "data_saved": false
+    },
+    "lehavre": {
+      "success": false,
+      "winning_strategy": null,
+      "data_saved": false
+    },
+    "longbeach": {
+      "success": false,
+      "winning_strategy": null,
+      "data_saved": false
+    },
+    "savannah": {
+      "success": true,
+      "winning_strategy": "safari_ua",
+      "data_saved": true
+    },
+    "vancouver": {
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "data_saved": true
+    },
+    "saigon": {
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "data_saved": true
+    },
+    "lcit": {
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "data_saved": true
+    },
+    "hpt": {
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "data_saved": true
+    },
+    "northport": {
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "data_saved": true
+    },
+    "dubai": {
+      "success": false,
+      "winning_strategy": null,
+      "data_saved": false
+    }
+  },
+  "elapsed_sec": 818.4
+}
