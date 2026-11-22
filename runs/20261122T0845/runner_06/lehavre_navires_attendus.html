@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>Navires attendus</title>
+    <!--[if IE]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <![endif]-->
+    <meta name="author" content="Grand Port Maritime du Havre">
+    <meta name="keywords" content="">
+    <meta name="description" content="Guichet Unique de HAROPA PORT | ROUEN">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Common Config-->
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="theme-color" content="#ffffff">
+
+<link rel="stylesheet" type="text/css" media="screen" href="/css/swing-min.css?vde65ced9" />
+<link rel="stylesheet" type="text/css" media="screen" href="/css/ormo-liste-min.css?vde65ced9" />
+<!-- END Common Config-->
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="icon" href="/favicon.ico"/>
+    <link rel="manifest" href="/manifest.json">
+
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+
+
+
+    <!--[if lt IE 9]>
+
+    <script type="text/javascript" src="/js/ie/respond.min.js"></script>
+    <script type="text/javascript" src="/js/ie/html5.js"></script>
+    <script type="text/javascript" src="/js/ie/fix.js"></script>
+    <![endif]-->
+
+</head>
+<body class="" data-theme="light">
+<section
+        class="vbox soget swing-main-screen" >
+    <header class="header bg-black navbar navbar-inverse pull-in">
+        <div class="navbar-header nav-bar aside">
+            <a class="btn btn-link visible-xs" data-toggle="class:show" data-target=".nav-primary">
+                <i class="menu-lower fa fa-reorder"></i>
+            </a>
+            <a class="btn btn-sm btn-link m-l-n-sm hidden-xs" style="font-size:12px;margin: 4px 1px;"
+               data-toggle="class:nav-vertical" href="#nav" rel="/user/menuMode">
+                <i class="menu-lower fa fa-reorder"></i>
+            </a>
+            <a href="/" class="hidden-xs nav-brand" style="padding-top: 1px;">
+                DrakHAR                <span class="text-success" style="font-size:0.8em;">
+                                            <span class="m-l-lg" style="font-size: 0.7em;">
+                            V2.3.0                        </span>
+                                    </span>
+            </a>
+            <a href="/"
+               class="visible-xs nav-brand-xs">DrakHAR</a>
+            <a class="btn btn-link visible-xs" data-toggle="collapse" data-target=".navbar-collapse">
+                <i class="fa fa-user"></i>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav hidden-sm hidden-xs">
+                <li class="m-l-lg text-white"><h4 style="padding-top:4px;margin:0"
+                                                  class="text-center-xs">Guichet Unique de HAROPA PORT | ROUEN</h4>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="swingHautMenu">
+                    <li>
+        <a href="/login">
+            <div class="hidden-xs">
+                <i class="fa fa-lock"></i>
+                Connexion            </div>
+            <div class="visible-xs">              
+                <i class="fa fa-lock"> </i>
+                Connexion            </div>
+        </a>
+    </li>
+                <li class="dropdown selectedLanguageCulture hide" lang="fr" 
+    ormo-urldatatable="/language/datatableLang"
+    ormo-optionAffichage="Options d'affichage" 
+    ormo-rafraichir="Rafraichir"  
+    ormo-favoris="Favoris" 
+    ormo-a="à" 
+    ormo-sur="sur" 
+    ormo-reset="Ré-initialiser" 
+    ormo-resultats="résultat(s)" >
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+        <div class="hidden-xs">
+            <img src="/images/flags/fr.png" />            <span class="caret"></span>
+        </div>
+        <div class="visible-xs">
+            <img src="/images/flags/fr.png" />                    </div>
+    </a>
+    <ul style="min-width: 60px;" class="dropdown-menu">
+                    <li><a href="/change_language/fr"><img alt="Francais" title="Francais" src="/images/flags/fr.png" /> Francais</a></li>
+            </ul>
+</li>
+
+            </ul>
+                    </div>
+    </header>
+
+    <section class="scrollable swing-main-scrollable">
+        <section class="hbox stretch">
+            <aside class="aside bg-light dk b-r" id="nav">
+                <section class="vbox">
+                    <section class="scrollable">
+                            <section class="vbox">
+        <section class="scrollable">
+            <div class="slim-scroll" data-height="auto" data-disable-fade-out="true" data-distance="0" data-size="5px">
+                <nav class="nav-primary hidden-xs" data-ride="collapse">
+                    <ul class="nav" id="swingMenu" count-rel="/menu/count"><li id="153" data-men-id="153"><a  href="/fr/liste/7/avis-aux-usagers" class="" ><span class="menuIcon fa fa-warning"  style="width:2em;" ></span> <span class="menuText" title="Avis aux usagers">Avis aux usagers</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li><li id="260" data-men-id="260"><a  class="dropdown-toggle" href="#" class="" ><span class="menuIcon fa fa-window-maximize"  style="width:2em;" ></span> <span class="menuText" title="Listes des navires">Listes des navires</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a><ul class="nav none bg-white"><li id="261" data-men-id="261" class="active"><a  href="/fr/liste/221/navires-attendus" class="" ><span class="prefixLink" title="Navires attendus"></span> <span class="menuText" title="Navires attendus">Navires attendus</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li><li id="262" data-men-id="262"><a  href="/fr/liste/222/accostages-prevus" class="" ><span class="prefixLink" title="Accostages prévus"></span> <span class="menuText" title="Accostages prévus">Accostages prévus</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li><li id="264" data-men-id="264"><a  href="/fr/liste/227/appareillages-prevus" class="" ><span class="prefixLink" title="Appareillages prévus"></span> <span class="menuText" title="Appareillages prévus">Appareillages prévus</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li><li id="263" data-men-id="263"><a  href="/fr/liste/223/navires-partis" class="" ><span class="prefixLink" title="Navires partis"></span> <span class="menuText" title="Navires partis">Navires partis</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li><li id="307" data-men-id="307"><a  href="/fr/liste/381/escales-croisieres" class="" ><span class="prefixLink" title="Croisière"></span> <span class="menuText" title="Croisière">Croisière</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li><li id="509" data-men-id="509"><a  href="/fr/liste/987/escales-croisieres-fluviales" class="" ><span class="menuIcon fa fa-clock-o"  style="width:2em;" ></span> <span class="menuText" title="Timeline des incidents">Timeline des incidents</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li></ul> <li id="100" data-men-id="100"><a  href="/map" class="" ><span class="menuIcon gpmh-icon-map"  style="width:2em;" ></span> <span class="menuText" title="Carte interactive">Carte interactive</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li><li id="360" data-men-id="360"><a  class="dropdown-toggle" href="#" class="" ><span class="menuIcon fa fa-stumbleupon"  style="width:2em;" ></span> <span class="menuText" title="Simbad">Simbad</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a><ul class="nav none bg-white"><li id="361" data-men-id="361"><a  href="/capteur/simbad" class="" ><span class="prefixLink" title="Houle et Vent"></span> <span class="menuText" title="Houle et Vent">Houle et Vent</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li><li id="362" data-men-id="362"><a  target="_blank" href="/files/simbad_cgu.pdf" class="" ><span class="prefixLink" title="Conditions générales d&#039;utilisation"></span> <span class="menuText" title="Conditions générales d&#039;utilisation">Conditions générales d&#039;utilisation</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li></ul> <li id="230" data-men-id="230"><a  class="dropdown-toggle" href="#" class="" ><span class="menuIcon fa fa-warning"  style="width:2em;" ></span> <span class="menuText" title="Infos pratiques">Infos pratiques</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a><ul class="nav none bg-white"><li id="231" data-men-id="231"><a  href="/fr/liste/36/listes-des-types-bateaux" class="" ><span class="prefixLink" title="Référentiel Type Bateau"></span> <span class="menuText" title="Référentiel Type Bateau">Référentiel Type Bateau</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li><li id="232" data-men-id="232"><a  href="/fr/liste/35/listes-des-pavillons" class="" ><span class="prefixLink" title="Référentiel Pavillons"></span> <span class="menuText" title="Référentiel Pavillons">Référentiel Pavillons</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li></ul> <li id="26" data-men-id="26"><a  href="/news/145/documentation" class="" ><span class="menuIcon fa fa-bookmark-o"  style="width:2em;" ></span> <span class="menuText" title="Documents à télécharger">Documents à télécharger</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li><li id="1503" data-men-id="1503"><a  href="/news/163/informations-du-pilotage-de-seine" class="" ><span class="menuIcon fa fa-bookmark-o"  style="width:2em;" ></span> <span class="menuText" title="Informations du Pilotage de Seine">Informations du Pilotage de Seine</span><b class="badge badge-hollow pull-right count" style="display:none;"></b></a></li></ul>                </nav>
+            </div>
+        </section>
+            </section>
+                        </section>
+                </section>
+            </aside>
+            <section id="dashboard-layout" class="vbox">
+                <div style="padding:10px;border:0;border-radius: 0;text-align: center;"
+                     class="visible-sm visible-xs m-b-none alert alert-info">
+                    <span class="h4">Guichet Unique de HAROPA PORT | ROUEN</span>
+                </div>
+                                <!-- Flashs affichables sans srechargement de page -->
+                <div
+                        id='alert-danger-flash'
+                        class='m-b-none alert alert-danger alert-flash alert-flash-display-none'
+                >
+                    <button onclick=hideFlashError() class='close' type='button'>
+                        <i class='fa fa-remove'></i>
+                    </button>
+                    <p id='message'></p>
+                </div>
+                <div
+                        id='alert-success-flash'
+                        class='m-b-none alert alert-success alert-flash alert-flash-display-none'
+                >
+                    <button onclick=hideFlashSuccess() class='close' type='button'>
+                        <i class='fa fa-remove'></i>
+                    </button>
+                    <p id='message'></p>
+                </div>
+                <div
+                        id='alert-info-flash'
+                        class='m-b-none alert alert-info alert-flash alert-flash-display-none'
+                >
+                    <button onclick=hideFlashInfo() class='close' type='button'>
+                        <i class='fa fa-remove'></i>
+                    </button>
+                    <p id='message'></p>
+                </div>
+                <div
+                        id='alert-warning-flash'
+                        class='m-b-none alert alert-warning alert-flash alert-flash-display-none'
+                >
+                    <button onclick=hideFlashWarning() class='close' type='button'>
+                        <i class='fa fa-remove'></i>
+                    </button>
+                    <p id='message'></p>
+                </div>
+                                                                                <div id="dashboard-layout-content">
+                    <div class="row" style="display:none;" id="cc">
+                        <div class="m-t col-md-10 col-md-offset-1">
+                            <div class="alert alert-danger alert-block">
+                                <h4><i class="fa fa-bell-o"></i> Actions requises!</h4>
+                                <div class="list-group"></div>
+                            </div>
+                        </div>
+                    </div>
+                                        <section class="wrapper" style="overflow-x: auto;">
+    <table uri-export-xlsx="/xlsx/liste/221" uri-export-pdf="/pdf/liste/221" rel-usr=""  mode="1" title="Navires attendus" id="221" defaultshow="-1" uri="/show/221"  class="table table-striped m-b-none liste"  n="38" uriincrement="/inc/compute" uriautocomp="/ref/auto" uripersistence="/json/attribut/persistance" uriressource="/resource/show" uriref="/ref" uricheckunique="/attribut/checkUnique" urithumbconvoi="/element/thumbMatrice" ><thead><tr><th class="sortable sd sorting_desc"  id="100" >ETA</th><th class="sortable sd sorting_desc filter_js_input"  id="102" >Navire</th><th id="103" >Pavillon</th><th class="filter_js_input"  id="104" >Agent</th><th id="105" >Provenance</th><th class="sortable"  id="106" >Quai</th></tr></thead><tbody><tr ><td data-title="ETA" >22/11/2026 11:00</td><td data-title="Navire" >DUZGIT ENDEAVOUR</td><td data-title="Pavillon" >Turquie</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >BEANR - Antwerpen</td><td data-title="Quai" >PJ40</td></tr><tr ><td data-title="ETA" >24/11/2026 04:00</td><td data-title="Navire" >TROY</td><td data-title="Pavillon" >Luxembourg</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >DEHAM - Hamburg</td><td data-title="Quai" >PJ20</td></tr><tr ><td data-title="ETA" >23/11/2026 12:00</td><td data-title="Navire" >EEMS SEA</td><td data-title="Pavillon" >Pays-Bas</td><td data-title="Agent" >SURVEYFERT</td><td class="tdleft"  data-title="Provenance" >FRLSO - Les Sables-d'Olonne</td><td data-title="Quai" >QPC1</td></tr><tr ><td data-title="ETA" >23/11/2026 03:00</td><td data-title="Navire" >WATERWAY</td><td data-title="Pavillon" >Saint Vincent et Grenadines</td><td data-title="Agent" >PROVERMARINE SHIPPING AGENCIES</td><td class="tdleft"  data-title="Provenance" >BEGNE - Gent (Ghent)</td><td data-title="Quai" >RDA>TRANSIT>MUSOIR</td></tr><tr ><td data-title="ETA" >25/11/2026 08:00</td><td data-title="Navire" >RAVEL</td><td data-title="Pavillon" >Chypre</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >NLRTM - Rotterdam</td><td data-title="Quai" >CPA2>Q430</td></tr><tr ><td data-title="ETA" >26/11/2026 21:00</td><td data-title="Navire" >STENA PROMISE</td><td data-title="Pavillon" >Chypre</td><td data-title="Agent" >S-5</td><td class="tdleft"  data-title="Provenance" >SEMMA - Malmo</td><td data-title="Quai" >CPAQ_M</td></tr><tr ><td data-title="ETA" >28/11/2026 14:00</td><td data-title="Navire" >MARIE</td><td data-title="Pavillon" >Belgique</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >FRSET - Sète</td><td data-title="Quai" >RADI</td></tr><tr ><td data-title="ETA" >23/11/2026 12:00</td><td data-title="Navire" >BARBAROS ULUC VARDAL</td><td data-title="Pavillon" >Panama</td><td data-title="Agent" >INCHCAPE SHIPPING SERVICES FRANCE</td><td class="tdleft"  data-title="Provenance" >NLRTM - Rotterdam</td><td data-title="Quai" >PJG3</td></tr><tr ><td data-title="ETA" >26/11/2026 08:00</td><td data-title="Navire" >TUULIA</td><td data-title="Pavillon" >Portugal</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >BEANR - Antwerpen</td><td data-title="Quai" >ANTA</td></tr><tr ><td data-title="ETA" >25/11/2026 14:00</td><td data-title="Navire" >ALESSANDRA LEHMANN</td><td data-title="Pavillon" >Antigua et Barbuda</td><td data-title="Agent" >EURO DOCKS SERVICES</td><td class="tdleft"  data-title="Provenance" >NLSCI - Schiedam</td><td data-title="Quai" >SOUF</td></tr><tr ><td data-title="ETA" >23/11/2026 06:00</td><td data-title="Navire" >FURE SPEAR</td><td data-title="Pavillon" >Iles Faroë</td><td data-title="Agent" >INCHCAPE SHIPPING SERVICES FRANCE</td><td class="tdleft"  data-title="Provenance" >GBTHS - Thames Haven</td><td data-title="Quai" >PJG3</td></tr><tr ><td data-title="ETA" >23/11/2026 12:00</td><td data-title="Navire" >ROSSINI</td><td data-title="Pavillon" >Chypre</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >NLRTM - Rotterdam</td><td data-title="Quai" >PJ10</td></tr><tr ><td data-title="ETA" >28/11/2026 09:45</td><td data-title="Navire" >WELLINGTON STAR</td><td data-title="Pavillon" >Bahamas</td><td data-title="Agent" >SEA SHIPPING SERVICES</td><td class="tdleft"  data-title="Provenance" >MQFDF - Fort-de-France</td><td data-title="Quai" >RADI</td></tr><tr ><td data-title="ETA" >25/11/2026 18:00</td><td data-title="Navire" >NORDIC SUND</td><td data-title="Pavillon" >Norvège</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >NLRTM - Rotterdam</td><td data-title="Quai" >CPAQ_M</td></tr><tr ><td data-title="ETA" >24/11/2026 00:00</td><td data-title="Navire" >STAR BONAIRE</td><td data-title="Pavillon" >Pays-Bas</td><td data-title="Agent" >SEA INVEST SHIPPING AGENCYS</td><td class="tdleft"  data-title="Provenance" >GBHUL - Hull</td><td data-title="Quai" >GCVL</td></tr><tr ><td data-title="ETA" >27/11/2026 12:00</td><td data-title="Navire" >CHARLES ISLAND</td><td data-title="Pavillon" >Bahamas</td><td data-title="Agent" >SEA SHIPPING SERVICES</td><td class="tdleft"  data-title="Provenance" >NLVLI - Vlissingen</td><td data-title="Quai" >RADI</td></tr><tr ><td data-title="ETA" >28/11/2026 00:00</td><td data-title="Navire" >ARIANE</td><td data-title="Pavillon" >Pays-Bas</td><td data-title="Agent" >SEA INVEST SHIPPING AGENCYS</td><td class="tdleft"  data-title="Provenance" >NLAMS - Amsterdam</td><td data-title="Quai" >SGMA</td></tr><tr ><td data-title="ETA" >23/11/2026 23:30</td><td data-title="Navire" >SARONIC SPIRIT</td><td data-title="Pavillon" >Iles Marshall</td><td data-title="Agent" >SEA INVEST SHIPPING AGENCYS</td><td class="tdleft"  data-title="Provenance" >CATHU - Thunder Bay</td><td data-title="Quai" >SGMA</td></tr><tr ><td data-title="ETA" >22/11/2026 12:00</td><td data-title="Navire" >SAPPHIRE</td><td data-title="Pavillon" >Lettonie</td><td data-title="Agent" >PROVERMARINE SHIPPING AGENCIES</td><td class="tdleft"  data-title="Provenance" >GBPSB - Sutton Bridge</td><td data-title="Quai" >TCRD>TRANSIT>RDA</td></tr><tr ><td data-title="ETA" >24/11/2026 18:00</td><td data-title="Navire" >GREEN ENERGY</td><td data-title="Pavillon" >Singapour</td><td data-title="Agent" >WILHELMSEN PORT SERVICES FRANCE SAS</td><td class="tdleft"  data-title="Provenance" >NLRTM - Rotterdam</td><td data-title="Quai" >AGQ</td></tr><tr ><td data-title="ETA" >26/11/2026 13:00</td><td data-title="Navire" >CHIOS SPIRIT</td><td data-title="Pavillon" >Iles Marshall</td><td data-title="Agent" >EURO DOCKS SERVICES</td><td class="tdleft"  data-title="Provenance" >FRMTX - Montoir-de-Bretagne</td><td data-title="Quai" >SIMA</td></tr><tr ><td data-title="ETA" >25/11/2026 07:00</td><td data-title="Navire" >GIA ASPIRANT</td><td data-title="Pavillon" >Iles Marshall</td><td data-title="Agent" >SEA INVEST SHIPPING AGENCYS</td><td class="tdleft"  data-title="Provenance" >CATHU - Thunder Bay</td><td data-title="Quai" >SGMA</td></tr><tr ><td data-title="ETA" >30/11/2026 09:00</td><td data-title="Navire" >HELEN ANNA</td><td data-title="Pavillon" >Antigua et Barbuda</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >PTLEI - Leixoes</td><td data-title="Quai" >RADI</td></tr><tr ><td data-title="ETA" >25/11/2026 05:00</td><td data-title="Navire" >TALINA B</td><td data-title="Pavillon" >Chypre</td><td data-title="Agent" >SURVEYFERT</td><td class="tdleft"  data-title="Provenance" >GBTEE - Teesport</td><td data-title="Quai" >QPC3</td></tr><tr ><td data-title="ETA" >22/11/2026 21:00</td><td data-title="Navire" >MORAIME</td><td data-title="Pavillon" >Espagne</td><td data-title="Agent" >SURVEYFERT</td><td class="tdleft"  data-title="Provenance" >ESBIO - Bilbao</td><td data-title="Quai" >QPC3</td></tr><tr ><td data-title="ETA" >23/11/2026 12:00</td><td data-title="Navire" >CL CONTIGO</td><td data-title="Pavillon" >Liberia</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >IEGRN - Greenore</td><td data-title="Quai" >MRM</td></tr><tr ><td data-title="ETA" >25/11/2026 00:00</td><td data-title="Navire" >HENGYI</td><td data-title="Pavillon" >Iles Marshall</td><td data-title="Agent" >SEA INVEST SHIPPING AGENCYS</td><td class="tdleft"  data-title="Provenance" >CNHUH - Huanghua Pt</td><td data-title="Quai" >SGMA</td></tr><tr ><td data-title="ETA" >27/11/2026 05:00</td><td data-title="Navire" >FWN SKY</td><td data-title="Pavillon" >Pays-Bas</td><td data-title="Agent" >SEA INVEST SHIPPING AGENCYS</td><td class="tdleft"  data-title="Provenance" >SEKXV - Karlsborg Axelvik</td><td data-title="Quai" >QRQ</td></tr><tr ><td data-title="ETA" >23/11/2026 18:00</td><td data-title="Navire" >BALTIC POLAND</td><td data-title="Pavillon" >Portugal</td><td data-title="Agent" >Agence Maritime de Seine</td><td class="tdleft"  data-title="Provenance" >PTAVE - Aveiro</td><td data-title="Quai" >QGCM</td></tr><tr ><td data-title="ETA" >23/11/2026 22:00</td><td data-title="Navire" >STEENBANK</td><td data-title="Pavillon" >Pays-Bas</td><td data-title="Agent" >HONFLEUR LOGISTIQUE PORTUAIRE</td><td class="tdleft"  data-title="Provenance" >FIRAU - Raumo (Rauma)</td><td data-title="Quai" >QSH3</td></tr><tr ><td data-title="ETA" >22/11/2026 19:00</td><td data-title="Navire" >NOORDVLIET</td><td data-title="Pavillon" >Portugal</td><td data-title="Agent" >EURO DOCKS SERVICES</td><td class="tdleft"  data-title="Provenance" >NLVLI - Vlissingen</td><td data-title="Quai" >QGCM>RADI</td></tr><tr ><td data-title="ETA" >20/11/2026 14:00</td><td data-title="Navire" >ADA</td><td data-title="Pavillon" >Portugal</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >NLRTM - Rotterdam</td><td data-title="Quai" >PJ10</td></tr><tr ><td data-title="ETA" >24/11/2026 15:00</td><td data-title="Navire" >BITFLOWER</td><td data-title="Pavillon" >Suède</td><td data-title="Agent" >HUMANN & TACONET</td><td class="tdleft"  data-title="Provenance" >GBAVO - Avonmouth</td><td data-title="Quai" >PJG2</td></tr><tr ><td data-title="ETA" >23/11/2026 14:00</td><td data-title="Navire" >HEENVLIET</td><td data-title="Pavillon" >Norvège</td><td data-title="Agent" >EURO DOCKS SERVICES</td><td class="tdleft"  data-title="Provenance" >BEANR - Antwerpen</td><td data-title="Quai" >RADI</td></tr><tr ><td data-title="ETA" >24/11/2026 10:00</td><td data-title="Navire" >GOLDEN PETUNIA</td><td data-title="Pavillon" >Liberia</td><td data-title="Agent" >Ferrari Shipping Agency</td><td class="tdleft"  data-title="Provenance" >NLRTM - Rotterdam</td><td data-title="Quai" >PJSD</td></tr><tr ><td data-title="ETA" >22/11/2026 09:30</td><td data-title="Navire" >LADY GUIA</td><td data-title="Pavillon" >Italie</td><td data-title="Agent" >INCHCAPE SHIPPING SERVICES FRANCE</td><td class="tdleft"  data-title="Provenance" >NLRTM - Rotterdam</td><td data-title="Quai" >PJ1V</td></tr><tr ><td data-title="ETA" >23/11/2026 21:15</td><td data-title="Navire" >PACIFIC REEFER</td><td data-title="Pavillon" >Liberia</td><td data-title="Agent" >SEA SHIPPING SERVICES</td><td class="tdleft"  data-title="Provenance" >NLVLI - Vlissingen</td><td data-title="Quai" >RADI</td></tr><tr ><td data-title="ETA" >23/11/2026 12:00</td><td data-title="Navire" >AQUAMARINE SW</td><td data-title="Pavillon" >Panama</td><td data-title="Agent" >PROVERMARINE SHIPPING AGENCIES</td><td class="tdleft"  data-title="Provenance" >SEGOT - Goteborg</td><td data-title="Quai" >QPC2</td></tr></tbody></table>
+        
+        
+        
+
+
+
+</section>                </div>
+            </section>
+            <aside class="bg-light lter b-l aside-lg" style="display:none;">
+                <section class="vbox">
+                                                                            </section>
+            </aside>
+        </section>
+    </section>
+</section>
+<a href="#" class="scrollToTop"><i class="gpmh-icon-up-open"></i></a>
+
+<script type="text/javascript" src="/js/swing-min.js?vde65ced9"></script>
+<script type="text/javascript" src="/js/gpmh/evenement/functions.js?vde65ced9"></script>
+<script type="text/javascript" src="/js/gpmh/autocomplete.js?vde65ced9"></script>
+<script type="text/javascript" src="/js/ormo-liste-min.js?vde65ced9"></script>
+<script type="text/javascript" src="/js/jquery/i18n/jquery.ui.datepicker-fr.js?vde65ced9"></script>
+
+
+
+<script type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=2033492933" async></script></body>
+</html>
