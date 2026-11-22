@@ -1,0 +1,347 @@
+# 國際港口資料收集（被 WAF 擋住的站台）— GitHub Actions 分散 IP 爬取
+# ---------------------------------------------------------------------------
+# 用 GitHub runner 的 Azure IP（一半再加 Cloudflare WARP）抓美國 GCP VM 連不上的港口網站：
+#   collect      requests 多策略（port_gha_worker.py）
+#   browser      Patchright 瀏覽器（port_gha_browser.py）
+#   flaresolverr Felixstowe 的 Cloudflare Managed Challenge（FlareSolverr，失敗改 nodriver）
+# 結果推到本 repo 的 port-data 分支 runs/<UTC 時間>/<job>/，由 port-collector VM 定時拉回。
+#
+# 排程：GitHub 常延後或跳過排程，所以每小時檢查一次，
+#       距離 port-data 上次推送滿 5.5 小時才真的跑，一天約 4 輪。手動觸發不受限制。
+
+name: Port Data Collector (Blocked Sites)
+run-name: port-collect ${{ inputs.request_id || 'scheduled' }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      ports:
+        description: '要抓的港口（逗號分隔，空 = 全部）'
+        required: false
+        default: ''
+        type: string
+      runners:
+        description: 'Runner 數量 (1-20)'
+        required: false
+        default: '10'
+        type: string
+      request_id:
+        description: '識別碼（port-collector 觸發時帶入）'
+        required: false
+        default: 'manual'
+        type: string
+      max_minutes:
+        description: '每個 runner 最多跑幾分鐘'
+        required: false
+        default: '20'
+        type: string
+
+  schedule:
+    - cron: '17 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: port-collector
+  cancel-in-progress: false
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    outputs:
+      matrix: ${{ steps.m.outputs.matrix }}
+      ports: ${{ steps.m.outputs.ports }}
+      ts: ${{ steps.m.outputs.ts }}
+      skip: ${{ steps.gate.outputs.skip }}
+    steps:
+      - id: gate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          SKIP=false
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            last=$(gh api "repos/${{ github.repository }}/commits/port-data" --jq .commit.committer.date 2>/dev/null || true)
+            if [ -n "$last" ]; then
+              age=$(( $(date -u +%s) - $(date -u -d "$last" +%s) ))
+              echo "port-data 上次推送：$last（$(( age / 60 )) 分鐘前）"
+              [ "$age" -lt 19800 ] && SKIP=true
+            fi
+          fi
+          echo "skip=$SKIP" >> "$GITHUB_OUTPUT"
+          echo "skip=$SKIP"
+      - id: m
+        env:
+          RUNNERS: ${{ inputs.runners || '10' }}
+          PORTS: ${{ inputs.ports || '' }}
+        run: |
+          python3 - <<'PYEOF'
+          import json, os
+          n = max(1, min(20, int(os.environ.get("RUNNERS") or "10")))
+          ports = os.environ.get("PORTS", "").strip()
+          from datetime import datetime, timezone
+          ts = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M")
+          out = os.environ["GITHUB_OUTPUT"]
+          with open(out, "a") as f:
+              f.write("matrix=" + json.dumps(list(range(n))) + "\n")
+              f.write("ports=" + (ports or "all") + "\n")
+              f.write("ts=" + ts + "\n")
+          print(f"runners={n} ports={ports or 'all'} ts={ts}")
+          PYEOF
+
+  collect:
+    needs: plan
+    if: needs.plan.outputs.skip != 'true'
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        runner_id: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            gha_port/port_gha_worker.py
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install
+        run: pip install --disable-pip-version-check -q requests==2.32.3
+
+      # 偶數 runner 啟用 WARP（換 Cloudflare IP）
+      - name: Setup Cloudflare WARP (even runners)
+        if: contains(fromJSON('[0,2,4,6,8,10,12,14,16,18]'), matrix.runner_id)
+        uses: fscarmen/warp-on-actions@v1.1
+        with:
+          stack: dual
+
+      - name: Show runner info
+        run: |
+          echo "Runner #${{ matrix.runner_id }}"
+          echo "IP: $(curl -s --max-time 10 https://api.ipify.org || echo 'unknown')"
+          echo "Ports: ${{ needs.plan.outputs.ports }}"
+
+      - name: Collect port data
+        env:
+          PORTS: ${{ inputs.ports || '' }}
+          RUNNER_ID: ${{ matrix.runner_id }}
+          MAX_MIN: ${{ inputs.max_minutes || '20' }}
+          PYTHONUNBUFFERED: '1'
+          PYTHONUTF8: '1'
+        run: |
+          # 錯開起跑 0～20 秒
+          sleep $(( RUNNER_ID % 20 ))
+          OUT="out/runner_$(printf %02d "$RUNNER_ID")"
+          timeout $(( (${MAX_MIN%.*} + 5) * 60 )) \
+            python gha_port/port_gha_worker.py \
+              --runner-id "$RUNNER_ID" \
+              --ports "${PORTS}" \
+              --out "$OUT" \
+              --max-minutes "$MAX_MIN" \
+          || echo "::warning::worker 非正常結束（rc=$?），已寫出的進度仍會上傳"
+
+      - name: Push results to port-data branch
+        if: always()
+        env:
+          TS: ${{ needs.plan.outputs.ts }}
+          RUNNER_ID: ${{ matrix.runner_id }}
+        run: |
+          OUT="out/runner_$(printf %02d "$RUNNER_ID")"
+          if [ ! -d "$OUT" ] || [ -z "$(ls -A "$OUT" 2>/dev/null)" ]; then
+            echo "沒有結果，跳過推送"
+            exit 0
+          fi
+          git config --global user.name "port-collector[bot]"
+          git config --global user.email "port-collector@users.noreply.github.com"
+          git clone --depth 1 --branch port-data "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" _push 2>/dev/null \
+            || { git init _push && cd _push && git checkout -b port-data && git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"; cd ..; }
+          DEST="_push/runs/${TS}/runner_$(printf %02d "$RUNNER_ID")"
+          mkdir -p "$DEST"
+          cp -a "$OUT"/. "$DEST"/
+          cd _push
+          git add -A
+          git diff --cached --quiet && { echo "沒有新檔案"; exit 0; }
+          git commit -m "port-collect runner $RUNNER_ID @ $TS"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin port-data 2>/dev/null || true
+            git push origin port-data && break || sleep $(( RANDOM % 10 + 5 ))
+          done
+
+  # ---- Patchright headless browser：對付需要 JS 執行的 WAF ----
+  # Felixstowe (Cloudflare JS Challenge) 和 Long Beach (Akamai Bot Manager)
+  # 用 requests 完全過不了，必須用真實瀏覽器跑 JS
+  browser:
+    needs: plan
+    if: needs.plan.outputs.skip != 'true'
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        runner_id: [0, 1, 2, 3]
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            gha_port/port_gha_browser.py
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Patchright + deps
+        run: |
+          sudo apt-get update && sudo apt-get install -y xvfb
+          pip install --disable-pip-version-check -q patchright
+          patchright install chromium --with-deps
+
+      - name: Setup Cloudflare WARP (even runners)
+        if: contains(fromJSON('[0,2]'), matrix.runner_id)
+        uses: fscarmen/warp-on-actions@v1.1
+        with:
+          stack: dual
+
+      - name: Show runner info
+        run: |
+          echo "Browser Runner #${{ matrix.runner_id }}"
+          echo "IP: $(curl -s --max-time 10 https://api.ipify.org || echo 'unknown')"
+
+      - name: Collect with headless browser
+        env:
+          RUNNER_ID: ${{ matrix.runner_id }}
+          PYTHONUNBUFFERED: '1'
+          PYTHONUTF8: '1'
+        run: |
+          sleep $(( RUNNER_ID * 5 ))
+          OUT="out/browser_$(printf %02d "$RUNNER_ID")"
+          xvfb-run --auto-servernum \
+            python gha_port/port_gha_browser.py \
+              --runner-id "$RUNNER_ID" \
+              --out "$OUT" \
+              --max-minutes 12 \
+          || echo "::warning::browser worker 非正常結束（rc=$?）"
+
+      - name: Push results to port-data branch
+        if: always()
+        env:
+          TS: ${{ needs.plan.outputs.ts }}
+          RUNNER_ID: ${{ matrix.runner_id }}
+        run: |
+          OUT="out/browser_$(printf %02d "$RUNNER_ID")"
+          if [ ! -d "$OUT" ] || [ -z "$(ls -A "$OUT" 2>/dev/null)" ]; then
+            echo "沒有結果，跳過推送"
+            exit 0
+          fi
+          git config --global user.name "port-collector[bot]"
+          git config --global user.email "port-collector@users.noreply.github.com"
+          git clone --depth 1 --branch port-data "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" _push 2>/dev/null \
+            || { git init _push && cd _push && git checkout -b port-data && git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"; cd ..; }
+          DEST="_push/runs/${TS}/browser_$(printf %02d "$RUNNER_ID")"
+          mkdir -p "$DEST"
+          cp -a "$OUT"/. "$DEST"/
+          cd _push
+          git add -A
+          git diff --cached --quiet && { echo "沒有新檔案"; exit 0; }
+          git commit -m "port-browser runner $RUNNER_ID @ $TS"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin port-data 2>/dev/null || true
+            git push origin port-data && break || sleep $(( RANDOM % 10 + 5 ))
+          done
+
+  # ---- FlareSolverr：用 Docker 容器繞過 Cloudflare Managed Challenge ----
+  # 專門處理 Felixstowe（Patchright 過不了的 Managed Challenge + Turnstile）
+  # FlareSolverr 內部用 undetected-chromedriver，已驗證可以 16 秒內通過
+  flaresolverr:
+    needs: plan
+    if: needs.plan.outputs.skip != 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    services:
+      solver:
+        image: ghcr.io/flaresolverr/flaresolverr:latest
+        ports:
+          - 8191:8191
+        env:
+          LOG_LEVEL: info
+          HEADLESS: "true"
+          TZ: Europe/London
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            gha_port/felixstowe_flaresolverr.py
+            gha_port/felixstowe_nodriver.py
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Wait for FlareSolverr
+        run: |
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:8191/ > /dev/null && { echo "FlareSolverr ready"; break; } || sleep 2
+          done
+
+      - name: Collect Felixstowe via FlareSolverr
+        env:
+          OUT_DIR: out/flaresolverr
+          FLARESOLVERR_URL: http://localhost:8191/v1
+          PYTHONUNBUFFERED: '1'
+          PYTHONUTF8: '1'
+        run: |
+          python gha_port/felixstowe_flaresolverr.py \
+            || echo "::warning::FlareSolverr worker 非正常結束（rc=$?）"
+
+      # 備案：FlareSolverr 沒拿到首頁才改用 nodriver
+      - name: Fallback to nodriver
+        env:
+          OUT_DIR: out/flaresolverr/nodriver
+          PYTHONUNBUFFERED: '1'
+          PYTHONUTF8: '1'
+        run: |
+          if [ -f out/flaresolverr/felixstowe_homepage.html ]; then
+            echo "FlareSolverr 已成功，不需備案"; exit 0
+          fi
+          echo "::warning::FlareSolverr 失敗，改用 nodriver"
+          mkdir -p "$OUT_DIR"
+          sudo apt-get update -q && sudo apt-get install -y -q xvfb
+          pip install --disable-pip-version-check -q nodriver opencv-python-headless
+          xvfb-run --auto-servernum python gha_port/felixstowe_nodriver.py             || echo "::warning::nodriver 也失敗（rc=$?）"
+
+      - name: Push results to port-data branch
+        if: always()
+        env:
+          TS: ${{ needs.plan.outputs.ts }}
+        run: |
+          OUT="out/flaresolverr"
+          if [ ! -d "$OUT" ] || [ -z "$(ls -A "$OUT" 2>/dev/null)" ]; then
+            echo "沒有結果，跳過推送"
+            exit 0
+          fi
+          git config --global user.name "port-collector[bot]"
+          git config --global user.email "port-collector@users.noreply.github.com"
+          git clone --depth 1 --branch port-data "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" _push 2>/dev/null \
+            || { git init _push && cd _push && git checkout -b port-data && git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"; cd ..; }
+          DEST="_push/runs/${TS}/felixstowe_flaresolverr"
+          mkdir -p "$DEST"
+          cp -a "$OUT"/. "$DEST"/
+          cd _push
+          git add -A
+          git diff --cached --quiet && { echo "沒有新檔案"; exit 0; }
+          git commit -m "port-flaresolverr felixstowe @ $TS"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin port-data 2>/dev/null || true
+            git push origin port-data && break || sleep $(( RANDOM % 10 + 5 ))
+          done
