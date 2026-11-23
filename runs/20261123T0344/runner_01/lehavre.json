@@ -1,0 +1,124 @@
+{
+  "port": "lehavre",
+  "name": "勒阿弗爾 HAROPA",
+  "protection": "Imperva",
+  "timestamp": "2026-11-23T03:46:09.334543+00:00",
+  "urls": [
+    {
+      "url": "https://www.haropaport.com/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.haropaport.com/",
+          "status": 403,
+          "size": 682,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "a20b01efba4a7175",
+          "snippet": "<html> <head><title>403 Forbidden</title></head> <body> <center><h1>403 Forbidden</h1></center> <hr><center>nginx</center> <script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=1682418533\" async></script></body> </html> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to d"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://www.haropaport.com/",
+          "status": 403,
+          "size": 682,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "ea0a58ca26bd482d",
+          "snippet": "<html> <head><title>403 Forbidden</title></head> <body> <center><h1>403 Forbidden</h1></center> <hr><center>nginx</center> <script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=2&cb=1922168615\" async></script></body> </html> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to d"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://www.haropaport.com/",
+          "status": 403,
+          "size": 679,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "1853a750020cedc2",
+          "snippet": "<html> <head><title>403 Forbidden</title></head> <body> <center><h1>403 Forbidden</h1></center> <hr><center>nginx</center> <script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=1&cb=6310313\" async></script></body> </html> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disa"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://www.haropaport.com/",
+          "status": 403,
+          "size": 682,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "03ab13e0227352e0",
+          "snippet": "<html> <head><title>403 Forbidden</title></head> <body> <center><h1>403 Forbidden</h1></center> <hr><center>nginx</center> <script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=4&cb=2012006027\" async></script></body> </html> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to d"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://www.haropaport.com/",
+          "status": 403,
+          "size": 280,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "1774ed7318e10d4a",
+          "snippet": "<html> <head><title>403 Forbidden</title></head> <body> <center><h1>403 Forbidden</h1></center> <hr><center>nginx</center> <script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=1148059019\" async></script></body> </html>"
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "https://www.haropaport.com/",
+          "status": 403,
+          "size": 682,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "dccfbbf85061fb58",
+          "snippet": "<html> <head><title>403 Forbidden</title></head> <body> <center><h1>403 Forbidden</h1></center> <hr><center>nginx</center> <script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=6&cb=1272943440\" async></script></body> </html> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to disable MSIE and Chrome friendly error page --> <!-- a padding to d"
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "https://www.haropaport.com/",
+          "status": 403,
+          "size": 279,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "85d971af3ef15930",
+          "snippet": "<html> <head><title>403 Forbidden</title></head> <body> <center><h1>403 Forbidden</h1></center> <hr><center>nginx</center> <script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=7&cb=816797418\" async></script></body> </html>"
+        }
+      ],
+      "success": false
+    },
+    {
+      "url": "https://drakhar.haropaport.com/fr/liste/221/navires-attendus",
+      "label": "navires_attendus",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://drakhar.haropaport.com/fr/liste/221/navires-attendus",
+          "status": 200,
+          "size": 25748,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "6720e7868dbf2dcc",
+          "snippet": "<!DOCTYPE html> <html lang=\"fr\"> <head> <meta charset=\"utf-8\"> <title>Navires attendus</title> <!--[if IE]> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/> <![endif]--> <meta name=\"author\" content=\"Grand Port Maritime du Havre\"> <meta name=\"keywords\" content=\"\"> <meta name=\"description\" content=\"Guichet Unique de HAROPA PORT | ROUEN\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <!-- Common Conf"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 25748,
+      "saved_file": "lehavre_navires_attendus.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
