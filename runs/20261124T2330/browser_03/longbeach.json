@@ -1,0 +1,29 @@
+{
+  "port": "longbeach",
+  "name": "長灘 POLB",
+  "protection": "Akamai Bot Manager",
+  "timestamp": "2026-11-24T23:34:20.805083+00:00",
+  "urls": [
+    {
+      "url": "https://polb.com/",
+      "label": "homepage",
+      "status": 200,
+      "size": 61628,
+      "is_challenge": false,
+      "has_content": true,
+      "error": null,
+      "title": ""
+    },
+    {
+      "url": "https://polb.com/port-info/anchorages/",
+      "label": "anchorages",
+      "status": 404,
+      "size": 61315,
+      "is_challenge": false,
+      "has_content": true,
+      "error": null,
+      "title": ""
+    }
+  ],
+  "success": true
+}
