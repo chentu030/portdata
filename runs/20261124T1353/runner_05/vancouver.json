@@ -1,0 +1,91 @@
+{
+  "port": "vancouver",
+  "name": "溫哥華 VFPA",
+  "protection": "Cloudflare",
+  "timestamp": "2026-11-24T13:56:44.869875+00:00",
+  "urls": [
+    {
+      "url": "https://www.portvancouver.com/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.portvancouver.com/",
+          "status": 403,
+          "size": 3230,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "d6e2f4131f6c200f",
+          "snippet": "\u0013-\u0017\u0000d����~yN�kG)@Pѩ�%(�$���C��,Y��ߏ��尚�M������\u0011�&�&\u0011\u0011�v �Z�D<U\"%fJ#bc��?'≛,1UQ\u0002\u0012}�\u001bwE>yՌ_ P�uu�m\u0017n�������o;ȅ,�Ղa؊� �J\u0018s�]� !?v�\u0016t_#��`�b�ׄ���\u0014D��K�\u0000_���*����X�ա � /�P@>�{��$ʵ\u001a�޾u�9�B\u0017�e\u0010N�$uZ�ڞ���\u000fV�b�6>�� \u001b�XV%���\b�6\u0001���}�\u0016\u0002� �m���%�B �.��0Q����uC�\u0006���d���n\u000f���}�\u0016��\u000f��m\u0000�WEp�k��0�8��w\u000e X0�*\u0005c��\u0014���҂<�[\u0000~�NN ������ ��W��\b�{�s(�ƪ�@�[�\u001a\u0019VM� Ɵ@9 \u0000/�\byn �}�� n���y����~yմn�9)�ô �L�x �cw3��+�_uu\u000fP\u0018%��\u0011xYҭ;0u�6��� Ҿ�\u000e(����\u000f�A7�\u0006=�ta�a�u���n]�`M bE�I����>}�sUv�� � @:�X=*����\u0002�\u0001t��B\u0012��bE5���\u0016R�U����M�"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://www.portvancouver.com/",
+          "status": 403,
+          "size": 3208,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "e2ffd0b8af180b7f",
+          "snippet": "\u0013\u0018\u0017\u0000d����~yN�{G)�%:ս\b��$\u0001E6p�rI�$�>��c��n9��o�\u0010�����GL�x�DD,�u�j�#\u0012�T��Lh��x���_\u001b\u0011q�$�W\u0015! я�6�6���k\u0001��e,~�����6i3���5-�!��j�(�EL��J\u001as�m��\u0011\u0010{u\u0003�/ �22R��KBQ�\u0012�\bF t���k��REy�� ��\\ꁣ�F \u0019����|\u0015Q��=z�� �2��/r�H8���qm�=�D�/V�b��\u0000��\u000f��\u0017e\u0001���#�O\u0000 �t\u0000׉�U��H\u0019�sg\u0015c\u001a���H\u0014u��h�\u0010�a�e!�ⶭ���Gu߫AAVvA�y5DA�'\u0017��ڶNS�Ӫ�2xc�`�\u0014 �V�G��J\u0003��o\u0006�b���\u0000\u000f�2� 3 ~V��=b�>��\u001a��\u0005��b�Ȱ��\u0019B�aG�����5p�� ��� x�)�?��_��&��\"�m� ��Ո�\u000e�O7\u0003���<��W�\u0000Gqz� ��J�u �v�$3\\{A�5�\u000eǰ����H��I|�Ӆ'���]�Z{U��5p��!K���\u0001��� ˢ]- \u0018�\u0010����V�e[�\u0016g���M��(���\u0015["
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://www.portvancouver.com/",
+          "status": 403,
+          "size": 3269,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "13dd856b3e622047",
+          "snippet": "\u0013m\u0017\u0000d�����~�np��Ҁ`��y\b�(A\u0004Ey�S@\u0011�P�9��~m���p5��I?D����%���'m\"\u001am:D��\u0010�x�DJ̤�������'n��TE H��o��t򪹿&0���ɷ]�9�E\u0011J����\u0011\u00060�{Mp �\"���\u0012�<!�� 憠�!�\u001aA^\u0006#\u0015���\u0016�/� ��^� �_��Tɋ������P\u000f�\u0017j( ���W\u0012\u0015��G?�y�\u0014~���2\b�<I��Qۋ\u000e��`�i�u�b�����\"��xwXm\u0013\u0000;/߅s� ��S\u0013\u0002� ��1���5\u0013e ��k��9lA�'D��������\u001awӢ��\u0014T\u0010w�,��9@� S��AC X0�*\u0005ck\u0012e���R���[\u0000~�Na ���,��\\��\u0016�v��{_x(I��J`�[�\u001a�\u0017U6 Ɵ@ٶ���� P�ySE\"�\u001b+�q�\u0014~��/���u4Fy���A ��\u0011�-��nz� �,�UW���If7Dh�`��u4�9��F[� �j�{Z� rA�j���0Ҽ�fsP�)�\u0013����(Od��O��P�h6�aP@�.Nf��)P1��`�B\u0014�\u0000S`\u0003'3��@:�(\u0005*0"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://www.portvancouver.com/",
+          "status": 200,
+          "size": 54032,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "a3ffb0f88922a99a",
+          "snippet": "���\u0010EU��\"�j=\\\u0014R�z\u00004R\u0016��_\u0004�M|��|�����It.��F�M����.I�,Y�-K^�35�\u0005\u0012�$� @\u0001`/zk~�\u0017M������\u001a����~�f>I��݇�tﳬ�O�63�q�� �\u0012dH�����^.�� �\u00013\u000f\u0011~\u0003d\u00182��U7x�#�j�P# �H\u000e=Z��Y� i��(l:�\u000f9j��{\u0003\u00189j e\u001625_�cf��\u0004h�)rӜ\u0001`� \\�{KCv\u0004�SJ�M\u000f�$DT�0���K2�\u00024,\u0004_�g�v�{����Z�\u0003�� Z��\u0007�Ȁ\u0018\u0005:�3�� E���=����\\�(\b\u0002�C��ݟÕ��c�m��XI��\u001a�� H�^Q�)�\u001b�\u0005�e��,��d�����;�\u0019S�\u0013�]ƴ�_�~U\u0004d�\u0000I�+\u0013\u0004�\\�\u0016� �٫�X\u0006�\u0003��[\u0004FK��/\u0003ӽ���ѽ��M7�\u0003͵�)X�\u0000�B�*\u0000�b A�/ݑ_\u0006�o� `��-܋�/]=��-�;\u0016��X ˗��M�����~�����׻����8���_=��\u0010���\u0019>5��=�-i�j���\u0007��o^��r ������o��ǳ����'ɽ<\u0016j���|.�� �"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "referer_self",
+      "response_size": 54032,
+      "saved_file": "vancouver_homepage.html"
+    },
+    {
+      "url": "https://ehub.portvancouver.com/GPSDashboard",
+      "label": "gps_dashboard",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://ehub.portvancouver.com/GPSDashboard",
+          "status": 200,
+          "size": 41177,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "597a367a3170a31f",
+          "snippet": "<!DOCTYPE html> <html lang=\"en\"> <head> <meta charset=\"utf-8\" /> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\" /> <base href=\"/GPSDashboard/\" /> <script src=\"_content/Telerik.UI.for.Blazor/js/telerik-blazor.js\" defer></script> <link rel=\"stylesheet\" href=\"css/bootstrap/bootstrap.min.css\" /> <link rel=\"stylesheet\" href=\"_content/Telerik.UI.for.Blazor/css/kendo-theme-default/all.css\" /> <link rel=\"stylesheet\" href=\"css/three-dots.m"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 41177,
+      "saved_file": "vancouver_gps_dashboard.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
