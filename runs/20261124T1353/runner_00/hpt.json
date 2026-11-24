@@ -1,0 +1,55 @@
+{
+  "port": "hpt",
+  "name": "林查班 HPT (Hutchison)",
+  "protection": "Cloudflare",
+  "timestamp": "2026-11-24T13:59:28.622062+00:00",
+  "urls": [
+    {
+      "url": "https://hutchisonports.co.th/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://hutchisonports.co.th/",
+          "status": 200,
+          "size": 27539,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "56f725942002c375",
+          "snippet": "#0�03`M��ʈ��z\u0000Tgb�\u001b��ן\u0019\u0018�\u0003bَ���3S��4���U�|�.@\u0002 ����.q�l���\u0019�\u0003\u0011�$b�@\u0001Т������ׯQ�^M=����]���z%�\u0013�O\u000e�8x\u0000�\u0015��4��������-����7#J\u0000H��d�\"Ӗ��E��\u0007\u0000A\u0011 Ep\u0001P���+��}��5��*���i_q9�૶L�! �v�t-{עj[�MT�@��2\u0005� P��>'��O\u0010u:A<ُ���}ժ��L�v}�L�Ѧ����\u0018g��f'���\u0017���\u0000 \u0018� �Y�d\u0000R @��)�w�� D���\u001a��j�U�Ԏ�T�,�\u0006$\u0015PUuΪ�k�MrI�2�{�Ib��Da�z��X�� N\u0010���} �޿�\b�q�1 b��uS\u00045\u0013���䰚� JDڢL��cL|�������ș g���@!hR���﫳����ޛ�*\u001aBD\u0010�cl��o�\u0017�H �\u0012�C�B@�~�����\u001b���I���J���{��������\u0005\u000e�_�.�R���\u0003h�.�\u0001M\u0017�\u000eh��m#�7N��\u0017�?>$O�_}A)aY��\u001b� � �1��M�Ⱥ�>`<,B�2��v1:"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 27539,
+      "saved_file": "hpt_homepage.html"
+    },
+    {
+      "url": "https://online.hutchisonports.co.th",
+      "label": "online_service",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 200,
+          "size": 32310,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "138a1c826c2a9696",
+          "snippet": "<!DOCTYPE html> <html class=\"no-js page-13 app-HPT-SUPER-APP114\" lang=\"en\" > <head> <meta http-equiv=\"x-ua-compatible\" content=\"IE=edge\" /> <meta charset=\"utf-8\"> <title>HPT Digital Platform</title> <base href=\"/hptpcs/\" /> <link rel=\"stylesheet\" href=\"/i/app_ui/css/Core.min.css?v=24.2.15\" type=\"text/css\" /> <link rel=\"stylesheet\" href=\"/i/app_ui/css/Theme-Standard.min.css?v=24.2.15\" type=\"text/css\" /> <link rel=\"stylesheet\" href=\"/i/libraries/font-apex/2.4/css/font-apex.min.css?v=24"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 32310,
+      "saved_file": "hpt_online_service.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
