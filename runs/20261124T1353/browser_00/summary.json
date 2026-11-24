@@ -1,0 +1,16 @@
+{
+  "runner_id": 0,
+  "ip": "104.28.200.112",
+  "timestamp": "2026-11-24T13:57:45.912580+00:00",
+  "method": "patchright_v3_turnstile",
+  "results": {
+    "felixstowe": {
+      "success": false,
+      "urls": 2
+    },
+    "longbeach": {
+      "success": true,
+      "urls": 2
+    }
+  }
+}
