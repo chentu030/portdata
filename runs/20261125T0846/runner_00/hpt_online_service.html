@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html class="no-js  page-13 app-HPT-SUPER-APP114" lang="en" >
+<head>
+  <meta http-equiv="x-ua-compatible" content="IE=edge" />
+  <meta charset="utf-8">
+  <title>HPT Digital Platform</title>
+  <base href="/hptpcs/" />
+<link rel="stylesheet" href="/i/app_ui/css/Core.min.css?v=24.2.15" type="text/css" />
+<link rel="stylesheet" href="/i/app_ui/css/Theme-Standard.min.css?v=24.2.15" type="text/css" />
+
+  <link rel="stylesheet" href="/i/libraries/font-apex/2.4/css/font-apex.min.css?v=24.2.15" type="text/css" />
+<link rel="stylesheet" href="/i/themes/theme_42/23.2/css/Core.min.css?v=24.2.15" type="text/css" />
+
+  
+  <link rel="stylesheet" href="r/hpt_ws/114/files/theme/42/v67/41249541109472586.css" type="text/css" />
+
+  <link rel="stylesheet" href="r/hpt_ws/114/files/static/v127/app-icon.css?version=Version%202024.1" type="text/css" />
+<link rel="stylesheet" href="r/hpt_ws/files/static/v39/hptdp_template.min.css" type="text/css" />
+<link rel="stylesheet" href="r/hpt_ws/files/static/v39/hpt_font.min.css" type="text/css" />
+
+  <style nonce="CiGoAFuGM2221OPACQwNww" >
+body,
+.a-TreeView-label {
+    font-size: 12pt !important;
+    font-weight: 500 !important;
+}
+
+.a-TreeView-row {
+    box-shadow: none !important;
+}
+
+#BANNER {
+    background: none;
+}
+
+#MENU_LIST {
+    padding: 2%;
+}
+
+.welcome {
+    color: #009BDE;
+    padding-left: 6pt;
+    margin-top: 8pt;
+    font-size: 16pt;
+}
+
+.helptext_align {
+    text-align: right;
+}
+
+.help_text {
+    background-color: #FFC627;
+    border: 0.01rem solid #FFC627;
+    padding: 20%;
+    border-radius: 3pt;
+    font-weight: 500;
+}
+
+.help {
+    text-align: right;
+    padding-right: 20pt;
+}
+
+.name {
+    padding-left: 2%;
+    font-size: 12pt;
+    color: gray;
+    font-weight: 600;
+}
+
+.code {
+    max-width: 125%;
+    box-shadow: #ECECEC 1px 2px 2px;
+    border: 0.01rem solid #ECECEC;
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   CAROUSEL
+   ======================================== */
+
+.carousel {
+    display: flex;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    gap: 16px;
+
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+
+    /* ซ่อน Scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    /* Mobile */
+    -webkit-overflow-scrolling: touch;
+
+    /* ป้องกันการเลือกข้อความ */
+    user-select: none;
+    -webkit-user-select: none;
+
+    /* Cursor */
+    cursor: grab;
+
+    /* ให้เลื่อนแนวตั้งของหน้าเว็บได้ตามปกติ */
+    touch-action: pan-y;
+}
+
+
+/* ซ่อน Scrollbar Chrome / Edge / Safari */
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ========================================
+   CAROUSEL GRID
+   ======================================== */
+
+.grid {
+    min-width: 100%;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    gap: 5px;
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    scroll-snap-align: start;
+}
+
+
+.grid li {
+    aspect-ratio: 1;
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   CAROUSEL PAGE
+   ======================================== */
+
+.carousel > .grid {
+    flex: 0 0 100%;
+
+    width: 100%;
+    min-width: 100%;
+
+    box-sizing: border-box;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(3, auto);
+
+    gap: 5px;
+
+    list-style: none;
+
+    padding: 0;
+    margin: 0;
+
+    scroll-snap-align: start;
+}
+
+
+/* ========================================
+   CAROUSEL ITEM
+   ======================================== */
+
+.carousel > .grid > li {
+    min-width: 0;
+
+    text-align: center;
+
+    border-radius: 10px;
+}
+
+
+/* ========================================
+   IMAGE / LINK
+   ======================================== */
+
+.carousel img,
+.carousel a {
+    -webkit-user-drag: none;
+
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* Link แสดงเป็นรูปมือเมื่อยังไม่ได้ลาก */
+.carousel a {
+    cursor: pointer;
+}
+
+
+/* ========================================
+   ตอนกำลังลาก
+   ======================================== */
+
+.carousel.dragging {
+    cursor: grabbing;
+
+    /* ปิด Smooth Scroll ระหว่างลาก */
+    scroll-behavior: auto;
+
+    /* ป้องกัน Scroll Snap มาขัดกับการลาก */
+    scroll-snap-type: none;
+}
+
+
+/* ทุก element ข้างในเปลี่ยน Cursor ตอนลาก */
+.carousel.dragging * {
+    cursor: grabbing !important;
+}
+
+
+/* ========================================
+   DOTS
+   ======================================== */
+
+.dots {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 2px;
+
+    margin-top: 10px;
+}
+
+
+.dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: #ccc;
+}
+
+
+.dot.active {
+    background: #333;
+}
+
+
+/* ========================================
+   MENU
+   ======================================== */
+
+li.menu {
+    text-align: center !important;
+    display: contents;
+}
+
+
+/* ========================================
+   IMAGE
+   ======================================== */
+
+.apex-item-image {
+    height: auto;
+    max-width: 75%;
+}
+
+
+/* ========================================
+   LABEL
+   ======================================== */
+
+.label {
+    font-size: 12pt;
+    color: #002E6D;
+}
+
+
+/* ========================================
+   DISPLAY ONLY
+   ======================================== */
+
+.t-Form-fieldContainer--floatingLabel
+.t-Form-inputContainer
+.apex-item-display-only {
+    color: #202020;
+
+    background-color: unset;
+    border-color: unset;
+    border-style: unset;
+}
+
+
+/* ========================================
+   DISPLAY ITEMS
+   ======================================== */
+
+#P9996_CONTAINER_DISPLAY,
+#P9996_BOOKINGBL_DISPLAY,
+#P9996_VESSEL_DISPLAY,
+#P9996_COST_DISPLAY,
+#P9996_EBILL_DISPLAY,
+#P9996_ETAX_DISPLAY,
+#P9996_EGATE_PASS_DISPLAY {
+    margin-left: 10%;
+}
+
+
+/* ========================================
+   BODY CONTENT
+   ======================================== */
+
+.t-Body-contentInner,
+.t-Body-mainContent {
+    padding: 0px 0px;
+}
+
+
+.t-Body-mainContent {
+    background: none;
+}
+
+
+/* ========================================
+   CARD VIEW
+   ======================================== */
+
+.a-CardView {
+    text-align: center;
+
+    box-align: center;
+    align-content: center;
+
+    border: none;
+}
+
+
+.a-CardView-media {
+    width: 50%;
+
+    border: none;
+
+    text-align: center;
+
+    box-align: center;
+    align-content: center;
+}
+
+
+.a-CardView.has-title.has-media.has-media--first.has-media--square.has-media--cover.has-actions {
+    align-items: center;
+
+    color: #002E6D;
+}
+
+
+.a-CardView-header {
+    border-bottom: none !important;
+}
+
+
+/* ========================================
+   MOBILE
+   ======================================== */
+
+@media only screen and (max-device-width: 480px) {
+
+    .a-CardView-items {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+</style>
+
+  <link rel="icon" href="r/hpt_ws/114/files/static/v127/icons/app-icon-32.png" /><link rel="apple-touch-icon" href="r/hpt_ws/114/files/static/v127/icons/app-icon-192.png" />
+  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Pragma" content="no-cache" /><meta http-equiv="Expires" content="-1" /><meta http-equiv="Cache-Control" content="no-cache" /><meta name="theme-color" content="&#x23;000000" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-title" content="HPT&#x20;SUPER&#x20;APP" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<link rel="manifest" href="&#x2F;hptpcs&#x2F;r&#x2F;hpt_ws&#x2F;hpt-super-app114&#x2F;manifest.json&#x3F;v&#x3D;24.2.15-249999391742&#x26;lang&#x3D;en" crossorigin="use-credentials" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body class="t-PageBody t-PageBody--hideLeft t-PageBody--hideActions no-anim t-PageTemplate--standard   apex-side-nav apex-icons-fontapex apex-theme-hpt-theme"   id="t_PageBody">
+<a href="#main" id="t_Body_skipToContent">Skip to Main Content</a>
+<form role="none" action="wwv_flow.accept?p_context=hpt-super-app114/13/112423319221288" method="post" name="wwv_flow" id="wwvFlowForm" data-oj-binding-provider="none" novalidate  autocomplete="off">
+<input type="hidden" name="p_flow_id" value="114" id="pFlowId" /><input type="hidden" name="p_flow_step_id" value="13" id="pFlowStepId" /><input type="hidden" name="p_instance" value="112423319221288" id="pInstance" /><input type="hidden" name="p_page_submission_id" value="MTgyMDUzMzE1MjM4MzU3ODg2NDg0MjY3ODgyMzc4OTEyMzA0ODA1&#x2F;ostJyZX3mfgrIqtJuaguMi1prkwMFcuI8-xr9YQdqWQ-9VYGDDM3hxaxkXvnUWAtSlGNqksasCSxDwacDmJayQ" id="pPageSubmissionId" /><input type="hidden" name="p_request" value="" id="pRequest" /><input type="hidden" name="p_reload_on_submit" value="S" id="pReloadOnSubmit" /><input type="hidden" value="hpt-super-app114&#x2F;13&#x2F;112423319221288" id="pContext" /><input type="hidden" value="182053315238357886484267882378912304805" id="pSalt" />
+<header class="t-Header" id="t_Header" role="banner">
+  
+  <div class="t-Header-branding">
+    <div class="t-Header-controls">
+      <button class="t-Button t-Button--icon t-Button--header t-Button--headerTree" aria-label="Main Navigation" title="Main Navigation" id="t_Button_navControl" type="button"><span class="t-Header-controlsIcon" aria-hidden="true"></span></button>
+    </div>
+    <div class="t-Header-logo">
+      <a href="&#x2F;hptpcs&#x2F;r&#x2F;hpt_ws&#x2F;hpt-super-app114&#x2F;13" class="t-Header-logo-link"><img src="r&#x2F;hpt_ws&#x2F;files&#x2F;static&#x2F;v39&#x2F;mini_hpt_logo.jpg" alt="" class="apex-logo-img" /><span class="apex-logo-text">HPT SUPER APP</span></a>
+      
+    </div>
+    <div class="t-Header-navBar">
+      <div class="t-Header-navBar--start"></div>
+      <div class="t-Header-navBar--center"><ul class="t-NavigationBar " id="18420890266802808"><li class="t-NavigationBar-item a-pwaInstall">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="#action$a-pwa-install" title="" target="">
+    <span class="t-Icon fa&#x20;fa-cloud-download" aria-hidden="true" ></span><span class="t-Button-label"> ติดตั้ง</span><span class="t-Button-badge"></span>
+  </a>
+</li><li class="t-NavigationBar-item style="font-size: 20px;"">
+  <a class="t-Button t-Button--icon t-Button--header t-Button--navBar" href="/hptpcs/r/hpt_ws/hpt-super-app114/super-app-login-page" title="" target="">
+    <span class="t-Icon fa&#x20;fa-sign-in" aria-hidden="true" ></span><span class="t-Button-label"> เข้าสู่ระบบ</span><span class="t-Button-badge"></span>
+  </a>
+</li></ul></div>
+      <div class="t-Header-navBar--end"></div>
+    </div>
+  </div>
+  <div class="t-Header-nav"></div>
+</header>
+<div class="t-Body">
+  <div class="t-Body-nav" id="t_Body_nav" role="navigation" aria-label="Application">
+  <div class="a-TreeView t-TreeNav js-defaultCollapsed js-defaultCollapsed js-navCollapsed--hidden t-TreeNav--styleA" id="t_TreeNav" data-id="13_tree" aria-label="Main Navigation">
+    <ul>
+<li data-current="true" data-id="" data-disabled="" data-icon="fa&#x20;fa-ship" data-shortcut="">
+  <a href="" title="" style="display: none" target="">Etracking</a>
+  <div class="a-TreeView-node a-TreeView-node--topLevel" aria-hidden="true">
+    <div role="none" class="a-TreeView-row"></div>
+    <div role="none" class="a-TreeView-content">
+      <span class="fa fa-file-o fa&#x20;fa-ship"></span>
+      <span class="a-TreeView-label">Etracking</span>
+    </div>
+  </div>
+<ul style="display:none"><li data-current="true" data-id="" data-disabled="" data-icon="fa&#x20;fa-truck" data-shortcut=""><a href="/hptpcs/r/hpt_ws/hpt-super-app114/container-inquiry" title="" target="">Container Inquiry</a></li><li data-current="true" data-id="" data-disabled="" data-icon="fa&#x20;fa-list-alt" data-shortcut=""><a href="/hptpcs/r/hpt_ws/hpt-super-app114/booking-and-b-l" title="" target="">Booking and B&#x2F;L</a></li><li data-current="true" data-id="" data-disabled="" data-icon="fa&#x20;fa-calculator" data-shortcut=""><a href="/hptpcs/r/hpt_ws/hpt-super-app114/cost-estimate-by-b-l" title="" target="">Cost Estimation by B&#x2F;L</a></li><li data-current="true" data-id="" data-disabled="" data-icon="fa&#x20;fa-ship" data-shortcut=""><a href="/hptpcs/r/hpt_ws/hpt-super-app114/vessel-schedule" title="" target="">Vessel Schedule</a></li></ul></li>    </ul>
+  </div>
+</div>
+<script>
+(() => {
+  const pref = "ORA_WWV_apex.toggleCore.nav.114.preferenceForExpanded",
+        nav  = document.getElementById('t_TreeNav').classList,
+        body = document.getElementById('t_PageBody');
+  if ( !sessionStorage.getItem( pref ) ) { sessionStorage.setItem( pref, !nav.contains('js-defaultCollapsed') ); }
+  if ( nav.contains('js-navCollapsed--default') ) {
+      body?.classList.add('js-navCollapsed--icons');
+      if ( sessionStorage.getItem( pref ) === "false" ) { body?.classList.add('js-navCollapsed'); }
+  }
+  if ( sessionStorage.getItem( pref ) === "true" && window.matchMedia("(min-width: " + getComputedStyle(document.documentElement).getPropertyValue("--js-mq-lg") + ")").matches) { body?.classList.add('js-navExpanded'); }
+  for (const label of document.querySelectorAll(".a-TreeView .a-TreeView-label")) {
+      label.textContent = label.textContent.replaceAll(/\[(.*?)\]/ig, '');
+  }
+})();
+</script>
+  <div class="t-Body-main">
+    <div class="t-Body-title" id="t_Body_title"></div>
+    <div class="t-Body-content" id="t_Body_content">
+      <main id="main" class="t-Body-mainContent">
+        <span id="APEX_SUCCESS_MESSAGE" data-template-id="18311233477803102_S" class="apex-page-success u-hidden"></span><span id="APEX_ERROR_MESSAGE" data-template-id="18311233477803102_E" class="apex-page-error u-hidden"></span>
+        <div class="t-Body-fullContent"></div>
+        <div class="t-Body-contentInner"><div class="container">
+<div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><div class="t-Region t-Region--noPadding t-Region--removeHeader js-removeLandmark t-Region--noBorder t-Region--scrollBody margin-top-sm margin-bottom-none margin-left-sm margin-right-sm" id="BANNER"  role="region" aria-label="Banner" >
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+    <h2 class="t-Region-title" id="BANNER_heading" data-apex-heading>Banner</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <div class="t-Region-orderBy"></div>
+     <a-dynamic-content region-id="BANNER" ajax-identifier="UkVHSU9OIFRZUEV-fjEwMDUxOTUyNzA0Mjc5NTc5MA&#x2F;mPNxQmmS3bI-zPypHg_WOZA6UCS3a_5l7-Fkbl5qRJptNX0tdD_7Y-i081WmXzil5l4w8rQqMRkW6dSffyupcA" >
+</a-dynamic-content>
+
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+</div>
+</div><div class="row ">
+<div class="col col-12 apex-col-auto col-start col-end" ><div class="t-Region t-Region--noPadding t-Region--removeHeader js-removeLandmark t-Region--noBorder t-Region--scrollBody margin-top-none margin-left-sm margin-right-sm" id="MENU_LIST"  role="region" aria-label="Menu&#x20;List" >
+ <div class="t-Region-header">
+  <div class="t-Region-headerItems t-Region-headerItems--title">
+    <span class="t-Region-headerIcon"><span class="t-Icon " aria-hidden="true"></span></span>
+    <h2 class="t-Region-title" id="MENU_LIST_heading" data-apex-heading>Menu List</h2>
+  </div>
+  <div class="t-Region-headerItems t-Region-headerItems--buttons"><span class="js-maximizeButtonContainer"></span></div>
+ </div>
+ <div class="t-Region-bodyWrap">
+   <div class="t-Region-buttons t-Region-buttons--top">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+   <div class="t-Region-body">
+     <div class="t-Region-orderBy"></div>
+     <a-dynamic-content region-id="MENU_LIST" ajax-identifier="UkVHSU9OIFRZUEV-fjEwMDUxOTU1NjA5NDc5NTc5MQ&#x2F;wq--10YrwY2fhyXJbXuQjqMi7xAhIfHSPQYcpcbEW7s2xWwkh628Q2adr1-UYqrE5nYhKgEZb8dWQVdubEd-JA" >
+<div class="carousel">
+<ul class="grid ">
+<li class="menu"><a href="f?p=114:16:112423319221288::"><img class="display_image apex-item-image" src="r/hpt_ws/114/files/static/v456/Icon_DP_Cost.png" alt=" " title=" " loading="lazy"><br><div class="label">Cost Estimation by B/L</div></a></li>
+<li class="menu"><a href="f?p=114:18:112423319221288::"><img class="display_image apex-item-image" src="r/hpt_ws/114/files/static/v456/Icon_DP_Booking.png" alt=" " title=" " loading="lazy"><br><div class="label">Booking and B/L</div></a></li>
+<li class="menu"><a href="f?p=114:17:112423319221288::"><img class="display_image apex-item-image" src="r/hpt_ws/114/files/static/v456/Icon_DP_Vessel.png" alt=" " title=" " loading="lazy"><br><div class="label">Vessel Schedule</div></a></li>
+<li class="menu"><a href="f?p=114:14:112423319221288::"><img class="display_image apex-item-image" src="r/hpt_ws/114/files/static/v456/Icon_DP_Container.png" alt=" " title=" " loading="lazy"><br><div class="label">Container Inquiry</div></a></li>
+</ul>
+</div>
+<div class="dots"></div>
+</a-dynamic-content>
+
+     
+   </div>
+   <div class="t-Region-buttons t-Region-buttons--bottom">
+    <div class="t-Region-buttons-left"></div>
+    <div class="t-Region-buttons-right"></div>
+   </div>
+ </div>
+</div>
+</div>
+</div>
+</div></div>
+      </main>
+      <footer class="t-Footer" id="t_Footer" role="contentinfo">
+        <div class="t-Footer-body">
+          <div class="t-Footer-content"></div>
+          <div class="t-Footer-apex">
+            <div class="t-Footer-version">Version 2024.1</div>
+            <div class="t-Footer-customize"></div>
+            
+          </div>
+        </div>
+        <div class="t-Footer-top">
+          <a href="#top" class="t-Footer-topButton" id="t_Footer_topButton" title="Start of page" aria-label="Start of page"><span class="a-Icon icon-up-chevron" aria-hidden="true"></span></a>
+        </div>
+      </footer>
+    </div>
+  </div>
+</div>
+<div class="t-Body-inlineDialogs" id="t_Body_inlineDialogs"></div><input type="hidden" id="pPageFormRegionChecksums" value="&#x5B;&#x5D;">
+<input type="hidden" id="pPageItemsRowVersion" value="" /><input type="hidden" id="pPageItemsProtected" value="&#x2F;1CD9BCXCrFmOfpba_F-W-L2Rm7Ztmi4Gh8Fly8xaKLAdO58HiEM3Y6RD-T3KDas-e7fuAF9prAq61mmhP3Jl0w" /></form>
+
+
+<script nonce="CiGoAFuGM2221OPACQwNww">
+var apex_img_dir = "\u002Fi\u002F";
+var apex = {env: {APP_USER: "nobody",APP_ID: "114",APP_PAGE_ID: "13",APP_SESSION: "112423319221288",APP_FILES: "r\u002Fhpt_ws\u002F114\u002Ffiles\u002Fstatic\u002Fv127\u002F",WORKSPACE_FILES: "r\u002Fhpt_ws\u002Ffiles\u002Fstatic\u002Fv39\u002F",APEX_VERSION: "24.2.15",APEX_BASE_VERSION: "24.2",COMPATIBILITY_MODE: 21.2,NONCE: "CiGoAFuGM2221OPACQwNww"},
+libVersions:{cropperJs:"1.6.2",domPurify:"3.3.2",fontapex:"2.4",fullcalendar:"6.1.15",hammer:"2.0.8",jquery:"3.6.4",jqueryUi:"1.13.2",maplibre:"4.6.0",mapboxGlRtlText:"0.3.0",markedJs:"14.1.2",prismJs:"1.30.0",oraclejet:"17.0.10",turndown:"7.2.2",monacoEditor:"0.51.0",lessJs:"4.2.0"}};
+</script>
+<script nonce="CiGoAFuGM2221OPACQwNww" src="/i/libraries/apex/minified/desktop_all.min.js?v=24.2.15"></script>
+<script nonce="CiGoAFuGM2221OPACQwNww" src="wwv_flow.js_messages?p_app_id=114&p_lang=en&p_version=24.2.15-249999391742&p_nls_settings=eyJudW1lcmljQ2hhcmFjdGVycyI6Ii4sIiwiY3VycmVuY3kiOiIkIiwiaXNvQ3VycmVuY3kiOiJBTUVSSUNBIiwiZHVhbEN1cnJlbmN5IjoiJCJ9"></script>
+<script nonce="CiGoAFuGM2221OPACQwNww" src="wwv_flow.js_dialogs?p_app_id=114&p_version=24.2.15-249999391742"></script>
+
+<script nonce="CiGoAFuGM2221OPACQwNww">
+apex.da.initDaEventList = function(){
+apex.da.gEventList = [
+{"executionType":"IMMEDIATE","bindEventType":"ready","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ /*var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+if (isMobile) {
+    $( ".t-Header-branding" ).remove();
+    $( ".t-Footer" ).remove();
+} */
+},"action":"NATIVE_JAVASCRIPT_CODE"}]},
+{"bindEventType":"ready","anyActionsFireOnInit":false,actionList:[{"eventResult":true,"executeOnPageInit":false,"stopExecutionOnError":true,javascriptFunction:function (){ function getDeviceId() { 
+    let deviceId = localStorage.getItem("HPT_DEVICE_ID"); 
+    if (!deviceId) { 
+        deviceId = crypto.randomUUID(); 
+        localStorage.setItem("HPT_DEVICE_ID", deviceId); 
+    } 
+    return deviceId; 
+} 
+function getDeviceType() { 
+    const ua = navigator.userAgent.toLowerCase(); 
+    if ( /ipad|tablet|playbook|silk/.test(ua) || (ua.includes("android") && !ua.includes("mobile")) ) { 
+        return "TABLET"; 
+    } 
+    if ( /iphone|ipod|android.*mobile|windows phone/.test(ua) ) { 
+        return "MOBILE"; 
+    } 
+     return "DESKTOP"; 
+} 
+ 
+function getBrowser() { 
+     const ua = navigator.userAgent; 
+     if (/Edg\//i.test(ua)) { 
+        return "EDGE"; 
+    } 
+     if (/OPR\//i.test(ua)) { 
+        return "OPERA"; 
+    } 
+     if (/Firefox\//i.test(ua)) { 
+        return "FIREFOX"; 
+    } 
+    if (/Chrome\//i.test(ua) && !/Edg\//i.test(ua)) { 
+        return "CHROME"; 
+    } 
+    if (/Safari\//i.test(ua) && !/Chrome\//i.test(ua)) { 
+        return "SAFARI"; 
+    } 
+    return "OTHER"; 
+} 
+ 
+function getAccessMode() { 
+    if ( window.matchMedia("(display-mode: standalone)").matches ) { 
+        return "PWA"; 
+    } 
+    if (window.navigator.standalone === true) { 
+        return "PWA"; 
+    } 
+    return "BROWSER"; 
+} 
+
+const deviceId = getDeviceId(); 
+const deviceType = getDeviceType(); 
+const browser = getBrowser(); 
+const accessMode = getAccessMode(); 
+
+apex.server.process( "REGISTER_DEVICE", { x01: deviceId, x02: deviceType, x03: navigator.userAgent, x04: browser, x05: accessMode }, 
+    { 
+        success: function () { 
+            console.log("REGISTER DEVICE SUCCESS"); 
+        }, 
+        error: function (xhr, status, error) { 
+            console.error( 
+                "REGISTER DEVICE ERROR:", 
+                error 
+            ); 
+        }}); 
+function savePWAInstalled() {
+    var installKey = "HPT_PWA_INSTALL_SAVED_" + deviceId;
+    if (localStorage.getItem(installKey) === "Y") {
+        return;
+    }
+    if (window.pwaInstallSaved) {
+        return;
+    }
+    var isStandalone = window.navigator.standalone === true ||window.matchMedia("(display-mode: standalone)").matches;
+    if (!isStandalone) {
+        return;
+    }
+    window.pwaInstallSaved = true;
+    apex.server.process("PWA_INSTALL",{ x01: deviceId },
+        {
+            dataType: "text",
+            success: function (data) {
+                var result = data;
+                if (typeof data === "string") {
+                    try {
+                        result = JSON.parse(data.trim());
+                    } catch (e) {
+                        result = data.trim();}}
+                var success =result === "SUCCESS" ||
+                    (
+                        result !== null &&
+                        typeof result === "object" &&
+                        result.success === true
+                    );
+                if (success) {
+                    localStorage.setItem(installKey, "Y");
+                } else {
+                    window.pwaInstallSaved = false;
+                }
+            },
+            error: function (xhr, status, error) {
+                window.pwaInstallSaved = false;
+                console.error("PWA INSTALL ERROR:", error);
+            }});}
+function checkIOSInstalled() {
+    savePWAInstalled();
+}
+window.addEventListener("appinstalled", savePWAInstalled);
+window.addEventListener("pageshow", checkIOSInstalled);
+document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) {
+        checkIOSInstalled();
+    }});
+checkIOSInstalled();
+
+},"action":"NATIVE_JAVASCRIPT_CODE"}]}];
+}
+</script>
+
+<script nonce="CiGoAFuGM2221OPACQwNww" src="/i/libraries/apex/minified/widget.stickyWidget.min.js?v=24.2.15"></script>
+<script nonce="CiGoAFuGM2221OPACQwNww" src="/i/themes/theme_42/23.2/js/theme42.min.js?v=24.2.15"></script>
+
+
+
+<script nonce="CiGoAFuGM2221OPACQwNww">
+// 1. Collapsed navigation menu by default
+$(window).on("theme42ready", function(){
+    if ($("body").hasClass("js-navExpanded")){
+        $("#t_Button_navControl").click();
+    }
+});
+
+// 2. Auto Close Navigation Menu
+const x = document.getElementsByClassName("apex-logo-text");
+for (let i = 0; i < x.length; i++) {
+    x[i].innerText= "HPT Super App";
+}
+//3.จำนวนรายการที่จะแสดงในแต่ละหน้าของ Carousel
+function getPerPage() {
+    const width = window.innerWidth;
+    if (width <= 480) {
+        return 9;      
+    }
+    return 12;         
+}
+//4.initCarousel()
+function initCarousel(){
+    const carousel = document.querySelector(".carousel");
+    if (!carousel) {
+        return;
+    }
+    const originalGrid = carousel.querySelector(".grid");
+    if (!originalGrid) {
+        return;
+    }
+    const items = Array.from(originalGrid.children);
+    const perPage = getPerPage();
+    carousel.innerHTML = "";
+    const pages = [];
+  for(let i=0;i<items.length;i+=perPage){
+    const page=document.createElement("ul");
+    page.className="grid";
+    items.slice(i, i + perPage).forEach(function (item) {
+      page.appendChild(item);
+    });
+    carousel.appendChild(page);
+    pages.push(page);
+  }
+  createDots(pages.length);
+  trackScroll();
+  enableDragScroll();
+}
+//5.จุด Dot ด้านล่าง Carousel
+function createDots(total){
+  const dotsContainer=document.querySelector(".dots");
+      if (!dotsContainer) {
+        return;
+    }
+  dotsContainer.innerHTML="";
+  for(let i=0;i<total;i++){
+    const dot=document.createElement("div");
+    dot.className="dot";
+    if(i===0){
+      dot.classList.add("active");
+    }
+    dotsContainer.appendChild(dot);
+  }
+}
+//6.ค้นหาแต่ละหน้าของ Carousel
+function getCarouselPages() {
+    const carousel = document.querySelector(".carousel");
+    if (!carousel) {
+        return [];
+    }
+    return Array.from(carousel.querySelectorAll(":scope > .grid"));
+}
+//7.หาตำแหน่งของหน้าที่ต้องการ
+function getPagePosition(carousel, page) {
+    return page.offsetLeft - carousel.offsetLeft;
+}
+//8.ตรวจสอบว่าตอนนี้ Carousel อยู่ใกล้หน้าไหนที่สุด
+function getNearestPageIndex() {
+    const carousel = document.querySelector(".carousel");
+    if (!carousel) {
+        return 0;
+    }
+    const pages = getCarouselPages();
+    if (!pages.length) {
+        return 0;
+    }
+    let nearestIndex = 0;
+    let nearestDistance = Infinity;
+    pages.forEach(function (page, index) {
+        const pagePosition = getPagePosition(carousel, page);
+        const distance = Math.abs(carousel.scrollLeft - pagePosition);
+        if (distance < nearestDistance) {
+            nearestDistance = distance;
+            nearestIndex = index;
+        }});
+    return nearestIndex;
+}
+//9.ตรวจจับการ Scroll ของ Carousel
+function trackScroll(){
+  const carousel=document.querySelector(".carousel");
+      if (!carousel) {
+        return;
+    }
+ carousel.addEventListener("scroll",function () {
+            const dots = document.querySelectorAll(".dot");
+            const index = getNearestPageIndex();
+            dots.forEach(function (dot) {
+                dot.classList.remove("active");
+            });
+            if (dots[index]) {
+                dots[index].classList.add("active");
+            }},
+        {passive: true}
+    );
+}
+//10.ทำให้สามารถลาก Carousel ได้
+function enableDragScroll() {
+    const carousel = document.querySelector(".carousel");
+    if (!carousel) {
+        return;
+    }
+    let isPointerDown = false;
+    let isDragging = false;
+    let suppressClick = false;
+    let startX = 0;
+    let startScrollLeft = 0;
+    carousel.querySelectorAll("img, a").forEach(function (element) {
+        element.setAttribute("draggable", "false");
+        element.addEventListener("dragstart", function (event) {
+            event.preventDefault();
+        });
+    });
+    carousel.addEventListener("pointerdown", function (event) {
+        if (
+            event.pointerType === "mouse" &&
+            event.button !== 0
+        ) {
+            return;
+        }
+        isPointerDown = true;
+        isDragging = false;
+        suppressClick = false;
+        startX = event.clientX;
+        startScrollLeft = carousel.scrollLeft;
+    });
+    carousel.addEventListener("pointermove", function (event) {
+        if (!isPointerDown) {
+            return;
+        }
+        const distance = event.clientX - startX;
+        if (
+            !isDragging &&
+            Math.abs(distance) > 15
+        ) {
+            isDragging = true;
+            suppressClick = true;
+            carousel.classList.add("dragging");
+        }
+        if (!isDragging) {
+            return;
+        }
+        carousel.scrollLeft = startScrollLeft - distance;
+        event.preventDefault();
+    });
+    carousel.addEventListener("pointerup", function () {
+        if (!isPointerDown) {
+            return;
+        }
+        const wasDragging = isDragging;
+        isPointerDown = false;
+        isDragging = false;
+        carousel.classList.remove("dragging");
+        if (wasDragging) {
+            snapToNearestPage();
+        }
+    });
+    carousel.addEventListener("pointercancel", function () {
+        isPointerDown = false;
+        isDragging = false;
+        carousel.classList.remove("dragging");
+    });
+    carousel.addEventListener("click", function (event) {
+        if (suppressClick) {
+            event.preventDefault();
+            event.stopPropagation();
+            suppressClick = false;
+        }
+    }, true);
+}
+//11.หลังจากผู้ใช้ลาก Carousel แล้วปล่อย
+function snapToNearestPage() {
+    const carousel = document.querySelector(".carousel");
+    if (!carousel) {
+        return;
+    }
+    const pages = getCarouselPages();
+    if (!pages.length) {
+        return;
+    }
+    const index = getNearestPageIndex();
+    const targetPage = pages[index];
+    const targetPosition = getPagePosition(carousel,targetPage);
+    carousel.scrollTo({
+        left: targetPosition,
+        behavior: "smooth"
+    });
+}
+</script>  
+
+
+
+<script nonce="CiGoAFuGM2221OPACQwNww" src="/i/libraries/apex/minified/widget.treeView.min.js?v=24.2.15"></script>
+
+
+<script nonce="CiGoAFuGM2221OPACQwNww">
+apex.jQuery( function() {
+apex.page.init( this, function() {
+try {
+(function(){
+var lTimeoutField = document.getElementById("apex_login_throttle_sec"),
+    lTimeout      = lTimeoutField ? +lTimeoutField.innerHTML : 0;
+if (lTimeout) {
+    var lTimer = window.setInterval (
+        function() {
+            if (lTimeout > 0) {
+                lTimeoutField.innerHTML = lTimeout;
+                lTimeout--;
+            } else {
+                window.clearInterval(lTimer);
+                var lDiv = document.getElementById("apex_login_throttle_div");
+                if (lDiv) {
+                    lDiv.parentNode.removeChild(lDiv);
+                    return true;
+                }
+            }
+        },
+        1000 );
+}})();
+(function(){apex.jQuery('body').addClass('t-PageBody--leftNav');})();
+} catch(e) {apex.debug.error(e)};
+apex.item.waitForDelayLoadItems().done(function() {
+try {
+(function(){apex.da.initDaEventList();
+apex.da.init();})();
+apex.theme42.initializePage.noSideCol();
+initCarousel();
+apex.item("P13_CONTAINER").setValue("Container Enquiry");
+apex.item("P13_BOOKINGBL").setValue("Booking/BL Enquiry");
+apex.item("P13_VESSEL").setValue("Vessel Schedule");
+apex.item("P13_COST").setValue("Cost Estimation");
+apex.item("P13_EBILL").setValue("e-Bill Statement");
+apex.item("P13_ETAX").setValue("ETAX");
+apex.item("P13_EGATE_PASS").setValue("e-Gate Pass");
+} finally {
+apex.event.trigger(apex.gPageContext$,'apexreadyend');
+};
+});
+});
+});apex.pwa.publicKey = ''
+apex.pwa.init( { serviceWorkerPath:'\u002Fhptpcs\u002Fr\u002Fhpt_ws\u002Fhpt-super-app114\u002Fsw.js?v=24.2.15-249999391742\u0026lang=en' } );
+</script>
+
+</body>
+</html>
