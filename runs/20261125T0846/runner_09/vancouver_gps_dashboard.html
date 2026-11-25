@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/GPSDashboard/" />
+
+    <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js" defer></script>
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-default/all.css" />
+    <link rel="stylesheet" href="css/three-dots.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="GPSDashboard.styles.css" rel="stylesheet" />
+    <!--Blazor:{"type":"server","prerenderId":"5cf65d9c308d4b8e8f46ed7009b63819","key":{"locationHash":"77D12F14A8105320B1AAED6AE7E689DA0EC4483270A645E84079EAA0FFDF550D:0","formattedComponentKey":""},"sequence":0,"descriptor":"CfDJ8N2Wrn4tZ05OgOYlHGvRTKp8VSV\u002BybACTZe1sFFIfQuYv5kHhkGhmGNcfGomgSXkAtr1P92T5ik6OtOotZwp/xOtY59KnSf3u8RDqAWh/P5D9VYoc1m3j8NPGhlEKjZ8i4mOkNcXQxPYcsVYedSyBbKs5ZiHKvuAZo7QsLxzvo3Ow1sSFCzOCtwb3CZ\u002B9IxITOvTEz6Boiyov1MqgO1SGfhENmz4TMAfTUyLtGEPawaBbH2BGms2Pu3AZqotXWF/PCJTb5TwU1EefUUpPR3MeeAQpB1n6lPQIGY7tl1vcugn3JA783SgAhlIJsYQM/70T0BN\u002BZo851hAi3onmMOaKoUdy9i9knixh5zrtjU5RjnEXNNurLyh3KBVdAE/vYx4mEQG6PpoLZurHVO0UDUG71jl1z8RykpOvJWDSoYjV9vlgBjLRfAQoN4bDAvDfnhvxHcl\u002BBMK7iTm1SNKvTKpg7\u002Be4D4XPzcITX\u002B7ivr0ak6mSCPIxwch1jlhAQLUSlMD48gse1EhikeH2F5lcfOr9He5TDpV9L\u002B2mJssouXq6141lYvAszpDKfo37dOlX9HsUY1gKEtaoC/8Sq3GDKp/xN4="}--><title>GPS Dashboard</title><!--Blazor:{"prerenderId":"5cf65d9c308d4b8e8f46ed7009b63819"}-->
+</head>
+<body>
+    
+<script>
+    // Automatic reload. Refer to https://github.com/dotnet/aspnetcore/issues/10325
+    // Wait until a 'reload' button appears
+    new MutationObserver((mutations, observer) => {
+        if (document.querySelector('#components-reconnect-modal h5 a')) {
+            // Now every 10 seconds, see if the server appears to be back, and if so, reload
+            async function attemptReload() {
+                await fetch(''); // Check the server really is back
+                location.reload();
+            }
+            observer.disconnect();
+            attemptReload();
+            setInterval(attemptReload, 10000);
+        }
+    }).observe(document.body, { childList: true, subtree: true });
+</script>
+
+<!--Blazor:{"type":"server","prerenderId":"debbc2da1743474c8021f6d7bf183b1b","key":{"locationHash":"973C83F14175105D4AB94E56F8F5FC36DD8F8F6A2E82CCD82A1E7193383CA0C5:0","formattedComponentKey":""},"sequence":1,"descriptor":"CfDJ8N2Wrn4tZ05OgOYlHGvRTKpppicBuBO3Kq23VeIwtP2guW2QKV0/xAQxeh0knDsVR1uvYdcW6JyHrJ14mjwiN6jQJhp6V/O0dp01lGsb3LJPatLNknW3TcUiCUzFBTgDe8vDeYoqa8ohC7iE4lM4SHy35j7DbFOaMtkxjttswOFl8ljyxBcsvMcvMz1c7kNZsiKL4aq0EOu9KWWYVNJoXOw9eTYXtRgnZV\u002BlUBuO08WQPESOmNClSv2hKD9imZjh7WB7PjYierHDUeZmuknJcd2QOAxblHav7ddoP4AKtiLg9x94D/KnYH\u002BA4hmv2cr8kNO14SypoDzQM6lvQBpCG0I7xwSuDsEEQKOoPNbHqJ1bb446Z21UcgSOQMRmUBqHBf05sYhsLWCaLnuztvHm6t4AV9cuEiUx9hXQyTCOBQTCkpKOHHfjgXZhkeA2erNDWXvB/\u002BpMbWzVirGw8u\u002BBc5Wng8W02PueE\u002BZyOc1NwljWtjRqoaVYwJERNy4lo2nPNQ=="}-->
+    
+
+
+    
+        
+
+<div class="page" b-yow7y3sakv><main b-yow7y3sakv><div class="top-row px-4 navbar navbar-dark" b-yow7y3sakv><div class="container-fluid" b-yow7y3sakv><a class="navbar-brand" style="margin-left: 0" href="https://www.portvancouver.com/" target="_blank" b-yow7y3sakv><img src="images/VFPA-Logo-English.png" style="height: 34px;" b-yow7y3sakv /></a>
+                <div b-mt8c2kzztu><span class="cc-name" b-mt8c2kzztu>English</span> ﻿<input type="checkbox" style="vertical-align: middle" b-mt8c2kzztu /> <span class="nc-name" b-mt8c2kzztu>Français</span></div></div></div>
+
+        <article class="content px-4" b-yow7y3sakv>
+
+<div class="main" style="height: calc(100vh - 95px);">
+
+    <div class="k-tabstrip telerik-blazor k-tabstrip-top k-tabstrip-scrollable" data-id="8f93e310-634d-40b0-9ae1-cfce48fdf5cc" dir="ltr" style="position: relative">
+
+        
+
+        <div class="k-tabstrip-items-wrapper k-hstack">
+
+            <ul class="k-tabstrip-items k-reset k-tabstrip-items-start" role="tablist">
+                    <li class="k-item k-first" aria-controls="2a5a9081-f2e4-4f75-b9b4-96352805468d" aria-selected="false" role="tab" id="a4876580-7670-4484-98c2-281da57478d3" tabindex="-1">
+            <span class="k-link">
+                    <span class="k-link-text">
+                        Current
+                    </span>
+            </span>
+    </li>
+
+        <li class="k-item k-active    k-last" aria-controls="2a5a9081-f2e4-4f75-b9b4-96352805468d" aria-selected="true" role="tab" id="c005affe-021a-469f-bd09-e723adee6d33" tabindex="0">
+            <span class="k-link">
+                    <span class="k-link-text">
+                        Hourly
+                    </span>
+            </span>
+    </li>
+
+            </ul>
+
+        </div>
+
+
+                <div class="k-tabstrip-content k-active" role="tabpanel" aria-labelledby="c005affe-021a-469f-bd09-e723adee6d33" aria-hidden="false" id="2a5a9081-f2e4-4f75-b9b4-96352805468d" tabindex="0" style="display: block;">
+<div><div><div><label for="terminal" class="k-label k-form-label">Terminal: </label>
+    <div style="display:inline-block; width: 240px; padding-left: 12px;">
+    
+
+
+
+<span class="telerik-blazor k-dropdownlist k-picker k-picker-solid k-picker-md k-rounded-md" dir="ltr" data-id="d3c6c1c6-9a22-4ab5-8216-887fd1104d3e" data-val-id="terminal" tabindex="0" id="terminal" role="combobox" aria-expanded="false" aria-busy="false" aria-readonly="false" aria-describedby="terminal_selectId" aria-controls="0a5ac068-272f-470d-b5a9-be2d27ecaa1f" aria-haspopup="listbox">
+
+        <span class="k-input-inner" id="terminal_selectId">
+                <span class="k-input-value-text">
+Centerm                </span>
+        </span>
+
+    <button class="telerik-blazor k-button k-input-button k-button-solid k-button-md k-button-solid-base k-icon-button" data-id="c9f5028b-d786-4801-a52c-a2cad26e0453" dir="ltr" tabindex="-1" aria-label="Open" aria-disabled="false" type="button">
+
+        
+            <span class="telerik-blazor k-button-icon k-icon k-svg-icon k-svg-i-caret-alt-down" aria-hidden="true">
+        <svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+            <path d="M256 352 128 160h256z" />
+        </svg>
+
+</span>
+    
+
+
+</button>
+</span>
+
+    
+        
+    
+</div>
+    <label style="padding-left: 24px;">Date: </label>
+    <span>2026-11-25</span></div>
+  <div style="padding-top: 12px; padding-left: 8px; padding-bottom: 8px;">Today&#x2019;s average turn time 7min, total 2 trucks.
+    </div><div class="kd-border kd-rounded">
+    
+    
+    
+    
+
+
+
+          
+    
+    
+
+
+
+          
+    
+    
+
+
+
+
+        
+    
+    
+    
+
+
+          
+    
+    
+
+
+
+
+        
+    
+    
+    
+
+
+
+
+
+
+
+
+
+        <div data-id="d22a997e-4383-421c-8f54-1ad97cc6ff3e" style="height: 400px;" class="telerik-blazor k-chart" dir="ltr">
+            <div class="k-chart-overlay" style="display: none;">
+    <div class="k-no-data">
+
+No data                    </div>
+</div>
+       </div>
+    </div>
+    <div><div class="claim">Data from GPS equipped trucks</div>
+      <div class="claim">Average turn time by hour for pre-gate lanes and terminal yards</div></div></div>
+
+
+<style>
+  .claim {
+    display: flex;
+    justify-content: center;
+  }
+</style></div></div>
+        </div>
+</div>
+
+<style>
+  .k-tabstrip {
+  height: 98%;
+  }
+
+  .k-tabstrip-content, .k-tabstrip > .k-content {
+  overflow-x:hidden;
+  }
+</style></article></main></div>
+
+<style b-yow7y3sakv>
+    .page {
+        max-width: 1560px;
+        margin: 0 auto;
+    }
+</style>
+
+            
+
+            
+            
+
+    <div class="k-animation-container telerik-blazor " data-id="f83e08d4-aba1-4916-938f-b1d4831dc500" role="region" aria-label="Options list" id="349deeae-f7dd-4212-9b01-a911dbf27001" dir="ltr" style="height: auto">
+        <div data-id="7e5dd477-315d-41bf-9d0b-c95b8a96de4d" style="transition-duration: 300ms;display: none" class="k-child-animation-container">
+</div>
+    </div>
+            
+            
+
+    <div class="k-animation-container telerik-blazor k-chart-tooltip-wrapper" data-id="dacb0276-86d5-4498-bfa3-8dce71c90b33" id="ba57b25b-d61c-430b-b824-e62d102f6ff0" dir="ltr" style="transition: left ease-in 80ms, top ease-in 80ms;">
+        <div data-id="88b4301c-a55d-49c3-b884-558e9d72b6f6" style="display: none" class="k-child-animation-container">
+</div>
+    </div>
+            
+    
+
+
+
+
+
+
+
+        <!--Blazor:{"prerenderId":"debbc2da1743474c8021f6d7bf183b1b"}-->
+
+
+    <div id="blazor-error-ui">
+        
+            An error has occurred. This application may no longer respond until reloaded.
+        
+        
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
