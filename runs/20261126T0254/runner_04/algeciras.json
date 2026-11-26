@@ -1,0 +1,102 @@
+{
+  "port": "algeciras",
+  "name": "阿爾赫西拉斯 APBA",
+  "protection": "F5 WAF",
+  "timestamp": "2026-11-26T02:54:36.892019+00:00",
+  "urls": [
+    {
+      "url": "https://www.apba.es/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.apba.es/",
+          "status": null,
+          "size": 0,
+          "is_challenge": null,
+          "has_content": null,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.apba.es', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.apba.es', port=443) at 0x77b6e784ebd0>, 'Connection to www.apba.es timed out. (connect timeout=30)'))",
+          "content_hash": null,
+          "snippet": ""
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://www.apba.es/",
+          "status": null,
+          "size": 0,
+          "is_challenge": null,
+          "has_content": null,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.apba.es', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.apba.es', port=443) at 0x77b6e784f170>, 'Connection to www.apba.es timed out. (connect timeout=30)'))",
+          "content_hash": null,
+          "snippet": ""
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://www.apba.es/",
+          "status": null,
+          "size": 0,
+          "is_challenge": null,
+          "has_content": null,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.apba.es', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.apba.es', port=443) at 0x77b6e784f8c0>, 'Connection to www.apba.es timed out. (connect timeout=30)'))",
+          "content_hash": null,
+          "snippet": ""
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://www.apba.es/",
+          "status": null,
+          "size": 0,
+          "is_challenge": null,
+          "has_content": null,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.apba.es', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.apba.es', port=443) at 0x77b6e784f290>, 'Connection to www.apba.es timed out. (connect timeout=30)'))",
+          "content_hash": null,
+          "snippet": ""
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://www.apba.es/",
+          "status": null,
+          "size": 0,
+          "is_challenge": null,
+          "has_content": null,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.apba.es', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.apba.es', port=443) at 0x77b6e784edb0>, 'Connection to www.apba.es timed out. (connect timeout=30)'))",
+          "content_hash": null,
+          "snippet": ""
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "https://www.apba.es/",
+          "status": null,
+          "size": 0,
+          "is_challenge": null,
+          "has_content": null,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.apba.es', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.apba.es', port=443) at 0x77b6e7e8b8f0>, 'Connection to www.apba.es timed out. (connect timeout=30)'))",
+          "content_hash": null,
+          "snippet": ""
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "https://www.apba.es/",
+          "status": null,
+          "size": 0,
+          "is_challenge": null,
+          "has_content": null,
+          "error": "ConnectTimeout: HTTPSConnectionPool(host='www.apba.es', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.apba.es', port=443) at 0x77b6e76a06e0>, 'Connection to www.apba.es timed out. (connect timeout=30)'))",
+          "content_hash": null,
+          "snippet": ""
+        }
+      ],
+      "success": false
+    }
+  ],
+  "success": false,
+  "winning_strategy": null,
+  "data_saved": false
+}
