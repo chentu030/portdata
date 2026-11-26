@@ -1,0 +1,33 @@
+{
+  "port": "northport",
+  "name": "巴生北港 Northport",
+  "protection": "WAF",
+  "timestamp": "2026-11-26T02:58:14.543430+00:00",
+  "urls": [
+    {
+      "url": "https://www.northport.com.my/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.northport.com.my/",
+          "status": 200,
+          "size": 21681,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "3680765feed10fbf",
+          "snippet": "<!DOCTYPE html> <html> <head> <title>Northport (Malaysia) Bhd</title> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <link rel=\"icon\" href=\"assets/imgs/fav.png\"> <link rel=\"stylesheet\" href=\"assets/css/bootstrap.min.css\"> <link rel=\"stylesheet\" href=\"assets/css/style.css\"> <link rel=\"stylesheet\" href=\"assets/font-awesome/css/all.css\"> <script src=\"assets/js/jquery.min.js\"></script> <script src=\"assets/js/bootstrap.min.js\"></script> <script src=\"asset"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 21681,
+      "saved_file": "northport_homepage.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
