@@ -1,0 +1,103 @@
+{
+  "port": "lehavre",
+  "name": "勒阿弗爾 HAROPA",
+  "protection": "Imperva",
+  "timestamp": "2026-11-26T12:49:38.025016+00:00",
+  "urls": [
+    {
+      "url": "https://www.haropaport.com/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.haropaport.com/",
+          "status": 200,
+          "size": 128725,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "7e1b306c69d2a5e8",
+          "snippet": "<!DOCTYPE html><html lang=\"fr\" dir=\"ltr\" prefix=\"og: https://ogp.me/ns#\"><head><meta charset=\"utf-8\" /><script>var _paq = _paq || [];if (!window.matomoDrupalTrackerInitialized) {window.matomoDrupalTrackerInitialized = true;(function(){var u=((\"https:\" == document.location.protocol) ? \"https://statistiques.haropaport.com/\" : \"http://statistiques.haropaport.com/\");_paq.push([\"setSiteId\", \"1\"]);_paq.push([\"setTrackerUrl\", u+\"matomo.php\"]);_paq.push([\"setDoNotTrack\", 1]);if (!window.matomo_search_re"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 128725,
+      "saved_file": "lehavre_homepage.html"
+    },
+    {
+      "url": "https://drakhar.haropaport.com/fr/liste/221/navires-attendus",
+      "label": "navires_attendus",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://drakhar.haropaport.com/fr/liste/221/navires-attendus",
+          "status": 403,
+          "size": 885,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "7d1bbcf4e27fc81b",
+          "snippet": "<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=23&xinfo=49-26629067-0%200NNN%20RT%2817956"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://drakhar.haropaport.com/fr/liste/221/navires-attendus",
+          "status": 403,
+          "size": 885,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "ee7946ca6756dbe0",
+          "snippet": "<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=23&xinfo=52-44198304-0%200NNN%20RT%2817956"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://drakhar.haropaport.com/fr/liste/221/navires-attendus",
+          "status": 403,
+          "size": 886,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "d2004c860e5f52ac",
+          "snippet": "<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=23&xinfo=54-46804592-0%200NNN%20RT%2817956"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://drakhar.haropaport.com/fr/liste/221/navires-attendus",
+          "status": 403,
+          "size": 885,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "20ab4cf690e44eba",
+          "snippet": "<html style=\"height:100%\"><head><META NAME=\"ROBOTS\" CONTENT=\"NOINDEX, NOFOLLOW\"><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"viewport\" content=\"initial-scale=1.0\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge,chrome=1\"><script type=\"text/javascript\" src=\"/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3\"></script></head><body style=\"margin:0px;height:100%\"><iframe id=\"main-iframe\" src=\"/_Incapsula_Resource?CWUDNSAI=23&xinfo=52-44200009-0%200NNN%20RT%2817956"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://drakhar.haropaport.com/fr/liste/221/navires-attendus",
+          "status": 200,
+          "size": 26357,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "6720e7868dbf2dcc",
+          "snippet": "<!DOCTYPE html> <html lang=\"fr\"> <head> <meta charset=\"utf-8\"> <title>Navires attendus</title> <!--[if IE]> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/> <![endif]--> <meta name=\"author\" content=\"Grand Port Maritime du Havre\"> <meta name=\"keywords\" content=\"\"> <meta name=\"description\" content=\"Guichet Unique de HAROPA PORT | ROUEN\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <!-- Common Conf"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "firefox_ua",
+      "response_size": 26357,
+      "saved_file": "lehavre_navires_attendus.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "firefox_ua",
+  "data_saved": true
+}
