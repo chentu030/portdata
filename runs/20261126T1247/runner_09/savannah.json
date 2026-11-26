@@ -1,0 +1,293 @@
+{
+  "port": "savannah",
+  "name": "薩凡納 GPA",
+  "protection": "Cloudflare",
+  "timestamp": "2026-11-26T12:50:45.795192+00:00",
+  "urls": [
+    {
+      "url": "https://gaports.com/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://gaports.com/",
+          "status": 403,
+          "size": 3195,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "9f5e47b215e20c69",
+          "snippet": "\u0013\u000e\u0017\u0000d����~yN�k[-@@ѩ�% (Q\u0010� � \\BT�@���1w}� V�m�eqyo�#�M<M\"\"\u0016�:U-qD\"^)�Hτ\u0016I �#�ڷ�8b�M\u0014�T��D���m�o^5�� �ˋ5�� 7�?m�����5-\u0002\u0010�{�V��\u00151\u00154�0��\"�#~ �\u0006�_+��`�bӗ���%\u0004\u0011�8�\u0012\u0014�k\u0016�Reu�� ���ꁽ�B \u0005䫽��J�\\���m[6>��\u00176�-�p\\&��r���#6��2Ų�}��?����J��� il\u0002`��pɎ7\u0017�nm#�к�cus�\u0017�DY���\u0006�p {��d�����>?��N��ϫ.\bsPÕ_\u0015�E.A��a qZ�c\u000eo,\u0018l����J�H�^i` �-\u0000���\u0013\b��(��1\u0003�啷�#��� J�wUg��-F� ��X.�O� v��G<��eW'\"�;+�~� ~��/�\u001a�M2%e�ۖA>��\u0011� ��n\u0006� �E����\u0001����� �,i�- �e�Lp ��k� ����\u0003��5���5]Xb\u0018n�%�%x>s�$\u000e�`��T�[���P��bf����E�-ΕW��b&���m�\u0003D� �-�:\u0001�"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://gaports.com/",
+          "status": 403,
+          "size": 3198,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "0c9b447861748e4e",
+          "snippet": "\u0013\u000e\u0017\u0000d����~yN�k[)@�:U�$\u0005� `� �%y \u0012R���1w}� V�m�eqyo�#�M<M\"\"\u0016�:U-qD\"^)�Hτ\u0016I �#�ڷ�8b�M\u0014�T��D���M\u00067���k\u0006��Ś}ۅ��&i �>�u����Z(�Z\u0011SAS c����\u0016�c��A󵂼 F*6}I�H_R\u0010\u0001���� |��S*/\u000e��c�\u0017S=�\u0017^���|��<_I�k� �m��w!��g�e\u0010��$u\\�ڞ{��U�X֕����j�͋ ��Ej�\u0000�y�>X28�8Gӯ%��_\u0006�����3Q��ڼvC�\u0004� ]2�MS֛���S���h�\u0010�\u0015@�\" .r�6M\u0015�\u0010�U3Bpc�`�\u0014��V�E��J `��\u0000|�NN ������ �\u0007 o�Eֽ�9�X}Q�@�[�\u001a\u0019\u0016U�\\Ɵ@9l\u0000�i�xn �m�� �\u0019!���_^1,�dJ�h�-�|\u0006S#�\u001bl�� �;n2����\u0001���v�\u0003�4�\u0006 ͲN&�t���� �a��\u0003��\u0015�·5]Xb\u0018n�&��[�\u0010,�C,x��/����ϻ+�f1�@T\u0000��\u0016f�\u0015M���\u0000v�I|\u0017�@ f �J\\��iES �"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://gaports.com/",
+          "status": 403,
+          "size": 3252,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "f34be9252faa4337",
+          "snippet": "\u0013N\u0017\u0000d�����~�np��� ��۽\u000fI�D\u0001� �\u0002�$I($̙��k�o.��y�L:�����\u0012��ē6\u0011�6���\u0018\"\u0011��H��L�4T\u0006���PB��*B@��b�g�W��5��ܵ'�����\u000fJP\u0006�\u000fm�0�ͼ�\b��Y�T�T�#Fy���\u0018� D_#��`�l�甊�%\u0006\u00114��\u0002��k�JE�i~�YQv��Fx�� ��ދ|yQ��x�\u0003�7>��\u00179q-��Ͻ�> �����;�L1oj ��\u000f��\u0016e\u0001��b͜\u0000X{�>��\\΂.� ��i.�}c�v \u0011% �-\u001a\u0010�9|�L'W�P�l>?��N �ge\u001b�\u0019�!u�s�Pm�`G�� �1k�\u0014��Q�G�vH\u0003��o\u0006xg��@������ ����f��{_p(���~�:��jlX��|\u0018\u0002e�\u0000��\u0016�@\u0003�m�� \u000e+�~� ~��/���M2&E�Y�A1�T#�\u001bb[�t�;Fy�+��\u0001���v�A9�=�7�\b� H�\u0006mH��+��\")�\"�)]��0ܼMfsPU\u0019�+\u000e1�eI�Ԁo?|^�,�lbè���Lf��+Q9��a��(�\u0001��\u0016Nf\\��l6�KTb6"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://gaports.com/",
+          "status": 403,
+          "size": 3255,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "5aff2104539bd13e",
+          "snippet": "\u00139\u0017\u0000d����~yN�k[)��N�,A ��\b\u001b<�K���ԧ�گM�� ��\u0013\u0003���w���?4�t\u0012\u0011�hөj�!\u0012�J�DJ̔H�1�m����\\\u00017\u0015! ��?I[�Ϋ\u0016�Z�rm\u0019�o�p��Ӧm\u000e���i!\u000f���\u0006�a+b*�TҘ#i�|\u0007\u0005�W7��� /##e��f��_�0\u0006\u0011\u0007]z\u0005�Z�NY�4બ\u000e��Qx�� rm�徊��J �o�&�r��.r�H��Ej_km/;��\u0007�L�n�\u0000��\u000f�ٕU � �A�M\u0000 ��\u0000�y$�� ���-�.��ܲ�9#Q�Ẳ�\"�\u0006���\u0014I���l??��N �U\u0017F�W\u00038����^��i v4픃\u0007� �J��ڤE�n�4 ��f� �S\u001a\u0014��Q��S!��+���ޗ �4CU?A][ �\u0014Uu�V�OHٶ\u0004�i\u0007�^\u0003�]�� n����r��_��j\\7霖��-� FS#A[d7� �;i��W_�\u0003\u0014F��z\u0000�3m�-\u0018�u��`�Y״[\u0014A�\u001a�\u0007�Q ��]O\u0017�\u0018�[w�j��^9X\u0003�XqyZ>U/0�>�*���\u0000q\u0005 K^���_��j!��\u0007m\u001ax�\u0006:�X�u�嫅V�\u0015dxe"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://gaports.com/",
+          "status": 403,
+          "size": 3004,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "2dc2acb5ac11b7c6",
+          "snippet": "\u0013�\u0015\u0000d�����~�np��� It������(I}�S@�$ \u0005\bs�j�M�� ��w�����!�M<i\u0013�hөj�!\u0012�J�Dz!DB*� �n.D�M�\u0013��\b\u00011���Q�9���k\u0002��eL�����\u000fJP\u0006��m�0�Yޫ��\u00151\u0015j*i�\u0011�<[c~ �\u0006�/ �22R��Kty�� \"\u0018��\u0005���$?\u0005����gE��\u0003G�\u001a2ȵ�g�*� 3}�\u0003�7>��\u00179�-#a�\u0017�u��=�@�oV�b��>�� \u0014�.�\u0002���\u001a�\u00008x�>�?�ʻZf$��b�,��s�� \u0012E �-\u001a\u0010�9�@\u0016�\"F�jV���}�\u0006��� � �\u0010��<��9@�NS��\u0000 \u0019�g�`�\u0014 �B�G�vH\u0003��o\u0006�f���\u0000\u000f�2� �a^Vz�5��>��D��� ��bА���\u001aBʲ\"xNk�\u0003 ��u�2��\u0002�g��������IƤ�Vn\u0019d�65�\"��M7�c�g��� �8ɬ�=�� �#�F�&\u0019� \u0004i۠\u0015I\u0010���Q$ER产 K ���d6\u0007U��9p��&K�� |�����\u0002�&\u0006�J�Y�dv-�\u0012���\u0004�\u000e��\u0007�\u0006[8� u\u0002�"
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "https://gaports.com/",
+          "status": 403,
+          "size": 3245,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "af3d299dda19a586",
+          "snippet": "\u00138\u0017\u0000d����~yN�k[)�\u0018�j\u0016\u0001\u0001%���\u001b8�\u0012�p\u0011�O��_�~s9\\�kg�\u000fQ{�vq�h�I��F�NUK ��WJ$Rb&U �������\u0015pS\u0011\u0002�|��ªt^5�� �Kۜ}ۅ�� ��\u0012| � \">by� ��V�T���1O �r�����\u0000~i�����M_S�\u0010% b�k�\u0002_��T�����.��P\u000f �7j� ��^쫈�,��\u000fnه~ ��Yn\u0019 ��H�K��E_���*�,�.D������\u0006�xwHo\u0013\u0000\u0007/?\u0004KXOi�*\u000f>vǜ���\u0001 �\u001b���4Խ �%x�eH�\u0014¶�~~V��z4,�!�K�\u0003h�T��-}\b�4\u0005;\u001a�*�\u0003K\u0006[�`hM�*a�SzP�3�\u000f�) ��( �)\u0017\u0012�M��!z� �J��� ��\u0016���MW-��\u0013R�-� �!�߃��e,�\u001b+�a^%���_A3-�����-�\u0012&S#~[l7���;�U����\u0003���n9����\u0012� .�� �~�\u000f=��\u0018��\u0018�\u0013��8��z���0�r�\u0016K�mK�\u0004\u000e�ؗY]�~h>}�CS���\u0004I\u0003\u0010[�-.M��f1�@�\u00040 }D\u0003\u0003�-"
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "https://gaports.com/",
+          "status": 200,
+          "size": 25478,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "fc7aaee38d2315e7",
+          "snippet": "S �23h�j� .���\u000fW\u0019�&�\u0000���\u00187�ǯ?��*0v7�:����R��LF��=\u0007� �c�6�%�nY^�\u0013��Ro��gd\u0001�*P(�\u001a@qiY\u0011s���~�?\u0013���������O�~\u0001\u0002@\u0012$eIYGv �Ǳk;M�&���G 6 �\u0000(Y�zgO��座�Z��i��\u0002���{���� \\ ����e꿟��t$v�&rrK��u�\u0017��V�A\u00158�����z���5�\u0018�3J��SB!\u0005d/���w��� TK\u0002�\u0000�%�V\u0000ݣ\u0006-�� \u0015:������hS�&i��k4�s4�ͥ\u0000�\u0001h J�\u0019%釘��\u0001��8%\u0018\"���f�\u0004\u001b~\u0000 \u0018��~��/\u0004*Q9�b\u0014��� ހ�ٿb7�\u000f\u0010������. \u0010\u0005���2��w���\u0000�\u0003��\\��4Y\u000e��?�\u0011\u0012\u0004m��P�?��D+1�1���߿��\u001a\u0011�! �d,k�{���\u001b�P)���h�g���6� D����3\u000f��V\u0011k�5��lx���L_u�5#+~�c�!�ɺ\u0016��\u0006}��f��űq\u0016[Z3b�1p�\u0014��u�M \u0004�W� ��:�i\u0017\u0013\u0002^Q�-,��)F\u001b��و2��@���"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "safari_ua",
+      "response_size": 25478,
+      "saved_file": "savannah_homepage.html"
+    },
+    {
+      "url": "https://gaports.com/facilities/port-of-savannah/garden-city-terminal/vessels-in-berth-and-at-anchor/",
+      "label": "vessels_in_berth",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://gaports.com/facilities/port-of-savannah/garden-city-terminal/vessels-in-berth-and-at-anchor/",
+          "status": 403,
+          "size": 3347,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "59e7d67d7b950c80",
+          "snippet": "\u0013h\u0018\u0000d�����~�np���dA�{ IA\u0001\u0003\u0018_�\u0014E�$IHs������rX��& ]�����i\u0013O�D4�u\u0011M ��D�T\"!\u0014BȄN�<F��U!�6�l\u0019! ��?a�&�WM�5A��bM�ǅ��:�\u0013��k�\u001a\u0003��{�\u0016��(b2�dxL\u0013�i��`\b� �_=ȋ�\b��_\"jʗ�\u0005Hc�3����}re��� fY�ԃ�B\u000354 ��=͗\u0013���G߻y\u0005A����m ��I��^�S\u000f�ic�q�U �����u�g�\u000f�5V� �+� �yL��\u0016�I�� $���L;\"aԁ��\u0002>��\u0016$*�º.���w?�Z�$o<?\u0001%Z�<e\u00178\u0007u]�dƩU\u000f �\u00116��\u0014\u0004�T�\u0006�m� %��\u0006��uR�\u0002\\ e�?\u0012`n���5��}�Q ��� ��E��~^��n�\u0011)Ê� �1\u0017Thޔ���f\u0005�̐����������( V�2H� j�q����\u000e~�u�����@,\bf=����y��z^E#�\u0003/n�zE��_i|G\u0014A\u0011\u0014���l$���M4���H� ��LL��e\u0000h=>�&����BA���6��s7���DEI��\b\u0002�D �̄2"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://gaports.com/facilities/port-of-savannah/garden-city-terminal/vessels-in-berth-and-at-anchor/",
+          "status": 403,
+          "size": 3340,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "dd976fbe806a7fde",
+          "snippet": "\u0013h\u0018\u0000d����~yN�k[-Bԩ�E@E *��\u0006\u000f�\u0012�p�}������rX��& ]�����i\u0013O�D4�u\u0011M ��D�T\"!\u0014BȄN�<F��U!�6�l\u0019! ��?\u0011̳ɫ&���bi\u0019��q��\u0007�0\u0003�Ƕ�����Wj�Z�\"&CM��4\u0011̳ �EN�\u0000�Ճ������%�,}I~\b4v�pr�5�O��\\4�â(�z�Zh��\u0006�����r�T���{�l<'\u0003_�̶��q��e���Gڴ��8˦���� �MQ\u0016�\u000f� Ҍ �+��\u0003�����\u0012�\u0015��\"*�y�NI#!aԁڢq\u0002�\u0004���$� ����w?�YyY��A��`�9���\u0003a͓\u0019�\u0016 3p#l�Q)\bZ�8\u000f��* Ȃ� @\u001b�\u0004\u0005�8��$@ܬt�\u001b�����\u0012�/�\u0014ԾE��AY��n�\u0011)Ú� m\u0010�i���c#�� x�1\u0003����-�e\u0013Oq\u0011��e��0Ԉ�\u001a�d7 ��`����ۀ�0j�쁛�p �\u0000�M<���'m\u0003�\u0018����wD`\u0004F`���Fb\u0018h�Ƌ�SU\u0019X\u0002�Yl��HU�3 wW\u0016p13@X\u0002Ēg�k閰\\�\u000e �\u0000�=\u0007�@ f ���l1�JX\"�S4�4�"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://gaports.com/facilities/port-of-savannah/garden-city-terminal/vessels-in-berth-and-at-anchor/",
+          "status": 403,
+          "size": 3365,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "51579415738ac19f",
+          "snippet": "\u0013�\u0018\u0000d����~yN�k[)ȢS5�����`��I�$I�$��_���7��ռv&]\u0010󷷋K�C\u0013O�D4�t\u0011M �x�\u0012�DJj�N�4 ������ɕx�1\u0002�|���\"��j�\u0019(��9�� 7�?0�9�>v-D<��^ \u0014E���P��1M\u0002�|�\u0004�״\u0000~� /\"#\u0014\u001b�&�w_�0\u0006\u0011;]z\u0005���S��N�߹(�C=�(�PC\u0001�h����(�b<��-����\u0017>Ӗ�0/�Լ �=�D� �2βm\u0002��?HnSV%�ǹAZ�\u0000|��\u0003�TI�M��TN\u0001d��ݺ O$�:PW�^\u0004����, �u�����g�h�W]\u0018�^\u0003Р*�E-=\b\u001b�L \u0005�r�@��^)\bZ����m�\u0016���\u0002Ѓur�\u0002<9ʜʄ�y�7ȸ��G%�P5O��\u0016�FEUS,��G�Lk�7�A|�\u0005ˮIE\u00067V��L9���_~5.�����zZ\u0006\u0005��F\\kl��t�;�E���n\u0003���f9\u0000���%\u0004#\\��\u001b,�0�Z��1�6�#\u0012'q\u0012��t�a�e�.�^]�` �g����z���q�U \u00173\u0013�\u0015@ly��T~\u0005���\u0000� �4�\u0010 t`�����\u00173��\u0015"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://gaports.com/facilities/port-of-savannah/garden-city-terminal/vessels-in-berth-and-at-anchor/",
+          "status": 403,
+          "size": 3367,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "0e513aca01a253fc",
+          "snippet": "\u0013�\u0018\u0000d����~yN�{[)��XS=K\u0014\u00140�\u00016p�%d�\u0012��_���7��ռv&]\u0010󷷋K�C\u0013O�D4�t\u0011M �x�\u0012�DJj�N�D ������ɕx�1\u0002���'�E>y��_ P����_�)�� ���c�B�E<��AQԋ� 5\u0019 �İ�?\u0011?v�\u0016��\u0011�Ed�b��Ċ�%\u0006\u0011����-��B�2eu���UY ��G��\u001a HG{���DyV���n��n\u000e������y������y'��`�q�m�#�A0�eU���H�\u0013�\u000f��\u000f�\u0013)$'i\u0013�YiG��grR��\u0001 �\u000eԕ�\u001b�5��<$K a��?>��Y-��U\u0017���\u0000ԯ vQk\u0017'\u0013G\u0001� <\u00106�W �V')\"q[�\u0005y��\u0000�`�ܠ\u0000O�2�2!^^y�Od��ܣ\u0012g�� 4�E�Qa�\u0014�a�\u0011)Ӟ� }\"�ۂu�$\"�\u001b+�e� ���_^5��dN�h?-�\u0002FW#�=���t�;�E���n\u0003����z\u0000^��5\u0004#\\�� �n�v-��\u0018�W\u001b�\u0011�\u00138��t�a�u���n]�` �g��I�i�o<}\\�*�ja��\u0002�]Y�n�W�j��A�\u0003��.��\u000e,V"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://gaports.com/facilities/port-of-savannah/garden-city-terminal/vessels-in-berth-and-at-anchor/",
+          "status": 403,
+          "size": 3133,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "5108297cbed1dafd",
+          "snippet": "\u0013S\u0017\u0000d�����~�np���d�v�\u0003AA\u0001\u0003�� �\u0002�\u0010\u0015�8g�گM�� ��3�����%�������E�.��!\u0012/Q\"�HI�� �Px�f�g\"\u0012&W�M�\bH��O��l�y�&��ms��\u0017n�P�2��oj�\u0001��^3� ���P��1M��l�y\u0011�j��F�\u0017�\u0011��_Ӫ��0b� �ï�>Պ���fEy�\u0007 �\u0016j( ���W\u0012\u0015��G� ^{ �_�D[B'�\u0019 ���@� �2\u000e^W �� �r]�\u0005��o��>\u0001���{\u0010'\u0003�~��Q��K� �' \u0002*A¨\u00035E \u0002��\u0016d!�\"�^���3��U\u0013^V6~�� \u0012^����\u0001B\u0015O&�\u0002 \u0019| lx�\u0014\u0004�Y���vI ��o\u0001��:EA\u0001� e�?��ܬtWkl������+�\u0014V�E��AY��0���iE��֘ j�7U,2��\u0002^f����r� ��1.�մ J�]����uw���\b�ٯ�� \u0014Aqk��n\u001a# � �u<B �IS�\u0015E���1\u0014C1Ժ�3O \u0003�M<���A ��L��\"Ձg>}�mY��Ąa 1[��.�[�r6Q`�B\u0014{\u00003`\u0003'3��A6�\u0018%"
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "https://gaports.com/facilities/port-of-savannah/garden-city-terminal/vessels-in-berth-and-at-anchor/",
+          "status": 403,
+          "size": 3396,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "58002a77dcab5e1e",
+          "snippet": "\u0013�\u0018\u0000d�����~�np��d�ޞ}\u0004\u0003*I0� ��(b\u0010d������[\u000e���D����� 1m�I��F�.��#\u0012�(�J�w*�\u0013:��l�LD��J��\u0018\u0001�~�\u0013uy6yՄ_3T,���_�)���.C?�}�a\u0000�Wj�Zy\u0011��&�c��˳O F�iQ�5����Pl�\u001aQ�~m�\u0010E�t\u0001r�5�'WQ�4�â(\u000f���B \u0005�����J�T���{�l!��\u00171Ӗ�0.�Ը �=��6=Xe�e�@��?(��( ��'��\u0004���\u000f��>q����\u0005�������^�NH\u0018u��hA���\u0005��DQ�U���#��ծ`V�~��\u0006�`�� \\��kx2qju� =\u00106�W �V*�Cq[�EY�\u0000�`���\u0000O�2��\u0012`^Vz�Ol����\u0012j(�\u00145�E��A���a�\u0011)Æ� }b hѲob���\u0015�2� ���_^9.�x��p3-�tFW#�\u001b�����w��ٯ�� Ċ`>�\u0003�Ҹ[vh�m<�%��6\u0004����wD\u0011\u0014A\u0011�5�yb\u0018h�ǋ%�� -��,�,.R\u0015@����ʢ[�,\u0014�\b�*�ť�ʮ\\�\u000e({�.�\u0000�P�f ��A��ieW"
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "https://gaports.com/facilities/port-of-savannah/garden-city-terminal/vessels-in-berth-and-at-anchor/",
+          "status": 200,
+          "size": 26207,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "58de51100b10ef28",
+          "snippet": "S8A4\u0012aQ��QT�z�\u0010��V\u000f�:R\u0017���� \u0002�c\u0002>L�v\\���e���Y��ý\u0007���\u0019�Q\u0012m)�q��T {lg�'ɪ@�I�\u0006\u0001<\u0000\u0014�x������r��q���U� ?_\u001a�Bq:�$yIL55��\u0016�\u001b[JI2\u0001f\u0015�� ^2�\u0003\u0005�u������P[J�t\u00183s��ueS[\bM\u0001��\\���75 ��T�[�r�2-�\u000e1U��Vu�{� � ŀ@1\b\u0005\u0006�\u0000�,\u0006\u0004 ��}�����`\u0010 iA\b�\u0003Q\u0010\u0017 ^B$ąr\u0001�,H�\u0005嘛&1mH�r��z��\u0014$�!��!�����\u001bR������g���@�Wfs\u0016jv�ߑ�:���+X0�\u001aG@k��T���^�\u0016��pż\u0002�>��0!\u0001��Yx�U�gZ��G>\u0013�L� 'Ot<�Q�`v���� C��l� \u0012�� \u001bcU��Wf��`װe�7ߜ��I����X\u0013\u0004\b��&cYڻ����]�\u0010 \u0004� a|���~�ʠADP�+\u0012�1k��X\u0002�h��vd���5G\u0010Vɖ�yL�#�74h\u0002�/l�J'��;9߅^-_� k��~�'�\u0013��s-n�w�y k2����Y�k\u0002�\u0012B� E�l���"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "safari_ua",
+      "response_size": 26207,
+      "saved_file": "savannah_vessels_in_berth.html"
+    },
+    {
+      "url": "http://savn4.gaports.com/gpa/vessel/vessel_gct.html",
+      "label": "vessel_schedule",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "http://savn4.gaports.com/gpa/vessel/vessel_gct.html",
+          "status": 403,
+          "size": 3218,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "9e18a9f53bb9f428",
+          "snippet": "\u0013b\u0017\u0000d����~yN�k[)�\u0001��Y� *I@� � \\B����ߏ��尚�m�7qy�#�M<M\"\"\u0016�:U-qD\" %\u0010��\"�� i]�6\"��M\u0014�2J@���&K�W��5����g�v�f����\u0014~�ۺA\u0000by�\u0016��V�d���#l�t��!�j�|� /\"#\u0014\u001b�$\u0014\u000f_\u0007/�\u0011\u0007�� ~��S*/\u000e��c�\u0017K=�(�RC\u0001�n�y��(�b?z��� R���RKH\u0018�Yj\\�ڞ{�M\u0017�L��+\u0017��\u000f���E\u000e���#�M\u0000>x�.\\�D�)�| �-����B_#SC¨õy |�� HC2�MSֻ���S��i�z~ *��E�.r �����iՌ)�\u00116�U �V+�\u0002q{�����\u0000t�NNP�\u0007G���\u0019\u0010'-�� ��>���*�Ui\u0011h�_T�r\u001bDʰ#xN{�\u00015\\�U$2��\u0002�gL���r�aYGS�\u0007;� �\u0019L�x��p3����_mu\u000fp\u0014_�=t��Y6ph�u4�%��nv8����\u000fD�$N����,1 �l��\u0012�e ��!\u0016l\u001a�\u0004\\��� ��Y�t\u0018\u0014\u00101���V8ES,f\u0002L;�D.@d��ق�\"�.f"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "http://savn4.gaports.com/gpa/vessel/vessel_gct.html",
+          "status": 403,
+          "size": 3238,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "a96a0cd42e72d8aa",
+          "snippet": "\u0013w\u0017\u0000d�����~�np���D\u0015��}\b\b�\u0004\u0005T|�S`\u0011�PH�3?���j�614���� 1m�i\u0012\u0011�hשj�#\u0012�P(�H��҈<F��3\u0011\u0001�+�&�\u0004$��'By�jƯ ,�5�� 7�?(F\u0019�޷ �\u0000fy�\u0016��V�d���#By���\b� D_3ȋ�\b�Ư U�Kz�0� �ïIzJ\u0015�I�{̊�P\u000f> ��P@:�{��,�5��ޱy� ~���\u0012\u0012�y�\u001a糶� hӃU��7����\u0007�m����xl��&\u0000 �t Α��D�����;FG��T�H\u0018u��h@\u0000�� ��L\u0011BU���,�;5����3�@ q���E�\u0001B5O&N+4d����R\u0010�Zq ��+ ̂�\u0005�\u0007��\u0004\u0005xr����\u0001��[o�y�s�J���SX�\u0016�F\u0006e�ϧ�G� k���<��y[�\"�\u001b+�~� ~��/���M<�E�v� ��Ԉ�� 7\u0003��P��j�{@�$��w�Kc4G�G�& � <��Ak� ���\u0007�I���MKg�\u0018����l\u000e�*�s�\u0010�m\u0016\u0017�\u0006|�����\u0002�&\u0016 K�9�dv.�\u0012���\u0002�7D�\u000f0 �p2��\u0018d��^�\u0012�@�L�"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "http://savn4.gaports.com/gpa/vessel/vessel_gct.html",
+          "status": 403,
+          "size": 3270,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "748413ea4deeb928",
+          "snippet": "\u0013�\u0017\u0000d����~yN�k[)�q�f �(Q@� \u0010�K���צ�\\\u000eW�ڙ�C���..��5D�6\u0011�6���\u0018\"\u0011\u000f�\u0012���)��c0ݞ�\b���2J@��\"�g�W��5\u0003��2f�����\u000f�a\u0006��m\u0003\u0011\u0017�y� �����P��1G\u0004�l���[7\u0000~� /\"#\u0014\u001b?�\u0016\u000f_� \u0004\u0016{\\�9����JQn�߳(ʮ �\u0015\u001a���t��b_^Td1 �����f� ����0/�Լ ���H�vV�b��>�� �v_�\u0005�ųG�9\u0001x��`��^�0M\u0005 �3��9�\u0014m��Q�k��}�%���$O\u0004a��>?��N �ge\u001b�2�\u0006�_���.�5O&�\u0002�\u0019�#l�Y)\bZ�8\u000f��\u0006d��\u0005��u �\u0002� e�?�B���v{d��£��/�\u0014ԡE�q��Η��#R� �s�#�ۀe[�\"�� ��1\u0003����+�e\u0013Oq\u0011�eP�0Ո�\u000e�\u00177���`��J�{��8�_��Kc��`��&��� ���; ����#q\u0012'�}Jg31 �l��ҭ� ,�C,�,.R�����+�\u0005\\� \u0010�\u0000����Zz%,\u0017�\u0013�:\u0000c�E\u0014Ђق�c7[̔\u0012"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "http://savn4.gaports.com/gpa/vessel/vessel_gct.html",
+          "status": 403,
+          "size": 3232,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "d05f34f7b5a84881",
+          "snippet": "\u0013�\u0017\u0000d����~yN�k[)��N�,IEI ���s�KȒ�O��_�~s9\\�kg\u0006Q���..��5D�IDĢM��%�H�C�\u0004\"%fJ��\u0018Ͷ�D\u0004l����\u0012������3�U�~�`���ٷ]�Y�i�6��Ǯi\u0011�X�k���\u00151\u0019j2<��<�\"^\u0004�\u0006�_3ȋ�\b�ƯYe�K�C\u0018q�\u0005���,=�����\u0016Ey�\u0007 �Vj( ����W\u0016�[�G�߲�@\u0006��Yj �2K��Y�˿iӃU�X6����\u0007��\u0016e\u0001� �\"�M\u0000>x� \\\u001a��J]�j�\u0000<�\u0014��� #a�Ả\u0001\u0001\\� d!Ţ�����gqߩA���� \u00035D�2g��\u0004m[�d�(�w\u0006 \b\u001b�*\u0005Ak\u0017硸���,�[\u0000z�NYP�'GY�OE\u00107+��\u0016���쨤\u001b�:�ui\u0011hrP��r\u001aDʴ!xN[�\u0005 \\vu,2��\u0002�������㲉��\b7n\u0019T2�\u001a �`��f��Q�g��� �(No�\u0003tӸ]�pl�M<�%�i78����\u000fD�$N�ۖ�,1 ����\u0012TU\u0006��!\u0016|\u0016\u0017� <����ʢ]�L\u0018�\u0010����R�e[.f\u0007����=�h���\u0005W� [̴�-\u0011\u0013\u0014ͬO�"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "http://savn4.gaports.com/gpa/vessel/vessel_gct.html",
+          "status": 403,
+          "size": 3072,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "6a54f02342a33ff0",
+          "snippet": "\u0013b\u0016\u0000d�����~�np��� `��}\u0004\u0003J��\u0017<P\u0014! E�3�צ�\\\u000eW�ڙGE���..��5D�6\u0011�6���\u0018\"�!\u0011 %\u0010 �\u0013R#4 ������ŕx�1\u0002�|�\u0013�,��j� ��9�� ��?(B)�>75� ��^\u001b ǽ��`���D��t��Щj��F�\u0017�\u0011��_3����\u0017��\u0003Ν ~M䩓\u0017'���š |\u0012Z�!�t��r_**3\u001b�~d�\u001a8)�\"'�\u0012\u0014�J��Q��\u000e���*s�� `�Amvy��<;�� �G� ����w�̨����B�}-�9\u0019\b������9l�4�H�PYo??��I5\u000eҢ��ԩ \u000e��\\��A����Q�!�\u000f� ������ �a���\u0000=X�40���,��B��\u0016�v��{_zX�tE��*�Hh�_T�|\u0018�ʴExM;�uj8o��epc\u0005<ϐ�����\u0016����(\u000f��2��w5��\u0012��!��_u�\bH�dv�\u000e�I��\b�h^G#�;^��hK\u0012�_m|\u0014I�\u0014����\u0013�x�&�͝�L�<p�\u0019�Fy\";�|���\"G�� �\u0002b�8�\u0019�[�b69���(\u0002\u000e��\u0006Nfl\u00159�l�\u0014�"
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "http://savn4.gaports.com/gpa/vessel/vessel_gct.html",
+          "status": 403,
+          "size": 3265,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "ecbacf56eb7941f3",
+          "snippet": "\u0013�\u0017\u0000d����~yN�k[)\u0010\u0010�T�\"���d� � \\B����o�i|S-j�Q�e;@x׻1ȟ�\u0001*t\u0000()~\u0016I-��caf���Sv6�����\\Ĩ\u0005:\u0019! ��?a��ƫ����|y3f�z������\u0014~_ںA\u0000�y�\u0019��Z�d�d'l�t��!�j�|� /�\u0011F\u001b��\u0015�/� ��^� �_��Tˋ���,��P\u000f� ��0�t��\u0012_YTl1 ���� R���RK ��,5/gm/>bӃU�Y֕���\u0007���E\u000e���Z'\u0000�|\u0017.��3!�\u0015|����\u001b\u0001(��� ����5��\u0012v u�\u00176MY�>?��^5�E��)� �\u0016Yp�K�4U�,:�fL�\u0003 ��JAؚEY\u0010�N�a�� \u0001z�NQ ���,��<��\u0016�n��{_t(���J`UZ�\u001a�\u0017U��� A�v�\u0017�G P�e[EQ\u00067V�Ì)���_N1,�h��`g�A)��\u0011�\u000e�\u000f7=�\u000e�,��V�\u0001Gqj�졓DͲ�C��� .�\u0017�u��1�>�'\u0002'p\u0002߷t��a�e\u001b-��,S�$\u000e�8�Q�H�5���ț�̀A\u0001��0[�S4�bv�i\u0007��\u0005� [8[0U\u0004��L.�"
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "http://savn4.gaports.com/gpa/vessel/vessel_gct.html",
+          "status": 200,
+          "size": 1455,
+          "is_challenge": false,
+          "has_content": false,
+          "error": null,
+          "content_hash": "9393a6f09aa95d2e",
+          "snippet": "\u0013Ö\u0013\u0000ä´¥½Äã?Ê ô^GDP¥P\u0011özE=\u0004¶`Gö$=÷óÙûîMñC>À\u0003;ÁÙ?\u0003w©Jk;Þ\u0006c\u0011îõyHO0`\u0001ÌCÜì ½à¡x3ã\u0004°é+À\u000e ªÝ#M\u0019o4\u001aè°ÀÜ=&B6x<1¬é\u0006 í¬Í±\u0014²Á#Ðæøç®¦=~ëèØ¢æ\u001b @vBOV¬{/S@cð×Mk1COðSáÿ1³§\u0004fÂ*Ô0ié *´}«E\u0007?Ñ9ì`)\u001bTÛ\u000e)eÁ;¹\u0006:jgKõÍ'\u0019Ò»»(Fa\u0018F®^iúÑ/&p| ^ 'öËArc+ *A\"äï¹]¨¢Óðô,<-\u0005!J¨Ò(÷ßµú\u0019rO!¨KR=p) d+nÝ­Ò¹\u0001=ÓÎ2\bý\u0006\u0011hVöj-i¥\u0004 ½ËXÇ¯\u001bcÉâ\u0016£0P¼\u0005?a\u0011 dnø»\u0001Â6Æ\u0012\u000e¬ÐAéTÊ\u0005·ÌhðN2FåÑYx\u0016G]d\u0014íýìÎÙÀÏÆ](;³Uu',\u0016\u0002Ä§ï¹÷v\u0013§ý¾÷vÃÉ1\u001bU÷â\u0019£ð4¼<ÉâÙùÿvµ[ÕF³NÖr f¿ÙPß]'{X1º±­&¨Ý­£FGkTß\u001bÎÏâz~37æg1 U»k 6_Ä¾\u0007ß±wûG¹àä}ç{¾"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "safari_ua",
+      "response_size": 1455,
+      "saved_file": "savannah_vessel_schedule.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "safari_ua",
+  "data_saved": true
+}
