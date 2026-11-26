@@ -1,0 +1,77 @@
+{
+  "port": "savannah",
+  "name": "薩凡納 GPA",
+  "protection": "Cloudflare",
+  "timestamp": "2026-11-26T22:27:38.990395+00:00",
+  "urls": [
+    {
+      "url": "https://gaports.com/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://gaports.com/",
+          "status": 200,
+          "size": 25462,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "1a1bcd6b03ba9227",
+          "snippet": "S �23h�j� .���\u000fW\u0019�&�\u0000���\u00187�ǯ?��*0v7�:����R��LF��=\u0007� �c�6�%�nY^�\u0013��Ro��gd\u0001�*P(�\u001a@qiY\u0011s���~�?\u0013���������O�~\u0001\u0004@\u0012$eIYGv �Ǳk;M�&���G 6\u0005�\u0000(Y�zgO��座�Z��i��\u0002���{���� \\ ����e꿟��t$v�&rrK��u�\u0017��V�A\u00158�����z#9fdM, 9�����3���9��*���\u0005����\u000e���1A��A�p�y� Lð� �\u0018�1F�\u0019fw�a� \u0004� \u0018��\\�)r��u�b\u0005�kF΅Ɔ?�be��X�\u000fB\u0005Y�����_\bT�rB�(`��A�\u00011��b7�\u000f\u0010����\u0007�\u000f�\u0002��D\u0019f盎�\u0007� �\u0010*�E�,��?�ݟ��\b �6�c���MyA����\u0018�����n�J�\b�\u0010�f2���Om� a�\u0014t�c��z~'��F�@B��^u�2\u0015�x�5��lx���L_u�5#+~�c�!�ɺ\u0016'�\u0006}��f��ű1\u0016[Z3b�0p�\u0014��u�M \u0004�W� ��:�i\u000f\u0013\u0002^Q�-,���F\u001b��و2��@���"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 25462,
+      "saved_file": "savannah_homepage.html"
+    },
+    {
+      "url": "https://gaports.com/facilities/port-of-savannah/garden-city-terminal/vessels-in-berth-and-at-anchor/",
+      "label": "vessels_in_berth",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://gaports.com/facilities/port-of-savannah/garden-city-terminal/vessels-in-berth-and-at-anchor/",
+          "status": 200,
+          "size": 26255,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "e16cc6875a4486ab",
+          "snippet": "��\u0001\u0012EU�GQԇˈ��z\u00004R\u0016��_\u0006��X��z���O�ݪ���\u0019�b�'\u0004��Q��Ȋ�8eY\u001aIN�ǯ�\u00108dC\u0002\u0001\u0004\u0000�\u0013EUo�~����7W�7�|ix �鈒�%1�Ԝ\u001b[$nl)%�\u0004�U8\"6x��\u000e\u0014Lוo�\u001b��T?T� 1� (c]�\u0015I\u0017u�L��\u0004�$�\u0005�\u0000�\u0001@\"�\u0001\b��g޼�\u0005���A � G��A�A~��� h�}�9Z\u0019g2� �yo�\u001b.�1.�q��<Q�\u001b\u0017$*e���l�\u001a\u0019(��l�B͎�;�RGQUw\u0005 �Y�\bh ����{�KӢ�\u0015��W@ч�\u0014&$��; o�J�LK ��g\"��<�䉎'4�\u0018�.\u0013q\u0016��c���MyA���cc�j���L�\u0010�\u001a�l�曓�3��\u0017\u0013k�\u0000\u0001r�d,K{�w� �k \u0002�\u0000Q!���V�o[\u00194�\b�xEb2f�v�\u000f\u0017���H.�����N.����W]a���o�l}�?}�� �\u0016}��bc�+� \u0006{Z1�\u00141r�(�%+�G%0�{ \u0004jZ\u0015.]�?8�\u000f�)\u0003[>�q��pmMD\u0011�JD�#�h} �����2����s}2\u001a���FD\u00117=��5�$\u0012�bQ�8"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 26255,
+      "saved_file": "savannah_vessels_in_berth.html"
+    },
+    {
+      "url": "http://savn4.gaports.com/gpa/vessel/vessel_gct.html",
+      "label": "vessel_schedule",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "http://savn4.gaports.com/gpa/vessel/vessel_gct.html",
+          "status": 200,
+          "size": 1455,
+          "is_challenge": false,
+          "has_content": false,
+          "error": null,
+          "content_hash": "9393a6f09aa95d2e",
+          "snippet": "\u0013Ö\u0013\u0000ä´¥½Äã?Ê ô^GDP¥P\u0011özE=\u0004¶`Gö$=÷óÙûîMñC>À\u0003;ÁÙ?\u0003w©Jk;Þ\u0006c\u0011îõyHO0`\u0001ÌCÜì ½à¡x3ã\u0004°é+À\u000e ªÝ#M\u0019o4\u001aè°ÀÜ=&B6x<1¬é\u0006 í¬Í±\u0014²Á#Ðæøç®¦=~ëèØ¢æ\u001b @vBOV¬{/S@cð×Mk1COðSáÿ1³§\u0004fÂ*Ô0ié *´}«E\u0007?Ñ9ì`)\u001bTÛ\u000e)eÁ;¹\u0006:jgKõÍ'\u0019Ò»»(Fa\u0018F®^iúÑ/&p| ^ 'öËArc+ *A\"äï¹]¨¢Óðô,<-\u0005!J¨Ò(÷ßµú\u0019rO!¨KR=p) d+nÝ­Ò¹\u0001=ÓÎ2\bý\u0006\u0011hVöj-i¥\u0004 ½ËXÇ¯\u001bcÉâ\u0016£0P¼\u0005?a\u0011 dnø»\u0001Â6Æ\u0012\u000e¬ÐAéTÊ\u0005·ÌhðN2FåÑYx\u0016G]d\u0014íýìÎÙÀÏÆ](;³Uu',\u0016\u0002Ä§ï¹÷v\u0013§ý¾÷vÃÉ1\u001bU÷â\u0019£ð4¼<ÉâÙùÿvµ[ÕF³NÖr f¿ÙPß]'{X1º±­&¨Ý­£FGkTß\u001bÎÏâz~37æg1 U»k 6_Ä¾\u0007ß±wûG¹àä}ç{¾"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 1455,
+      "saved_file": "savannah_vessel_schedule.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
