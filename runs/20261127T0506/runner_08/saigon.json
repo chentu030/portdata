@@ -1,0 +1,55 @@
+{
+  "port": "saigon",
+  "name": "西貢新港 SNP",
+  "protection": "WAF",
+  "timestamp": "2026-11-27T05:11:31.043520+00:00",
+  "urls": [
+    {
+      "url": "https://eport.saigonnewport.com.vn/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://eport.saigonnewport.com.vn/",
+          "status": 200,
+          "size": 67038,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "6dba998ee6d7904e",
+          "snippet": "<!DOCTYPE html> <html> <head> <script type=\"text/javascript\"> (function(){ window[\"loaderConfig\"] = \"/TSPD/?type=21\"; })(); </script> <script type=\"text/javascript\" src=\"/TSPD/?type=18\"></script> <meta charset=\"utf-8\" /> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <title>Trang chủ - ePort</title> <link href=\"/Content/content/genaral?v=2xzDbEd1SLVBRCFHiA_GyVCNs5q0J7XyAFQ9rYgn1qk1\" rel=\"stylesheet\"/> <link href=\"/Content/deve"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 67038,
+      "saved_file": "saigon_homepage.html"
+    },
+    {
+      "url": "https://eport.saigonnewport.com.vn/Pages/Operation/Default",
+      "label": "operation",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://eport.saigonnewport.com.vn/Pages/Operation/Default",
+          "status": 200,
+          "size": 19818,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "b103f2dfdf233f0e",
+          "snippet": "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\"> <link rel=\"stylesheet\" type=\"text/css\" href=\"../../Content/css/common.css\"></link> <html xmlns=\"http://www.w3.org/1999/xhtml\"> <head id=\"Head1\"> <script type=\"text/javascript\"> (function(){ window[\"loaderConfig\"] = \"/TSPD/?type=21\"; })(); </script> <script type=\"text/javascript\" src=\"/TSPD/?type=18\"></script> <title> SNP E-Port </title> <scri"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 19818,
+      "saved_file": "saigon_operation.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
