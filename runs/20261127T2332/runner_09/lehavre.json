@@ -1,0 +1,55 @@
+{
+  "port": "lehavre",
+  "name": "勒阿弗爾 HAROPA",
+  "protection": "Imperva",
+  "timestamp": "2026-11-27T23:33:58.262228+00:00",
+  "urls": [
+    {
+      "url": "https://www.haropaport.com/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.haropaport.com/",
+          "status": 200,
+          "size": 129038,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "7e1b306c69d2a5e8",
+          "snippet": "<!DOCTYPE html><html lang=\"fr\" dir=\"ltr\" prefix=\"og: https://ogp.me/ns#\"><head><meta charset=\"utf-8\" /><script>var _paq = _paq || [];if (!window.matomoDrupalTrackerInitialized) {window.matomoDrupalTrackerInitialized = true;(function(){var u=((\"https:\" == document.location.protocol) ? \"https://statistiques.haropaport.com/\" : \"http://statistiques.haropaport.com/\");_paq.push([\"setSiteId\", \"1\"]);_paq.push([\"setTrackerUrl\", u+\"matomo.php\"]);_paq.push([\"setDoNotTrack\", 1]);if (!window.matomo_search_re"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 129038,
+      "saved_file": "lehavre_homepage.html"
+    },
+    {
+      "url": "https://drakhar.haropaport.com/fr/liste/221/navires-attendus",
+      "label": "navires_attendus",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://drakhar.haropaport.com/fr/liste/221/navires-attendus",
+          "status": 200,
+          "size": 27197,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "6720e7868dbf2dcc",
+          "snippet": "<!DOCTYPE html> <html lang=\"fr\"> <head> <meta charset=\"utf-8\"> <title>Navires attendus</title> <!--[if IE]> <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\"/> <![endif]--> <meta name=\"author\" content=\"Grand Port Maritime du Havre\"> <meta name=\"keywords\" content=\"\"> <meta name=\"description\" content=\"Guichet Unique de HAROPA PORT | ROUEN\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1\"> <!-- Common Conf"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 27197,
+      "saved_file": "lehavre_navires_attendus.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
