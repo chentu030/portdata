@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript">
+(function(){
+window["loaderConfig"] = "/TSPD/?type=21";
+})();
+
+</script>
+
+<script type="text/javascript" src="/TSPD/?type=18"></script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang chủ - ePort</title>
+   
+    <link href="/Content/content/genaral?v=2xzDbEd1SLVBRCFHiA_GyVCNs5q0J7XyAFQ9rYgn1qk1" rel="stylesheet"/>
+
+    <link href="/Content/devextreme?v=4daox5jZNlmi1qAR2RgTeXy8wKleKxeR--5Du9uSdcA1" rel="stylesheet"/>
+
+
+    
+
+    <script src="/bundles/scripts/topjs?v=P48OIJwcjq_2EYmDW29Yf3aBXiK4plobkPsqxK1ptqQ1"></script>
+
+
+    <script src="/bundles/scripts/cldr?v=xtNW7p3eF4MfeD4S0dCdXqHy6jxfYqkspVQAoCZgZYQ1"></script>
+
+    <script src="/bundles/scripts/globalize?v=V6fpSpQBqYQczp093twAPH_WuQl-P3gstTwG17BThBc1"></script>
+
+
+    <link href="/Content/content/common?v=tv70OXgGZ8Ng9XJvWDjNif2gpwIZih6YQJua5T-MP101" rel="stylesheet"/>
+
+
+    <script src="/bundles/scripts/devextreme?v=k3tM0-Emm71b3bf5Pck7mD6HDq2SHE3aZbj34PAJl9M1"></script>
+
+
+
+    <script src="/Scripts/eport/app-constants.js?v=3.2.21.241"></script>
+
+    <link href="/bundles/content/smart_wizard?v=8cIMGEWSlXDA_mzA6-NV1Ahhn7LG_Ht285XFSg6OEPc1" rel="stylesheet"/>
+
+
+    <script type="text/javascript">
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-17091330-1']);
+        _gaq.push(['_setDomainName', '.saigonnewport.com.vn']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+
+    </script>
+    <style type="text/css">
+        .modal-dialog {
+            width: 460px;
+        }
+
+        .jconfirm-content {
+            font-size: 13px;
+        }
+
+        .uppercase .dx-texteditor-input {
+            text-transform: uppercase;
+        }
+
+        #blockUI {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100vw;
+            z-index: 999999999;
+            border: none;
+            margin: 0px;
+            padding: 0px;
+            top: 0px;
+            left: 0px;
+            cursor: wait;
+            position: fixed;
+        }
+
+        footer {
+            background-color: #29bade;
+            color: white;
+        }
+
+        .custom-menu A {
+            color: #FFFFFF !important;
+            text-decoration: none !important;
+            font-size: 8pt;
+        }
+
+        .custom_input {
+            padding: 4px 5px;
+            border: 1px solid #d3e0e9;
+            border-bottom-left-radius: 4px;
+            border-top-left-radius: 4px;
+            border-right: none;
+            height: 30px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="blockUI">
+        <div class="dx-loadpanel-content" style="width: 140px; top: calc(50vh - 35px); left: calc(50vw - 70px); position: fixed;">
+            <div class="dx-loadpanel-content-wrapper">
+                <div class="dx-loadpanel-indicator dx-loadindicator dx-widget">
+                    <div class="dx-loadindicator-wrapper">
+                        <div class="dx-loadindicator-content">
+                            <div class="dx-loadindicator-icon">
+                                <div class="dx-loadindicator-segment dx-loadindicator-segment7"></div>
+                                <div class="dx-loadindicator-segment dx-loadindicator-segment6"></div>
+                                <div class="dx-loadindicator-segment dx-loadindicator-segment5"></div>
+                                <div class="dx-loadindicator-segment dx-loadindicator-segment4"></div>
+                                <div class="dx-loadindicator-segment dx-loadindicator-segment3"></div>
+                                <div class="dx-loadindicator-segment dx-loadindicator-segment2"></div>
+                                <div class="dx-loadindicator-segment dx-loadindicator-segment1"></div>
+                                <div class="dx-loadindicator-segment dx-loadindicator-segment0"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dx-loadpanel-message">Đang tải dữ liệu...</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row row-layout">
+            <div class="col-12">
+                <a href="/" class="">
+                    <img src="/Images/BANNER2024V1.png" style="width:100%; max-height: 168px;" />
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid" style="min-height: 600px">
+        <div class="row row-layout">
+            <div class="col-lg-2 col-3 col-12">
+                
+<div class="card">
+    <input data-val="true" data-val-required="The Username field is required." id="Username" name="Username" type="hidden" value="" />
+    <div class="card-header">
+            <b>Đăng nhập</b>
+    </div>
+    <div class="card-body">
+                <form action="/Home/LoginSubmit" id="LoginForm" method="post" novalidate="novalidate">
+                    <input name="__RequestVerificationToken" type="hidden" value="D_LxvYTF3fkAm17cTcVk-xWdkv09TJy6bGTCAhMd_6Wdt0BXeaAyEx68PJik5Yh76jAMjOVfbvnkbbPkwReyMqk5x2zycuW026lWOzJKhZs1" />
+                    <div>
+                        <label for="txtUserName">Tài khoản</label>
+                        <input class="form-control text-box single-line" data-val="true" data-val-required="The Username field is required." id="Username" name="Username" type="text" value="" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Username" data-valmsg-replace="true"></span>
+                    </div>
+                    <div>
+                        <label for="txtPassword">Mật khẩu</label>
+                        <input class="form-control" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" type="password" />
+                        <span class="field-validation-valid text-danger" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                    </div>
+                        <div class="form-group">
+                            <label for="cmbSite">Khu vực giao nhận Container</label>
+                            <select class="form-control" data-val="true" data-val-required="Bạn chưa chọn Khu vực giao nhận Container!" id="SiteId" name="SiteId"><option value=""></option>
+<option value="CTL">C&#225;t L&#225;i</option>
+<option value="GNL">C&#225;t L&#225;i Giang Nam</option>
+<option value="THP">T&#226;n Cảng Hiệp Phước</option>
+<option value="TOT">TCTT</option>
+</select>
+                            <span class="field-validation-valid" data-valmsg-for="SiteId" data-valmsg-replace="true" style="color : red; font-size : 13px"></span>
+                        </div>
+                    
+                    
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-12" style="text-align: center; margin-top: 5px">
+                                <input type="submit" class="btn btn-primary" value="Đăng nhập" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="col-12" style="text-align:center; font-size: 9pt">
+                                <a id="btnForgetPass" href="/Home/ForgotPassword">Quên mật khẩu?</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+    </div>
+</div>
+    <div class="modal fade" tabindex="-1" role="dialog" id="changeSiteModel">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h6 class="modal-title">Khu vực giao nhận Container</h6>
+                    <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <select class="form-control" id="ChangeSiteId" name="SiteId"><option value="CTL">C&#225;t L&#225;i</option>
+<option value="GNL">C&#225;t L&#225;i Giang Nam</option>
+<option value="THP">T&#226;n Cảng Hiệp Phước</option>
+<option value="TOT">TCTT</option>
+</select>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Đóng</button>
+                    <button onclick="onChangeSite()" class="btn btn-primary">Đồng ý</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>DevExpress.config({"serverDecimalSeparator":"."});DevExpress.aspnet.setTemplateEngine();</script><div id="popup-add-email-account-management"></div><script type="text/html" id="popup-add-email-account-management-contentTemplate">
+            <div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <p>
+                Xin chào: <strong> </strong> <br>
+                <span id="messageChangesite">Vui lòng nhập 1 email khi đăng nhập lần đầu để bảo mật tài khoản, tránh việc bị người khác lấy cắp thông tin tài khoản</span>
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-11">
+        <div class="form-group">
+            <label>Email mới<span style="color: red"> (*)</span></label>
+            <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxTextBox",{"mode":"email","placeholder":"Vui lòng nhập 1 email"},arguments[0])%><%}("txtRegisterEmail")%>
+        </div>
+    </div>
+
+    <div class="col-md-1 form-group">
+        <i class="fa fa-info-circle" id="iconInfoEmailHome" style="margin-top: 6%;color: #337ab7;"></i>
+        <div id="tooltipEmailHome"></div>
+    </div>
+</div>
+
+<div class="row hidden" id="otp-group" >
+    <div class="col-md-11">
+        <div class="form-group">
+            <label>OTP<span style="color: red"> (*)</span></label>
+            <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxTextBox",{"placeholder":"Nhập mã OTP gửi về email"},arguments[0])%><%}("txtOTPAddMailManageHome")%>
+        </div>
+    </div>
+</div>
+
+<div class="row hidden">
+    <div class="col-md-11">
+        <div class="form-group">
+            <label>Tài khoản<span style="color: red"> (*)</span></label>
+            <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxTextBox",{"value":null},arguments[0])%><%}("txtUserNameAddMailManage")%>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group">
+        <div class="col-md-7">
+            <label>Captcha<span style="color: red"> (*)</span></label>
+            <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxTextBox",{"placeholder":"Nhập mã captcha"},arguments[0])%><%}("txtCaptchaAddMailManageHome")%>
+        </div>
+        <div class="col-md-4">
+            <img id="captchaImageAddMailHome"
+                 style="padding-top: 13%; width: 80%"
+                 onclick="reloadCaptchaAddMail()" />
+        </div>
+        <div class="col-md-1">
+            <button type="button" id="refreshCaptchaAddMail" onclick="reloadCaptchaAddMail()" style="margin-top: 50%;margin-left: -100%;">
+                <i class="fa fa-refresh"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="text-align:right">
+        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"width":"100px","text":"Gửi OTP","type":"default","onClick":onSendOTPAddMailManage},arguments[0])%><%}("btnPopup_SendOTP_AddMailManage")%>
+
+        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"width":"100px","text":"Xác nhận","type":"default","visible":false,"onClick":onConfirmAddMailManage},arguments[0])%><%}("btnPopup_ConfirmAddMailManage")%>
+
+        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"width":"100px","text":"Đóng","type":"normal","onClick":onClosePopupAddMailManage},arguments[0])%><%}("btnPopupAddMail_Close")%>
+    </div>
+</div>
+
+<script>
+    function reloadCaptchaAddMail() {
+        var img = document.getElementById("captchaImageAddMailHome");
+        var url = '/Home/GenerateCaptcha?captchaType=AddMailManage';
+        url = url + "&t=" + new Date().getTime();
+        img.src = url;
+    }
+</<% %>script>
+
+<style>
+    .dx-popup-title {
+        background-color: #337ab7;
+        border-color: #2d6da3;
+        color: #fff;
+    }
+
+    .custom-tooltip {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .hidden {
+        display: none;
+    }
+    .custom-tooltip {
+        display: none;
+        position: absolute;
+        background-color: #333;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    #refreshCaptchaAddMail {
+        border: none;
+        background: none;
+        color: #007bff;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 0;
+        transition: color 0.3s ease;
+        margin-left: 5px;
+    }
+
+        #refreshCaptchaAddMail:hover {
+            color: #0056b3;
+        }
+</style>
+
+
+            </div>
+        </script><script>DevExpress.utils.readyCallbacks.add((function($){$("#popup-add-email-account-management").dxPopup({"height":"auto","maxWidth":"450px","title":"Nhập email quản lý tài khoản","showCloseButton":true,"dragEnabled":true,"deferRendering":false,"contentTemplate":$("#popup-add-email-account-management-contentTemplate")});}).bind(this, jQuery));</script>
+<div id="popup-change-pwd-home"></div><script type="text/html" id="popup-change-pwd-home-contentTemplate">
+            <div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <p id="typeMessageChangePwdHome">Vui lòng đổi mật khẩu khác với mật khẩu hiện tại của tài khoản</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="password-container" id="passwordContainerHome">
+            <label>Mật khẩu hiện tại<span style="color: red"> (*)</span></label>
+            <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxTextBox",{"mode":"password","elementAttr":{"class":"input-pwd-custom"},"placeholder":"Nhập mật khẩu hiện tại","maxLength":40},arguments[0])%><%}("txtCurrentPasswordHome")%>
+            <span id="togglePasswordNewConfirmHome" class="toggle-password-icon-home-current fa fa-eye fa-lg" onclick="changePasswordModeHome('txtCurrentPasswordHome', 'toggleCurrentPasswordHome')"></span>
+        </div>
+
+        <div class="password-container" id="passwordContainerHome">
+            <label>Mật khẩu mới<span style="color: red"> (*)</span></label>
+            <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxTextBox",{"mode":"password","onKeyDown":onCheckSingleQuoute,"onFocusOut":onRemoveSpecialCharTxt_PW,"elementAttr":{"class":"input-pwd-custom"},"placeholder":"Nhập mật khẩu mới","maxLength":40},arguments[0])%><%}("txtNewPasswordHome")%>
+            <span id="togglePasswordNewHome" class="toggle-password-icon-home fa fa-eye fa-lg" onclick="changePasswordModeHome('txtNewPasswordHome', 'togglePasswordNewHome')"></span>
+        </div>
+
+        <div class="password-container" id="passwordContainerConfirmHome">
+            <label>Xác nhận mật khẩu<span style="color: red"> (*)</span></label>
+            <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxTextBox",{"mode":"password","onKeyDown":onCheckSingleQuoute,"onFocusOut":onRemoveSpecialCharTxt,"elementAttr":{"class":"input-pwd-custom"},"placeholder":"Xác nhận lại mật khẩu","maxLength":40},arguments[0])%><%}("txtNewPasswordConfirmHome")%>
+            <span id="togglePasswordNewConfirmHome" class="toggle-password-icon-home-confirm fa fa-eye fa-lg" onclick="changePasswordModeHome('txtNewPasswordConfirmHome', 'togglePasswordNewConfirmHome')"></span>
+        </div>
+        <div class="col-md-5">
+            <div class="form-group">
+                <span id="strengthPwdMessageHome"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <i style="color: red">*Mật khẩu từ 8 ký tự đến 40 ký tự bao gồm chữ hoa, chữ thường, số và ký tự đặc biệt <br />(trừ ký tự "<" và ">") </i>
+        </div>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="form-group">
+        <div class="col-md-7">
+            <label>Captcha<span style="color: red"> (*)</span></label>
+            <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxTextBox",{"placeholder":"Nhập mã captcha"},arguments[0])%><%}("txtCaptchaChangePassHome")%>
+        </div>
+        <div class="col-md-4">
+            <img id="captchaImageChangePassHome"
+                 style="padding-top: 13%; height: 85%; width: 100%"
+                 onclick="reloadCaptchaChangePassHome()" />
+        </div>
+        <div class="col-md-1">
+            <button type="button" id="refreshCaptchaChangePwHome" onclick="reloadCaptchaChangePassHome()" style="margin-top: 50%;">
+                <i class="fa fa-refresh"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="row form-group">
+    <div class="col-md-12" style="text-align:right">
+        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"width":"100px","text":"Xác nhận","type":"default","onClick":onUpdatePwdHome},arguments[0])%><%}("btnPopupChangePwd_ConfirmHome")%>
+
+        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"width":"100px","text":"Đóng","type":"normal","onClick":onClosePopupChangePwdHome},arguments[0])%><%}("btnPopupChangePwd_CloseHome")%>
+    </div>
+</div>
+
+<script>
+    function reloadCaptchaChangePassHome() {
+    var img = document.getElementById("captchaImageChangePassHome");
+    var url = '/Home/GenerateCaptcha?captchaType=ChangePassHome'
+    url = url + "&t=" + new Date().getTime();
+    img.src = url;
+}
+</<% %>script>
+
+<style>
+    .password-container {
+        position: relative;
+        padding-bottom: 5px;
+    }
+
+    .toggle-password-icon-home {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        cursor: pointer;
+        color: #337ab7;
+    }
+
+    .toggle-password-icon-home-confirm {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        cursor: pointer;
+        color: #337ab7;
+    }
+
+    .toggle-password-icon-home-current {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        cursor: pointer;
+        color: #337ab7;
+    }
+
+    .weak {
+        color: #ffc107;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .strong {
+        color: #28a745;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .good {
+        color: #d39e00;
+        font-weight: 500;
+        font-size: 12px;
+    }
+
+    .input-pwd-custom .dx-texteditor-input {
+        width: 90%;
+    }
+    #refreshCaptchaChangePwHome {
+        border: none;
+        background: none;
+        color: #007bff;
+        cursor: pointer;
+        font-size: 24px;
+        padding: 0;
+        transition: color 0.3s ease;
+        margin-left: 5px;
+    }
+
+        #refreshCaptchaChangePwHome:hover {
+            color: #0056b3;
+        }
+</style>
+            </div>
+        </script><script>DevExpress.utils.readyCallbacks.add((function($){$("#popup-change-pwd-home").dxPopup({"height":"auto","maxWidth":"475px","title":"Nhập mật khẩu Eport mới","showCloseButton":true,"dragEnabled":true,"deferRendering":false,"contentTemplate":$("#popup-change-pwd-home-contentTemplate")});}).bind(this, jQuery));</script>
+<div id="popup-warning-change-pwd-home"></div><script type="text/html" id="popup-warning-change-pwd-home-contentTemplate">
+            <div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <p>
+                Xin chào: <strong> </strong> <br>
+                Hiện nay tài khoản của quý khách đã lâu chưa đổi mật khẩu. <br />
+                Ngày đổi mật khẩu gần nhất là . <br />
+                Quý khách vui lòng thay đổi mật khẩu trước ngày <strong></strong> để tiếp tục sử dụng tài khoản Eport và bảo mật tài khoản.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="text-align:right">
+        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"width":"100px","text":"Đóng","type":"normal","onClick":onClosePopupWarning},arguments[0])%><%}("btnPopupChangePWD_Close")%>
+    </div>
+</div>
+            </div>
+        </script><script>DevExpress.utils.readyCallbacks.add((function($){$("#popup-warning-change-pwd-home").dxPopup({"height":"auto","maxWidth":"430px","title":"Thông báo đổi mật khẩu tài khoản","showCloseButton":true,"dragEnabled":true,"deferRendering":false,"contentTemplate":$("#popup-warning-change-pwd-home-contentTemplate")});}).bind(this, jQuery));</script>
+<div id="popup-warning-change-pwd-home-change-site"></div><script type="text/html" id="popup-warning-change-pwd-home-change-site-contentTemplate">
+            <div>
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="form-group">
+            <p>
+                Xin chào: <strong> </strong> <br>
+                Hiện nay tài khoản của quý khách đã lâu chưa đổi mật khẩu. <br />
+                Ngày đổi mật khẩu gần nhất là <span id="lastChangePwdStr"></span>. <br />
+                Quý khách vui lòng thay đổi mật khẩu trước ngày <strong><span id="pwdExpDatetr"></span></strong> để tiếp tục sử dụng tài khoản Eport và bảo mật tài khoản.
+            </p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12" style="text-align:right">
+        <%!function(){%><div id="<%=arguments[0]%>"></div><%DevExpress.aspnet.createComponent("dxButton",{"width":"100px","text":"Đóng","type":"normal","onClick":onClosePopupWarningChangeSite},arguments[0])%><%}("btnPopupChangePwdChangeSite_Close")%>
+    </div>
+</div>
+            </div>
+        </script><script>DevExpress.utils.readyCallbacks.add((function($){$("#popup-warning-change-pwd-home-change-site").dxPopup({"height":"auto","maxWidth":"430px","title":"Thông báo đổi mật khẩu tài khoản","showCloseButton":true,"dragEnabled":true,"deferRendering":false,"contentTemplate":$("#popup-warning-change-pwd-home-change-site-contentTemplate")});}).bind(this, jQuery));</script>
+
+
+<script type="text/javascript" src="/Scripts/eport/keycloak.js?v=3.2.21.241"></script>
+<script type="text/javascript" src="/Scripts/share/custom.layout.js?v=3.2.21.241"></script>
+<script type="text/javascript" src="/Scripts/eport/modules/home/home.js?v=3.2.21.241"></script>
+
+<script>
+    var noEmailManagement = null;
+    var modelUserName = null;
+    var mustChangePwd = null;
+    var messageChangePwd = null;
+    var warningChangePwd = null;
+
+    var keycloak = new Keycloak({
+        url: 'https://iam-eport-mobile.snp.com.vn'+'/auth',
+        realm: 'eport-realm-production',
+        clientId: 'public_client'
+    });
+
+    keycloak?.init({
+        checkLoginIframe: false,
+        promiseType: 'native',
+        token: keycloak?.token,
+        refreshToken: keycloak?.refreshToken,
+        pkceMethod: 'S256'
+    }).then((authenticated) => {
+        
+
+        if (authenticated && 'False' === 'False') {
+            $('#changeSiteModel').modal('show');
+        }
+    });
+
+    function onChangePassword() {
+        keycloak?.login(
+            { redirectUri: "https://eport.saigonnewport.com.vn", action:"UPDATE_PASSWORD" }
+        )
+    }
+
+    function onRedirectKeycloak() {
+        keycloak?.login({ redirectUri: "https://eport.saigonnewport.com.vn" })
+    }
+</script>
+
+
+                <div class="navbar-default sidebar" role="navigation">
+    <nav class="navbar navbar-default d-block d-md-block d-lg-none" role="navigation" style="margin-bottom: 0">
+        <div class="d-flex justify-content-between w-100" style="padding-left: 10px;padding-right: 10px;">
+            <a class="navbar-brand" href="#">Menu</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+    <div class="sidebar-nav collapse navbar-collapse" id="navbarCollapse">
+        <ul class="nav in" id="side-menu">
+                <li>
+                    <a class="title_menuItem" href="#">
+                        TIỆN &#205;CH
+                        <span class="fa fa-caret-down float-end fa-lg"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/CheckIn">Check-In Giao/nhận</a>
+                                </li>
+                                <li>
+                                    <a href="/Eir">Tải EIR điện tử</a>
+                                </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="title_menuItem" href="#">
+                        TRA CỨU
+                        <span class="fa fa-caret-down float-end fa-lg"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/HazadousMasterInfo">Th&#244;ng tin h&#224;ng h&#243;a nguy hiểm</a>
+                                </li>
+                                <li>
+                                    <a href="/FullContDeliveryInfo">T&#236;nh trạng container h&#224;ng xuất</a>
+                                </li>
+                                <li>
+                                    <a href="/ContainerInformation">Th&#244;ng tin container</a>
+                                </li>
+                                <li>
+                                    <a href="/Ships">Th&#244;ng tin t&#224;u/ chuyến</a>
+                                </li>
+                                <li>
+                                    <a href="/TransportationInfo">Th&#244;ng tin vận chuyển</a>
+                                </li>
+                                <li>
+                                    <a href="/ANCB">Vi phạm an ninh cảng biển</a>
+                                </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="title_menuItem" href="#">
+                        THANH TO&#193;N V&#192; HO&#193; ĐƠN
+                        <span class="fa fa-caret-down float-end fa-lg"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/PaymentList/Index">Thanh to&#225;n dịch vụ</a>
+                                </li>
+                                <li>
+                                    <a href="/DownloadInvoice">Tải h&#243;a đơn điện tử</a>
+                                </li>
+                                <li>
+                                    <a href="/InvoiceConversion/InvoiceConversion">Chuyển đổi h&#243;a đơn</a>
+                                </li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="title_menuItem" href="#">
+                        HƯỚNG DẪN SỬ DỤNG
+                        <span class="fa fa-caret-down float-end fa-lg"></span>
+                    </a>
+                    <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="/Document/Template/HBCX_EirTemplate.xlsx">HBCX_EirTemplate</a>
+                                </li>
+                                <li>
+                                    <a href="/Document/Template/CAPR_EirTemplate.xlsx">CAPR_EirTemplate</a>
+                                </li>
+                                <li>
+                                    <a href="/Document/Template/GTHA_EirTemplate.xlsx">GTHA_EirTemplate</a>
+                                </li>
+                                <li>
+                                    <a href="/Document/Template/NHAR_EirTemplate.xlsx">NHAR_EirTemplate</a>
+                                </li>
+                                <li>
+                                    <a href="/Images/ePort_Huong_dan_dang_ky_giao_nhan_container_v12024.pdf">User guide</a>
+                                </li>
+                    </ul>
+                </li>
+        </ul>
+    </div>
+</div>
+
+            </div>
+            <div class="col-lg-10 col-9 col-12">
+                <div class="panel panel-default" style="border-color:transparent;">
+                    <div class="panel-heading">
+                        <b> Trang chủ</b>
+                        
+                            <div class="btn-group pull-right" style="bottom: 7px; left: 14px;">
+                                <input id="text_search" maxlength="500" type="text" class="custom_input" placeholder="Nhập nội dung cần tìm...">
+                                <button id="btnSearchNoti" onclick="onClickSearch()" class="btn btn-default pull-right" style="height: 30px;">
+                                    <i class="fa fa-search"></i>
+                                </button>
+                            </div>
+                    </div>
+                    <div class="panel-body">
+                        
+
+<p style="color: red"></p>
+
+            <div class="row snp-card" style="color: #3C7BB5;">
+                <div class="col-md-3">
+                    <img src="https://api-eport-mobile.snp.com.vn/fileapp/store/file/get?subPath=24543/snp/742a8448-906a-4098-a8a0-5a6991b46e01.jpg" class="img-card" />
+                </div>
+                <div class="col-md-8">
+                    <div class="row" style="display: flex; width: 107%">
+                        <h3>📢 THÔNG BÁO HỢP LUYỆN PHƯƠNG ÁN CHỮA CHÁY, CỨU NẠN, CỨU HỘ TẠI CỔNG B CẢNG TÂN CẢNG - CÁT LÁI</h3>
+                        <p style="position:absolute">
+                            <i class='fa fa-calendar position-icon' style="display: flex;">
+                                <span style="margin-left: 12px"> 27/11/2026</span>
+                            </i>
+                            <i id="1ee40034-7114-472f-98fc-70e33af01260" onclick="onExpend('1ee40034-7114-472f-98fc-70e33af01260')" class="fa fa-angle-down position-icon circle" style="display: -webkit-inline-box">
+                                <span id="1ee40034-7114-472f-98fc-70e33af01260span-content" style="white-space: nowrap; overflow: hidden; margin-left: 25px">Xem chi tiết</span>
+                            </i>
+                        </p>
+                    </div>
+                </div>
+
+                    <div class="col-md-1">
+                        <i class="fa fa-star start-icon" style="font-size: large"></i>
+                    </div>
+            </div>
+            <div class="row snp-card" id="1ee40034-7114-472f-98fc-70e33af01260div" style="display: none">
+                <div class="card card-body" style="background-color: #F0F8FF; font-size: 17px">
+                    <p><span style="color: rgb(8, 27, 58); font-size: 15px">Thực hiện Kế hoạch số 5659/KH-TCg về tổ chức thực tập phương án chữa cháy, cứu nạn, cứu hộ tại Cảng Tân Cảng - Cát Lái năm 2026, Tân Cảng Sài Gòn trân trọng thông báo đến Quý khách hàng, hãng tàu và đối tác: </span></p><p><strong><br>📅 Thời gian triển khai: <span style="color: #ff0000">08:30 - 10:30, ngày 28/10/2026</span></strong></p><p><strong>📍 Địa điểm: <span style="color: #ff0000">Tòa nhà D – Cảng Tân Cảng -Cát Lái.</span></strong></p><p>Hoạt động nhằm nâng cao năng lực ứng phó và khả năng phối hợp của các lực lượng trong công tác chữa cháy, cứu nạn, cứu hộ, góp phần bảo đảm môi trường làm việc và khai thác an toàn tại Cảng.</p><p><strong><span style="color: #ff0000">📌 Lưu ý: Đề nghị Quý khách KHÔNG QUAY PHIM, CHỤP HÌNH VÀ ĐĂNG TẢI, phát tán hình ảnh liên quan đến hoạt động luyện tập, thực tập khi chưa được phép của Tổng công ty Tân Cảng Sài Gòn; không đưa tin, bình luận sai lệch về hoạt động này trên các phương tiện thông tin và mạng xã hội.</span></strong></p><p><span style="color: #0063cc">🎯 Trong suốt thời gian luyện tập và diễn tập, hoạt động sản xuất tại cảng vẫn diễn ra bình thường. Kính mong Quý khách hàng, hãng tàu, đối tác cùng phối hợp tạo điều kiện để buổi diễn tập được tổ chức an toàn, hiệu quả.</span></p><p>Kính mong Quý khách lưu ý lịch triển khai và phối hợp thực hiện theo hướng dẫn của lực lượng chức năng tại khu vực tổ chức.</p><p>Trân trọng cảm ơn sự phối hợp của Quý khách!</p><p>👉 Link chi tiết: <a target="_blank" rel="noopener noreferrer nofollow" href="https://saigonnewport.com.vn/thong-bao#ke-hoach-5659-kh-tcg-to-chuc-thuc-tap-phuong-an-chua-chay-cuu-nan-cuu-ho-tai-cang-tan-cang-cat-lai-nam-2026-6afabdef98860">https://saigonnewport.com.vn/thong-bao#ke-hoach-5659-kh-tcg-to-chuc-thuc-tap-phuong-an-chua-chay-cuu-nan-cuu-ho-tai-cang-tan-cang-cat-lai-nam-2026-6afabdef98860</a> </p><p>#SNP #TanCangCatLai #PhongChayChuaChay #CuuNanCuuHo</p>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row snp-card" style="color: #3C7BB5;">
+                <div class="col-md-3">
+                    <img src="https://api-eport-mobile.snp.com.vn/fileapp/store/file/get?subPath=24543/snp/682f8e0e-ba71-4bc7-a1de-0169345bfb48.jpg" class="img-card" />
+                </div>
+                <div class="col-md-8">
+                    <div class="row" style="display: flex; width: 107%">
+                        <h3>✨ [#SNP_EVENT] CHUỖI HOẠT ĐỘNG KHẢO SÁT CHẤT LƯỢNG DỊCH VỤ CÁC CƠ SỞ CẢNG 2026 | TỐI ƯU TRẢI NGHIỆM – CHÚNG TÔI CẦN BẠN</h3>
+                        <p style="position:absolute">
+                            <i class='fa fa-calendar position-icon' style="display: flex;">
+                                <span style="margin-left: 12px"> 17/11/2026</span>
+                            </i>
+                            <i id="e10786f2-9164-4f7a-ac47-3c00683b52ca" onclick="onExpend('e10786f2-9164-4f7a-ac47-3c00683b52ca')" class="fa fa-angle-down position-icon circle" style="display: -webkit-inline-box">
+                                <span id="e10786f2-9164-4f7a-ac47-3c00683b52caspan-content" style="white-space: nowrap; overflow: hidden; margin-left: 25px">Xem chi tiết</span>
+                            </i>
+                        </p>
+                    </div>
+                </div>
+
+                    <div class="col-md-1">
+                        <i class="fa fa-star start-icon" style="font-size: large"></i>
+                    </div>
+            </div>
+            <div class="row snp-card" id="e10786f2-9164-4f7a-ac47-3c00683b52cadiv" style="display: none">
+                <div class="card card-body" style="background-color: #F0F8FF; font-size: 17px">
+                    <p><strong>Tổng công ty Tân Cảng Sài Gòn (TCSG) xin gửi lời cảm ơn chân thành đến Quý Khách hàng và Đối tác đã luôn tin tưởng, đồng hành cùng chúng tôi trong suốt thời gian qua.</strong></p><p>Mỗi khách hàng là một góc nhìn, mỗi trải nghiệm là một câu chuyện đáng được lắng nghe!</p><p>TCSG chính thức triển khai Chuỗi hoạt động khảo sát chất lượng dịch vụ năm 2026, kết nối khách hàng, doanh nghiệp và đối tác tại các cơ sở cảng, ICD trên toàn hệ thống.</p><p>Đây là dịp để Quý Khách chia sẻ những điều hài lòng, những mong đợi và ý tưởng cải tiến, cùng TCSG xây dựng trải nghiệm dịch vụ thuận tiện, chuyên nghiệp và hiệu quả hơn.</p><p><strong>📍 KHU VỰC MIỀN NAM | 17/11–04/12/2026 | <span style="color: #ff0000">ĐANG DIỄN RA</span></strong></p><p>⚓ <span style="color: rgb(8, 8, 9); font-size: 11.5pt">Cảng Quốc Tế Tân Cảng - Cái Mép (TCIT): </span><a target="_blank" rel="noopener noreferrer nofollow" href="https://forms.gle/nkgX3o9MCc1HvwMf8"><span style="color: rgb(17, 85, 204); font-size: 10pt">https://forms.gle/nkgX3o9MCc1HvwMf8</span></a><span style="color: rgb(31, 31, 31); font-size: 10pt">&nbsp;</span></p><p>⚓ <span style="color: rgb(8, 8, 9); font-size: 11.5pt">Cảng Tân Cảng - Cái Mép Thị Vải (TCTT):</span><a target="_blank" rel="noopener noreferrer nofollow" href="https://forms.gle/FYmYSZNFvzWVPy4w9?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETEwR25FUGJ0Mk1qYVZTZlN0c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH65nrd8qDLzi86bWbxLbpNHEfrhMwcY8yxe4d0tFJAnNM0G59AF3RjCxsEjB_aem_roglGnaW6NGHMDLmUG35-A"><span style="color: rgb(8, 8, 9); font-size: 11.5pt"> </span></a><a target="_blank" rel="noopener noreferrer nofollow" href="https://forms.gle/mamijAa9jxqA8Yeo7"><span style="color: rgb(17, 85, 204); font-size: 10pt">https://forms.gle/mamijAa9jxqA8Yeo7</span></a><span style="color: rgb(0, 100, 209); font-size: 10pt">&nbsp;</span></p><p>⚓ <span style="color: rgb(8, 8, 9); font-size: 11.5pt">Cảng Tân Cảng - Cái Mép (TCCT) :</span><a target="_blank" rel="noopener noreferrer nofollow" href="https://forms.gle/K7WvC4LxjySyMhB79"><span style="color: rgb(17, 85, 204); font-size: 10pt">https://forms.gle/K7WvC4LxjySyMhB79</span></a><span style="color: rgb(8, 8, 9); font-size: 10pt">&nbsp;</span></p><p>⚓ <span style="color: rgb(8, 8, 9); font-size: 11.5pt">Cảng Tân Cảng - Cát Lái:</span><a target="_blank" rel="noopener noreferrer nofollow" href="https://forms.gle/FYmYSZNFvzWVPy4w9?fbclid=IwZXh0bgNhZW0CMTAAcGRvZgFicmlkETEwR25FUGJ0Mk1qYVZTZlN0c3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABH65nrd8qDLzi86bWbxLbpNHEfrhMwcY8yxe4d0tFJAnNM0G59AF3RjCxsEjB_aem_roglGnaW6NGHMDLmUG35-A"><span style="color: rgb(8, 8, 9); font-size: 11.5pt"> </span></a><a target="_blank" rel="noopener noreferrer nofollow" href="https://forms.gle/xgvuEVEpLvfVzn3c6"><span style="color: rgb(0, 100, 209); font-size: 11.5pt">https://forms.gle/xgvuEVEpLvfVzn3c6</span></a></p><p>⚓ <span style="color: rgb(8, 8, 9); font-size: 11.5pt">Cảng Tân Cảng - Hiệp Phước: </span><a target="_blank" rel="noopener noreferrer nofollow" href="https://forms.gle/5ME4sLXiMhH3Snme6"><span style="color: rgb(17, 85, 204); font-size: 10pt">https://forms.gle/5ME4sLXiMhH3Snme6</span></a></p><p><strong>📍 KHU VỰC MIỀN TRUNG | 07/12–12/12/2026 </strong></p><p>⚓ Cảng Tân Cảng – Miền Trung:</p><p>⚓ Cảng Quốc tế Cam Ranh:</p><p><strong>📍 KHU VỰC ĐỒNG BẰNG SÔNG CỬU LONG | 07/12–11/12/2026</strong></p><p>⚓ Tân Cảng – Cái Cui:</p><p>⚓Tân Cảng – Sa Đéc:</p><p>⚓Tân Cảng – Thốt Nốt:</p><p>⚓Tân Cảng – Giao Long:</p><p><strong>📍 KHU VỰC MIỀN BẮC | 01/12–15/12/2026</strong></p><p>⚓ Cảng Tân Cảng – 128:</p><p>⚓ Cảng Tân Cảng – 189:</p><p>⚓ Cảng Container Quốc tế Tân Cảng – Hải Phòng (TC-HICT):</p><p>📦 ICD Tân Cảng – Hải Phòng:</p><p>📦 ICD Tân Cảng – Quế Võ:</p><p><strong>📸 Đừng quên theo dõi Fanpage Saigon Newport Corporation để cập nhật đường dẫn khảo sát từng đơn vị và cùng nhìn lại những khoảnh khắc gặp gỡ trên khắp các khu vực!</strong></p><p></p><blockquote><h2><strong>💙 Quý Khách chia sẻ hôm nay – cùng Tân Cảng Sài Gòn tạo nên trải nghiệm tốt hơn ngày mai!</strong></h2></blockquote><p></p><p><strong>Mọi thông tin chi tiết quý khách vui lòng liên hệ TTCSKH:</strong></p><p>☎ Hotline (24/7 - miễn cước): 1800 1188</p><p>📱 Zalo OA: Saigon Newport Corporation</p><p>📩 Group: Đồng hành cùng Tân Cảng Sài Gòn (<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/groups/donghanhcungtcsg">https://www.facebook.com/groups/donghanhcungtcsg</a><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/groups/donghanhcungtcsg)">)</a></p><p>🌐Fanpage: Saigon Newport Corporation (<a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/saigonnewportcorporation">https://www.facebook.com/saigonnewportcorporation</a><a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/saigonnewportcorporation)">)</a></p><p>#SNP_EVENT #TanCangSaiGon #SNP #KhaoSatDichVu2026 #KhachHangHienTruong2026 #ToiUuTraiNghiemChungToiCanBan #DongHanhCungKhachHang</p>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row snp-card" style="color: #3C7BB5;">
+                <div class="col-md-3">
+                    <img src="https://api-eport-mobile.snp.com.vn/fileapp/store/file/get?subPath=24543/snp/d12cd0eb-a635-44be-b501-84f78c609bb2.jpg" class="img-card" />
+                </div>
+                <div class="col-md-8">
+                    <div class="row" style="display: flex; width: 107%">
+                        <h3>LÀM QUEN VỚI ePORT GIAO DIỆN MỚI – THUẬN TIỆN HƠN TRONG TỪNG THAO TÁC</h3>
+                        <p style="position:absolute">
+                            <i class='fa fa-calendar position-icon' style="display: flex;">
+                                <span style="margin-left: 12px"> 13/11/2026</span>
+                            </i>
+                            <i id="9b9df212-a312-48af-a2db-179a581b8519" onclick="onExpend('9b9df212-a312-48af-a2db-179a581b8519')" class="fa fa-angle-down position-icon circle" style="display: -webkit-inline-box">
+                                <span id="9b9df212-a312-48af-a2db-179a581b8519span-content" style="white-space: nowrap; overflow: hidden; margin-left: 25px">Xem chi tiết</span>
+                            </i>
+                        </p>
+                    </div>
+                </div>
+
+                    <div class="col-md-1">
+                        <i class="fa fa-star start-icon" style="font-size: large"></i>
+                    </div>
+            </div>
+            <div class="row snp-card" id="9b9df212-a312-48af-a2db-179a581b8519div" style="display: none">
+                <div class="card card-body" style="background-color: #F0F8FF; font-size: 17px">
+                    <p>✨ Mỗi lần khai báo, mỗi lượt tra cứu thông tin đều là một phần trong trải nghiệm làm hàng của Quý khách. Với mong muốn giúp những thao tác ấy trở nên thuận tiện hơn, Tổng Công ty Tân Cảng Sài Gòn giới thiệu giao diện website ePort mới từ ngày 11/11/2026.</p><p>Diện mạo hiện đại, thân thiện và hướng đến sự dễ sử dụng, ePort phiên bản nâng cấp giúp Quý khách thuận tiện thao tác, tra cứu thông tin và chủ động hơn trong quá trình sử dụng dịch vụ cảng.</p><p>⭐️⭐️Khuyến khích khách hàng làm quen và thực hiện khai báo trên phiên bản nâng cấp của ePort.</p><p><strong>🌐 Trải nghiệm giao diện ePort mới tại:</strong></p><p style="text-align: start"><strong>👉 </strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://eport.saigonnewport.com.vn"><strong><em><span style="color: rgb(41, 128, 185); font-size: inherit">https://eport.saigonnewport.com.vn</span></em></strong></a></p><p style="text-align: start"><strong>👉Phạm vi: <span style="color: rgb(231, 76, 60); font-size: inherit">Site Tân Cảng - Cát Lái</span></strong></p><p style="text-align: start"><strong><span style="color: rgb(231, 76, 60); font-size: inherit">📲 TÀI LIỆU HƯỚNG DẪN QUY TRÌNH ÁP DỤNG CHO 2 TÍNH NĂNG</span></strong></p><p style="text-align: start">🔹 <strong>Giao rỗng cho cảng: </strong><a target="_blank" rel="noopener noreferrer nofollow" href="https://canva.link/eport-new-giao-rong-cho-cang"><em><span style="color: rgb(41, 128, 185); font-size: inherit">https://canva.link/eport-new-giao-rong-cho-cang</span></em></a></p><p style="text-align: start">🔹 <strong>Hạ bãi chờ xuất:</strong><em><span style="color: rgb(41, 128, 185); font-size: inherit"> </span></em><a target="_blank" rel="noopener noreferrer nofollow" href="https://canva.link/2fnojz40e3nm1vd"><em><span style="color: rgb(41, 128, 185); font-size: inherit">https://canva.link/2fnojz40e3nm1vd</span></em></a></p><p style="text-align: start">__________________</p><p style="text-align: start">📞 Hotline 24/7 (miễn cước): 1800 1188</p><p style="text-align: start">📱 Zalo OA: Saigon Newport Corporation</p><p style="text-align: start">💻 Fanpage: Saigon Newport Corporation</p>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row snp-card" style="color: #3C7BB5;">
+                <div class="col-md-3">
+                    <img src="https://api-eport-mobile.snp.com.vn/fileapp/store/file/get?subPath=24543/snp/f6fb0648-4395-456c-af04-78d4ba22047f.png" class="img-card" />
+                </div>
+                <div class="col-md-8">
+                    <div class="row" style="display: flex; width: 107%">
+                        <h3>KẾ HOẠCH LÀM HÀNG NGÀY VĂN HÓA VIỆT NAM 2026</h3>
+                        <p style="position:absolute">
+                            <i class='fa fa-calendar position-icon' style="display: flex;">
+                                <span style="margin-left: 12px"> 03/11/2026</span>
+                            </i>
+                            <i id="64fa737c-3c70-4658-9680-b4f98f408de9" onclick="onExpend('64fa737c-3c70-4658-9680-b4f98f408de9')" class="fa fa-angle-down position-icon circle" style="display: -webkit-inline-box">
+                                <span id="64fa737c-3c70-4658-9680-b4f98f408de9span-content" style="white-space: nowrap; overflow: hidden; margin-left: 25px">Xem chi tiết</span>
+                            </i>
+                        </p>
+                    </div>
+                </div>
+
+                    <div class="col-md-1">
+                        <i class="fa fa-star start-icon" style="font-size: large"></i>
+                    </div>
+            </div>
+            <div class="row snp-card" id="64fa737c-3c70-4658-9680-b4f98f408de9div" style="display: none">
+                <div class="card card-body" style="background-color: #F0F8FF; font-size: 17px">
+                    <p>Để đảm bảo duy trì hoạt động và phục vụ cho các Quý Hãng tàu, Đại lý Hãng tàu và Quý Khách hàng một cách tốt nhất trong ngày Văn hóa Việt Nam năm 2026, chúng tôi xin thông báo kế hoạch làm hàng tại cảng như sau:</p><p><strong><span style="color: rgb(231, 76, 60); font-size: inherit">1. Thời gian nghỉ lễ</span></strong></p><p style="text-align: start"><strong>Ngày Văn hóa Việt Nam</strong>: <strong><span style="color: rgb(52, 152, 219); font-size: inherit">01 ngày</span></strong> (thứ Ba ngày<span style="color: #3aba03"> </span><strong><span style="color: #3aba03">24/11/2026</span></strong>)</p><p style="text-align: start"><strong><span style="color: rgb(231, 76, 60); font-size: inherit">2. Quy định làm hàng</span></strong></p><p style="text-align: start">Trong thời gian nghỉ lễ nêu trên, các cảng của TCT TCSG vẫn tiếp nhận tàu, xếp dỡ hàng hóa xuất/nhập tàu, giao nhận container như bình thường. Đối với các dịch vụ khác, cảng thực hiện thời gian làm việc theo quy định chung của Nhà nước về chế độ nghỉ lễ.</p><p style="text-align: start">Ngoài các dịch vụ nêu trên, đề nghị Quý Hãng tàu, Đại lý Hãng tàu và Quý Khách hàng thông báo cho cảng <strong><span style="color: rgb(52, 152, 219); font-size: inherit">trước ngày 16/11/2026</span></strong>. Cảng sẽ xem xét và có kế hoạch giải quyết cho từng trường hợp cụ thể.</p><p style="text-align: start"><strong><span style="color: rgb(231, 76, 60); font-size: inherit">3. Chính sách miễn phí lưu bãi</span></strong></p><p style="text-align: start">Để hỗ trợ cho Quý Hãng tàu, Đại lý hãng tàu và Quý khách hàng, ngoài thời gian miễn lưu bãi được quy định trong hợp đồng, TCSG sẽ miễn thêm phí lưu bãi như sau:</p><p style="text-align: start"><strong>Đối tượng: </strong>Container hàng nhập từ tàu; container hàng trung chuyển, container hàng quá cảnh và container hàng tạm nhập tái xuất.</p><p style="text-align: start"><strong>Khu vực áp dụng: <span style="color: rgb(52, 152, 219); font-size: inherit">Cảng Tân Cảng - Cát Lái</span></strong> và <strong><span style="color: rgb(52, 152, 219); font-size: inherit">cảng Tân Cảng - Hiệp Phước</span></strong></p><p style="text-align: start"><strong>Thời gian áp dụng: Ngày Văn hóa Việt Nam</strong>: <strong><span style="color: rgb(52, 152, 219); font-size: inherit">01 ngày</span></strong> (thứ Ba ngày <strong><span style="color: #3aba13">24/11/2026</span></strong>)</p><p style="text-align: start">Thời gian miễn lưu bãi nêu trên<em> </em>không được tính vào thời gian lũy <em>tiến</em> để tính phí dịch vụ giao container hàng nhập.</p><p style="text-align: start">TCSG rất mong Quý Hãng tàu, Đại lý Hãng tàu và Quý Khách hàng sắp xếp lấy container ra khỏi cảng trong những ngày nghỉ để tránh tình trạng tồn đọng hàng hóa sau thời gian nghỉ lễ.</p><p style="text-align: start">👉 <strong>Chi tiết thông báo vui lòng xem tại:</strong> <a target="_blank" rel="noopener noreferrer nofollow" href="https://saigonnewport.com.vn/thong-bao#thong-bao-so-5759-tb-tcg-ke-hoach-lam-hang-tai-tong-cong-ty-tan-cang-sai-gon-trong-ngay-van-hoa-viet-nam-nam-2026-6ae994ec78c14"><span style="color: rgb(52, 152, 219); font-size: inherit">https://saigonnewport.com.vn/thong-bao#thong-bao-so-5759-tb-tcg-ke-hoach-lam-hang-tai-tong-cong-ty-tan-cang-sai-gon-trong-ngay-van-hoa-viet-nam-nam-2026-6ae994ec78c14</span></a></p><p style="text-align: start">----------------------------</p><p style="text-align: start">👉 Tham gia ngay Group Đồng hành cùng Tân Cảng Sài Gòn: <a target="_blank" rel="noopener noreferrer nofollow" href="https://www.facebook.com/groups/donghanhcungtcsg">https://www.facebook.com/groups/donghanhcungtcsg</a> để cập nhật thêm nhiều thông tin hữu ích khác!</p><p style="text-align: start"><strong>Mọi thông tin chi tiết quý khách vui lòng liên hệ TTCSKH:</strong></p><p style="text-align: start">☎ Hotline (24/7 - miễn cước): 1800 1188</p><p style="text-align: start">📱 Zalo OA: Saigon Newport Corporation</p><p style="text-align: start">📩 Group: Đồng hành cùng Tân Cảng Sài Gòn</p><p style="text-align: start">📱 Fanpage: Saigon Newport Corporation</p>
+                </div>
+            </div>
+            <br />
+            <br />
+            <div class="row snp-card" style="color: #3C7BB5;">
+                <div class="col-md-3">
+                    <img src="https://api-eport-mobile.snp.com.vn/fileapp/store/file/get?subPath=24543/snp/825414d0-fbc9-4580-a11c-b68687fb3e2d.jpg" class="img-card" />
+                </div>
+                <div class="col-md-8">
+                    <div class="row" style="display: flex; width: 107%">
+                        <h3>CÁC TIỆN ÍCH MỚI TRÊN EPORT TCTT TỪ 28/10/2026</h3>
+                        <p style="position:absolute">
+                            <i class='fa fa-calendar position-icon' style="display: flex;">
+                                <span style="margin-left: 12px"> 16/11/2026</span>
+                            </i>
+                            <i id="e7f1c399-f0d8-41c4-a69e-71642035f49b" onclick="onExpend('e7f1c399-f0d8-41c4-a69e-71642035f49b')" class="fa fa-angle-down position-icon circle" style="display: -webkit-inline-box">
+                                <span id="e7f1c399-f0d8-41c4-a69e-71642035f49bspan-content" style="white-space: nowrap; overflow: hidden; margin-left: 25px">Xem chi tiết</span>
+                            </i>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row snp-card" id="e7f1c399-f0d8-41c4-a69e-71642035f49bdiv" style="display: none">
+                <div class="card card-body" style="background-color: #F0F8FF; font-size: 17px">
+                    <p><span style="font-size: 14pt">Nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho khách hàng khi thực hiện thủ tục giao nhận container, Công ty TNHH MTV Cảng Tân Cảng – Cái Mép Thị Vải (TCTT) trân trọng thông báo </span><strong><span style="color: #2e89ff; font-size: 14pt">bổ sung các tiện ích trên hệ thống ePort</span></strong><span style="font-size: 14pt">, áp dụng từ ngày </span><strong><span style="color: #2e94ff; font-size: 14pt">28/10/2026</span><span style="font-size: 14pt"> </span></strong><span style="font-size: 14pt">đối với hoạt động giao nhận container hàng bằng đường bộ tại cảng.</span></p><p><strong><span style="color: #ff0000; font-size: 14pt">1. Mở rộng đăng ký giao nhận và thanh toán trực tuyến</span></strong></p><p><span style="font-size: 14pt">Khách hàng có thể đăng ký </span><strong><span style="color: #000000; font-size: 14pt">giao container hàng cho cảng</span></strong><span style="font-size: 14pt"> và </span><strong><span style="font-size: 14pt">nhận container hàng từ cảng</span></strong><span style="font-size: 14pt"> đối với </span><strong><span style="color: #2e89ff; font-size: 14pt">container lạnh, container hàng nguy hiểm và container quá khổ</span><span style="font-size: 14pt"> </span></strong><span style="font-size: 14pt">bằng cách nhập thông tin trực tiếp hoặc tải danh sách bằng tệp Excel trên ePort.</span></p><p><span style="font-size: 14pt">Đồng thời, hệ thống </span><strong><span style="font-size: 14pt">hỗ trợ khai bổ sung và thanh toán</span></strong><span style="font-size: 14pt"> các khoản phí kèm theo phát sinh đối với phương án GTHA, HBCX, giúp khách hàng thuận tiện hoàn tất thủ tục trên cùng hệ thống.</span></p><p><strong><span style="color: #ff0000; font-size: 14pt">2. Đăng ký chuyển bãi kiểm hóa khi làm thủ tục giao container</span></strong></p><p><span style="font-size: 14pt">Khách hàng có thể thực hiện chỉ định chuyển bãi kiểm hóa ngay khi đăng ký giao container hàng cho cảng trên ePort, giúp chủ động hơn trong việc thực hiện các thủ tục liên quan.</span></p><p><strong><span style="color: #ff0000; font-size: 14pt">3. Đăng ký hạ bãi container quá cảnh trên ePort</span></strong></p><p><span style="font-size: 14pt">Quý khách có thể </span><strong><span style="color: #2e89ff; font-size: 14pt">đăng ký hạ bãi container quá cảnh</span><span style="font-size: 14pt"> </span></strong><span style="font-size: 14pt">ngay trên ePort, thuận tiện khai báo thông tin trước khi đưa container đến cảng.</span></p><p><span style="font-size: 14pt">Các tiện ích mới được triển khai đồng bộ với quy trình duyệt phiếu và ghi nhận container qua cổng, góp phần hạn chế sai sót thông tin, giảm nhu cầu hỗ trợ trực tiếp tại quầy và tiết kiệm thời gian làm thủ tục.</span></p><p><span style="font-size: 14pt">Quý khách hàng chủ động đăng ký hàng hạ bãi quá cảnh và thanh toán trên hệ thống ePort !</span></p><p><span style="font-size: 14pt">_____________________</span></p><p><span style="font-size: 14pt">Trong quá trình thực hiện, nếu cần hướng dẫn, Quý khách vui lòng liên hệ Bộ phận Chăm sóc khách hàng TCTT:</span></p><p><span style="font-size: 14pt">Hotline: 18001188 - 1 - 3</span></p><p><span style="font-size: 14pt">Website: </span><a target="_blank" rel="noopener noreferrer nofollow" href="http://tancangcaimepthivai.com.vn"><strong><span style="font-size: 14pt">tancangcaimepthivai.com.vn</span></strong></a></p><p><span style="font-size: 14pt">Email: </span><a target="_blank" rel="noopener noreferrer nofollow" href="mailto:cskh.tctt@saigonnewport.com.vn"><span style="font-size: 14pt">cskh.tctt@saigonnewport.com.vn</span></a></p>
+                </div>
+            </div>
+            <br />
+            <br />
+        <div class="card-footer">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                            <li class="page-item active" )>
+                                <a class="page-link" href="/?page=1">1</a>
+                            </li>
+                            <li  )>
+                                <a class="page-link" href="/?page=2">2</a>
+                            </li>
+                            <li  )>
+                                <a class="page-link" href="/?page=3">3</a>
+                            </li>
+                            <li>
+                                <a class="page-link" href="/?page=4">...</a>
+                            </li>
+                                <li>
+                                    <a class="page-link" href="/?page=5">5</a>
+                                </li>
+                            <li class="page-item">
+                                <a class="page-link" href="/?page=2" tabindex="-1">></a>
+                            </li>
+
+                </ul>
+            </nav>
+        </div>
+<div class="zalo-chat-widget-container">
+    <div class="tooltip">Để được hỗ trợ xin quý khách vui lòng chọn "Chat bằng Zalo", KHÔNG chọn “Chat Nhanh”</div>
+    <div class="zalo-chat-widget" data-oaid="401080262646260631" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="300" data-height="500" title="Nhấn để chat với chúng tôi trên Zalo"></div>
+</div>
+<script src="https://sp.zalo.me/plugins/sdk.js"></script>
+<style>
+    .zalo-chat-widget {
+        bottom: 85px !important;
+        right: 35px !important;
+    }
+
+    .zalo-chat-widget-container {
+        border: none;
+        visibility: visible;
+        bottom: 85px;
+        right: 35px;
+        position: fixed;
+        width: 60px;
+        height: 60px;
+        z-index: 2147483644;
+    }
+
+        .zalo-chat-widget-container .tooltip {
+            font-size: large;
+            visibility: hidden;
+            background-color: white;
+            color: #0f0f0f;
+            font-weight: 600;
+            text-align: center;
+            padding: 5px 10px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: -15%;
+            left: -5px;
+            transform: translate(-100%,-50%);
+            white-space: nowrap;
+            z-index: 1;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .zalo-chat-widget-container:hover .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+</style>
+<style>
+    .fa-calendar:before {
+        margin-right: 8px;
+    }
+
+    .img-card {
+        width: 85%
+    }
+
+    .summary {
+        display: block;
+        text-overflow: ellipsis;
+        word-wrap: break-word;
+        overflow: hidden;
+        max-height: 5.5em;
+        line-height: 1.4em;
+        position: inherit;
+        font-size: 2em;
+    }
+
+    .snp-card {
+        flex-direction: row;
+        max-width: 100%;
+        min-height: 22%;
+        max-height: 22%;
+        background-color: #F0F8FF;
+        border-top-right-radius: 0;
+        border-bottom-left-radius: calc(0.25rem - 1px);
+    }
+
+    .card-body {
+        height: 100%;
+        display: inline-grid;
+        font-weight: 500;
+    }
+
+    .start-icon {
+        position: absolute;
+        right: 4%;
+        font-size: 20px;
+        color: #ffae29;
+    }
+
+    .position-icon {
+        position: absolute;
+        top: calc(100% + 90px);
+        color: #4E4E4E;
+        font-size: large;
+    }
+
+    .circle {
+        text-align: center;
+        float: left;
+        width: 21px;
+        height: 21px;
+        padding: 0.05em 0.15em 1.04em 0.2em;
+        border: 1px solid #909090;
+        border-radius: 100%;
+        margin-right: 7px;
+        left: 40vh;
+    }
+
+    .pagination {
+        padding-right: 5%;
+        float: right;
+    }
+
+    .ql-editor ol li:not(.ql-direction-rtl), .ql-editor ul li:not(.ql-direction-rtl) {
+        padding-left: 0;
+    }
+
+    .ql-editor ol > li, .ql-editor ul > li {
+        list-style-type: disc;
+    }
+
+        .ql-editor ul > li::before {
+            content: none;
+        }
+
+    .row.snp-card {
+        margin-bottom: 0px;
+    }
+</style>
+
+<script>
+    function onExpend(id) {
+        var myCollapse = document.getElementById(id + 'div');
+        var content = document.getElementById(id + 'span-content');
+        if (myCollapse.style.display == "none") {
+            myCollapse.style.display = "block"
+            $('#' + id).removeClass("fa fa-angle-down position-icon circle").addClass("fa fa-angle-up position-icon circle");
+            content.textContent = "Rút gọn";
+        }
+        else {
+            myCollapse.style.display = "none"
+            $('#' + id).removeClass("fa fa-angle-up position-icon circle").addClass("fa fa-angle-down position-icon circle");
+            content.textContent = "Xem chi tiết";
+        }
+    }
+
+    function onClickSearch() {
+        let myText = document.getElementById('text_search').value;
+        if (myText && myText !== '') {
+            if (myText.length > 500) {
+                myText = myText.substring(0, 500);
+            }
+            let encode = encodeURIComponent(myText);
+            window.location.href = window.location.origin + "/Home?page=1&search=" + encode;
+        }
+        else {
+            window.location.href = window.location.origin + "/Home";
+        }
+    }
+
+    $("#text_search").keyup(function (event) {
+        if (event.keyCode === 13) {
+            $("#btnSearchNoti").click();
+        }
+    });
+</script>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <footer class="bg-light text-center text-lg-start">
+        <div class="container-fluid">
+            <div class="d-flex flex-row flex-wrap justify-content-center" style="font-size: 8pt; padding-top: 1%">
+                <div class="col-6 col-lg-8 mb-4 mb-md-0 custom-menu text-sm">
+                    &nbsp;&nbsp; <a href="Default.aspx">Home</a>&nbsp;&nbsp; |&nbsp;&nbsp; <a href="#index.htm">Hint</a>&nbsp;&nbsp; |&nbsp;<a href="#index.htm">&nbsp;Contact</a>&nbsp;&nbsp;
+                    |&nbsp;&nbsp; Online:  1803  &nbsp;&nbsp;
+                    |&nbsp;&nbsp;Version:  3.2.21.241
+                </div>
+                <br />
+                <br />
+                <div class="col-6 col-lg-4 mb-4 mb-md-0 text-sm text-end">
+                    <p class="mb-0">
+                        Copyright © 2010 - Sai Gon Newport Corporation.
+                        All Rights Reserved.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <p class="text-center">
+                        <span>Tổng đài (24/7): 1800 1188 &nbsp;&nbsp;</span>
+                        <span>&nbsp;&nbsp;Email: ttcskh@saigonnewport.com.vn</span>
+                    </p>
+                    <p class="text-center">
+                        Trụ sở: 722 Điện Biên Phủ, Phường Thạnh Mỹ Tây, Thành phố Hồ Chí Minh, Việt Nam
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="/bundles/scripts/jquery?v=e-A61MQupXHqq8BeXkc9cblEtZ45HESDKnDJ7kSBVrI1"></script>
+
+
+    <script src="/bundles/scripts/custom-scripts?v=IHHWQ-mKhV79xBBaZCL6vwgOnYZMoBOHCFzbD_1av8U1"></script>
+
+
+    
+
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            var url = window.location.pathname;
+            $('a[href="' + url + '"]').addClass('active');
+            $('a[href="' + url + '"]').parent().addClass('mm-active');
+            $('a[href="' + url + '"]').parent().parent().addClass('mm-collapse mm-show');
+        });
+
+        $(function () {
+            // Close the modal when using data-dismiss="modal"
+            $('[data-dismiss="modal"]').on('click', function () {
+                $(this).closest('.modal').modal('hide');
+            });
+        });
+
+        //remove plugin from vnpt
+        function RemovePlugIn() {
+            var pluginObject = document.getElementById("4plugin");
+            ///var parentNode = null;
+            if (pluginObject != null)
+                document.body.removeChild(pluginObject);
+        }
+
+        RemovePlugIn();
+
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-15465185-2']);
+        _gaq.push(['_trackPageview']);
+
+        (function () {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+</html><script id="f5_cspm">(function(){var f5_cspm={f5_p:'FBFPJJNBKPGJJMNJBPKANPJDGNMOCFEMNGLJGPGCJDDMHHDFLBDCFPNDKOPMEGBFMIOBBPDCAAKAHPJOBLNALADPAAPNONJJLEFKJFIEOLAFDEGBDIBNKIMPHMMMDNKD',setCharAt:function(str,index,chr){if(index>str.length-1)return str;return str.substr(0,index)+chr+str.substr(index+1);},get_byte:function(str,i){var s=(i/16)|0;i=(i&15);s=s*32;return((str.charCodeAt(i+16+s)-65)<<4)|(str.charCodeAt(i+s)-65);},set_byte:function(str,i,b){var s=(i/16)|0;i=(i&15);s=s*32;str=f5_cspm.setCharAt(str,(i+16+s),String.fromCharCode((b>>4)+65));str=f5_cspm.setCharAt(str,(i+s),String.fromCharCode((b&15)+65));return str;},set_latency:function(str,latency){latency=latency&0xffff;str=f5_cspm.set_byte(str,40,(latency>>8));str=f5_cspm.set_byte(str,41,(latency&0xff));str=f5_cspm.set_byte(str,35,2);return str;},wait_perf_data:function(){try{var wp=window.performance.timing;if(wp.loadEventEnd>0){var res=wp.loadEventEnd-wp.navigationStart;if(res<60001){var cookie_val=f5_cspm.set_latency(f5_cspm.f5_p,res);window.document.cookie='snpanalytics1878189646aaaaaaaaaaaaaaaa_cspm_='+encodeURIComponent(cookie_val)+';path=/;'+'';}
+return;}}
+catch(err){return;}
+setTimeout(f5_cspm.wait_perf_data,100);return;},go:function(){var chunk=window.document.cookie.split(/\s*;\s*/);for(var i=0;i<chunk.length;++i){var pair=chunk[i].split(/\s*=\s*/);if(pair[0]=='asnps'&&pair[1]=='1234')
+{var d=new Date();d.setTime(d.getTime()-1000);window.document.cookie='asnps=;expires='+d.toUTCString()+';path=/;'+';';setTimeout(f5_cspm.wait_perf_data,100);}}}}
+f5_cspm.go();}());</script>
