@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/GPSDashboard/" />
+
+    <script src="_content/Telerik.UI.for.Blazor/js/telerik-blazor.js" defer></script>
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="_content/Telerik.UI.for.Blazor/css/kendo-theme-default/all.css" />
+    <link rel="stylesheet" href="css/three-dots.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="GPSDashboard.styles.css" rel="stylesheet" />
+    <!--Blazor:{"type":"server","prerenderId":"405ac2d4ab994551998e7c92721f2b5e","key":{"locationHash":"77D12F14A8105320B1AAED6AE7E689DA0EC4483270A645E84079EAA0FFDF550D:0","formattedComponentKey":""},"sequence":0,"descriptor":"CfDJ8EVym6\u002BkcnhItYZ2eMnjOXpBini2hWmG3NLArUgRfWh9BP7QIkp8tTUUvUGWGpgmeuF2bNzup3zbo4ichmPmlsr2c/gRt6y3mR89F2lB7k8HVldEtnPT2ZHsoUIXUmRVnAo1suzMdR51Rmnl9E7DNQu3oCvWW8DrbR\u002BXbq3OuBcjxeU0Lhpda5who/DoKDydkNucLfYRJvYH\u002BJ0bYp2JqnU692C1BfFpRqeesTYGRD0opc8W\u002BpmumzxAVg0cALAIsY6n0aX9KiLMocwRRZ1tyZFKWz3QtDB\u002BfXLt4kTydLHCcP0kc1cjxnJFOiigvfT7NgNFWn\u002BctMt0/68g7raRlJoCgbpTUa2TaOcNTPHl8zimRRtpfHelEm1Wz2FfcX09obibm01wZdkqtsks/gwvDVqprSt8NDy2WVXmSdK4oNMjcazjfhpy7lWoLxXz9NweSsRcYXcFvPF9Vwp41LXe13BqItIQ90b6j5CA06AKRXOjqB2lSUhklYhN4/xzQl7mmtr\u002ByQAdBAON4/dumSmaLvIdf31QVGsFWv1ktsDT2QdBHaoMsaRZ0S0vig4ZYWqW8PaliYaobarDmVlIS5CqF2E="}--><title>GPS Dashboard</title><!--Blazor:{"prerenderId":"405ac2d4ab994551998e7c92721f2b5e"}-->
+</head>
+<body>
+    
+<script>
+    // Automatic reload. Refer to https://github.com/dotnet/aspnetcore/issues/10325
+    // Wait until a 'reload' button appears
+    new MutationObserver((mutations, observer) => {
+        if (document.querySelector('#components-reconnect-modal h5 a')) {
+            // Now every 10 seconds, see if the server appears to be back, and if so, reload
+            async function attemptReload() {
+                await fetch(''); // Check the server really is back
+                location.reload();
+            }
+            observer.disconnect();
+            attemptReload();
+            setInterval(attemptReload, 10000);
+        }
+    }).observe(document.body, { childList: true, subtree: true });
+</script>
+
+<!--Blazor:{"type":"server","prerenderId":"ef68a2e83ee94de2b8b1334bef408110","key":{"locationHash":"973C83F14175105D4AB94E56F8F5FC36DD8F8F6A2E82CCD82A1E7193383CA0C5:0","formattedComponentKey":""},"sequence":1,"descriptor":"CfDJ8EVym6\u002BkcnhItYZ2eMnjOXp1OFgvOS4to3l3RVVM/0OPrM87UdVoVmLrBJZne5jueVve9vZWoHN1os1MXbPZX/9RWyl3FNmFQdmxmuPqm4G\u002BMacvmehSjSPbq/uf3tXP61rjODh2DcZnIWBp5SZ2iyrzs2S\u002BMCKSroUtidPJqClmZ/z8PGWpkCXKRQtvysqpXNBJ/WRvnFiFx4omSXtlTdLt/2lHC3UHS/FVfQyzaHGxMlw2xVcOTqCUn5npfiXDFmVoNa9coV4eGQbGTHgNlUCPUSFsGGS38NK6FBKPt/0BKCuljY/iqU/6mTJBp98wrlSRwS\u002BUOlzWJGRg5ahx3T8aPMjQEWlY6qH5OH7vTvzRKMSwNmHwovHe3Bc1e4E5tNpHZz0j7elnTJEXoQF66RzpZGxD0HxpR1TvmapnFpZXz6gy3EZbgDPNDnCPRMsVio1jX/adSNsVXJ3wFRSGgj5R\u002BB0aWysm7ZN6qt9gWwX6XMouqk21foAf1lirZZqyLA=="}-->
+    
+
+
+    
+        
+
+<div class="page" b-yow7y3sakv><main b-yow7y3sakv><div class="top-row px-4 navbar navbar-dark" b-yow7y3sakv><div class="container-fluid" b-yow7y3sakv><a class="navbar-brand" style="margin-left: 0" href="https://www.portvancouver.com/" target="_blank" b-yow7y3sakv><img src="images/VFPA-Logo-English.png" style="height: 34px;" b-yow7y3sakv /></a>
+                <div b-mt8c2kzztu><span class="cc-name" b-mt8c2kzztu>English</span> ﻿<input type="checkbox" style="vertical-align: middle" b-mt8c2kzztu /> <span class="nc-name" b-mt8c2kzztu>Français</span></div></div></div>
+
+        <article class="content px-4" b-yow7y3sakv>
+
+<div class="main" style="height: calc(100vh - 95px);">
+
+    <div class="k-tabstrip telerik-blazor k-tabstrip-top k-tabstrip-scrollable" data-id="6d323f7b-154e-4b4d-9daa-35f7c7bbf531" dir="ltr" style="position: relative">
+
+        
+
+        <div class="k-tabstrip-items-wrapper k-hstack">
+
+            <ul class="k-tabstrip-items k-reset k-tabstrip-items-start" role="tablist">
+                    <li class="k-item k-active   k-first" aria-controls="5e974edd-6af9-400a-8c50-72f055b65570" aria-selected="true" role="tab" id="1cf3bcc3-fe3f-4ba3-a9e6-e81ab3f01ddb" tabindex="0">
+            <span class="k-link">
+                    <span class="k-link-text">
+                        Current
+                    </span>
+            </span>
+    </li>
+
+        <li class="k-item k-last" aria-controls="5e974edd-6af9-400a-8c50-72f055b65570" aria-selected="false" role="tab" id="1f51e031-3fd3-4eba-97d6-8dc1b043c631" tabindex="-1">
+            <span class="k-link">
+                    <span class="k-link-text">
+                        Hourly
+                    </span>
+            </span>
+    </li>
+
+            </ul>
+
+        </div>
+
+
+                <div class="k-tabstrip-content k-active" role="tabpanel" aria-labelledby="1cf3bcc3-fe3f-4ba3-a9e6-e81ab3f01ddb" aria-hidden="false" id="5e974edd-6af9-400a-8c50-72f055b65570" tabindex="0" style="display: block;">
+<div><h4>Estimated truck waiting and flow times at Port of Vancouver terminals</h4>
+
+
+
+    
+
+
+<div class="k-listview telerik-blazor" dir="ltr" data-id="3cf9313e-5b23-4043-a953-4cda03398a20" style="">
+
+        <div class="k-listview-header">
+            
+                Terminal status on <span class="card-date">Nov. 27 2026</span>.
+<span>Last updated on
+                    <span class="card-date">16:34</span></span><div style="margin-left: 24px; display: inline-block;" class="dot-flashing"></div>
+            
+        </div>
+
+    <div class="k-listview-content" role="list">
+            
+        <div class="k-loader-container telerik-blazor k-loader-container-md k-loader-top" dir="ltr" style="display: none;" data-id="710da28f-1100-447a-9ec4-07fcd60acf78">
+            <div class="k-loader-container-overlay k-overlay-light"></div>
+
+        <div class="k-loader-container-inner ">
+
+                <div class="k-loader telerik-blazor k-loader-spinner-3 k-loader-lg k-loader-primary" dir="ltr">
+        <div class="k-loader-canvas">
+                <span class="k-loader-segment"></span>
+                <span class="k-loader-segment"></span>
+                <span class="k-loader-segment"></span>
+        </div>
+    </div>
+
+                </div>
+    </div>
+
+
+
+                
+        <div class="k-listview-item" role="listitem" tabindex="0" aria-setsize="4" aria-posinset="1">
+            <div class="k-card k-card-horizontal"><div class="k-vbox k-flex-grow"><div style="margin: auto; width: 130px;"><img class="orig-img" src="https://ehub.portvancouver.com/WebCams/Photos/CentermMainGates?rnd=27-04-35-30" alt="Centerm" /></div>
+
+
+<Style>
+    .orig-img {
+        width: 120px;
+        height: 90px;
+    }
+    .orig-img:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .zoom-img {
+        width: 360px;
+        height: 270px;
+        position: fixed;
+        z-index: 1001;
+        overflow: visible;
+        border: 1px solid white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: zoom-anim;
+        animation-duration: 2s;
+    }
+
+    .zoom-out {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        z-index: 1001;
+        overflow: visible;
+        border: 1px solid white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: zoom-out-anim;
+        animation-duration: 1s;
+    }
+
+    @keyframes zoom-anim {
+        from {width: 120px; height: 90px; margin-left: -120px;}
+        to {width: 360px; height: 270px; margin-left: 0px;}
+    }
+
+    @keyframes zoom-out-anim {
+        from {width: 360px; height: 270px; margin-left: 0px;}
+        to {width: 120px; height: 90px; margin-left: -120px;}
+    }
+</Style></div>
+  <div class="k-vbox k-flex-grow-4"><h4>Centerm</h4>
+    <h5>Today&#x27;s total average wait time: 41 min</h5>
+    <h5>Current total average wait time: 1hr 13 min</h5>
+    <div class="k-card-subtitle">Terminal pre-gate: 6 min</div>
+    <div class="k-card-subtitle">Terminal: 1hr 7 min</div></div>
+  <div class="k-vbox k-flex-grow-3"><div style="margin: auto;"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="60"><rect x="20" y="20" width="86" height="10" style="fill:green"></rect>
+        <rect x="106" y="20" width="43" height="10" style="fill:yellow"></rect>
+        <rect x="150" y="20" width="130" height="10" style="fill:red"></rect>
+        <rect x="20" y="0" width="105" height="10" style="fill:Yellow"><animate attributeName="width" from="0" to="105" dur="0.5s" fill="freeze"></animate></rect><line x1="20" x2="20" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="34" x2="34" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="48" x2="48" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="63" x2="63" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="77" x2="77" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="92" x2="92" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="106" x2="106" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="121" x2="121" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="135" x2="135" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="150" x2="150" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="164" x2="164" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="178" x2="178" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="193" x2="193" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="207" x2="207" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="222" x2="222" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="236" x2="236" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="251" x2="251" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="265" x2="265" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="280" x2="280" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><text x="15" y="52" fill="black">0</text><text x="53" y="52" fill="black">30</text><text x="96" y="52" fill="black">60</text><text x="140" y="52" fill="black">90</text><text x="183" y="52" fill="black">120</text><text x="226" y="52" fill="black">150</text><text x="270" y="52" fill="black">180</text></svg></div></div>
+  <div class="k-vbox k-flex-grow-2" style="margin-right: 4px;"><div class="k-card telerik-blazor k-card-vertical" dir="ltr" data-id="fb994181-db85-489c-97e7-8cf1fe2c336a">
+    <div class="k-card-header ">
+    <h5>Operating status:</h5>
+</div>
+      <div class="k-card-body ">
+    <p>Operating normally</p>
+</div>
+</div></div></div>
+
+
+<style>
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 800;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .k-card {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        column-gap: 6px;
+    }
+
+    .k-vbox {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .k-card-subtitle {
+        padding-left: 8px;
+    }
+
+    .k-flex-grow {
+        flex-basis: 10px;
+        flex-grow: 1 !important;
+    }
+
+    .k-flex-grow-2 {
+        flex-basis: 20px;
+        flex-grow: 3 !important;
+    }
+
+    .k-flex-grow-3 {
+        flex-basis: 30px;
+        flex-grow: 3 !important;
+    }
+
+    .k-flex-grow-4 {
+        flex-basis:40px;
+        flex-grow: 4 !important;
+    }
+</style>
+        </div>
+
+
+                
+        <div class="k-listview-item" role="listitem" tabindex="-1" aria-setsize="4" aria-posinset="2">
+            <div class="k-card k-card-horizontal"><div class="k-vbox k-flex-grow"><div style="margin: auto; width: 130px;"><img class="orig-img" src="https://ehub.portvancouver.com/WebCams/Photos/DeltaportGate1?rnd=27-04-35-30" alt="Deltaport" /></div>
+
+
+<Style>
+    .orig-img {
+        width: 120px;
+        height: 90px;
+    }
+    .orig-img:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .zoom-img {
+        width: 360px;
+        height: 270px;
+        position: fixed;
+        z-index: 1001;
+        overflow: visible;
+        border: 1px solid white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: zoom-anim;
+        animation-duration: 2s;
+    }
+
+    .zoom-out {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        z-index: 1001;
+        overflow: visible;
+        border: 1px solid white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: zoom-out-anim;
+        animation-duration: 1s;
+    }
+
+    @keyframes zoom-anim {
+        from {width: 120px; height: 90px; margin-left: -120px;}
+        to {width: 360px; height: 270px; margin-left: 0px;}
+    }
+
+    @keyframes zoom-out-anim {
+        from {width: 360px; height: 270px; margin-left: 0px;}
+        to {width: 120px; height: 90px; margin-left: -120px;}
+    }
+</Style></div>
+  <div class="k-vbox k-flex-grow-4"><h4>Deltaport</h4>
+    <h5>Today&#x27;s total average wait time: 35 min</h5>
+    <h5>Current total average wait time: 1hr 41 min</h5>
+    <div class="k-card-subtitle">Terminal pre-gate: Trucks in transit</div>
+    <div class="k-card-subtitle">Terminal: 1hr 41 min</div></div>
+  <div class="k-vbox k-flex-grow-3"><div style="margin: auto;"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="60"><rect x="20" y="20" width="86" height="10" style="fill:green"></rect>
+        <rect x="106" y="20" width="43" height="10" style="fill:yellow"></rect>
+        <rect x="150" y="20" width="130" height="10" style="fill:red"></rect>
+        <rect x="20" y="0" width="145" height="10" style="fill:Red"><animate attributeName="width" from="0" to="145" dur="0.5s" fill="freeze"></animate></rect><line x1="20" x2="20" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="34" x2="34" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="48" x2="48" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="63" x2="63" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="77" x2="77" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="92" x2="92" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="106" x2="106" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="121" x2="121" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="135" x2="135" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="150" x2="150" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="164" x2="164" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="178" x2="178" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="193" x2="193" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="207" x2="207" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="222" x2="222" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="236" x2="236" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="251" x2="251" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="265" x2="265" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="280" x2="280" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><text x="15" y="52" fill="black">0</text><text x="53" y="52" fill="black">30</text><text x="96" y="52" fill="black">60</text><text x="140" y="52" fill="black">90</text><text x="183" y="52" fill="black">120</text><text x="226" y="52" fill="black">150</text><text x="270" y="52" fill="black">180</text></svg></div></div>
+  <div class="k-vbox k-flex-grow-2" style="margin-right: 4px;"><div class="k-card telerik-blazor k-card-vertical" dir="ltr" data-id="7a7ced0d-cc81-4032-97f2-a1655aaf04ff">
+    <div class="k-card-header ">
+    <h5>Operating status:</h5>
+</div>
+      <div class="k-card-body ">
+    <p>Operating normally</p>
+</div>
+</div></div></div>
+
+
+<style>
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 800;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .k-card {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        column-gap: 6px;
+    }
+
+    .k-vbox {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .k-card-subtitle {
+        padding-left: 8px;
+    }
+
+    .k-flex-grow {
+        flex-basis: 10px;
+        flex-grow: 1 !important;
+    }
+
+    .k-flex-grow-2 {
+        flex-basis: 20px;
+        flex-grow: 3 !important;
+    }
+
+    .k-flex-grow-3 {
+        flex-basis: 30px;
+        flex-grow: 3 !important;
+    }
+
+    .k-flex-grow-4 {
+        flex-basis:40px;
+        flex-grow: 4 !important;
+    }
+</style>
+        </div>
+
+
+                
+        <div class="k-listview-item" role="listitem" tabindex="-1" aria-setsize="4" aria-posinset="3">
+            <div class="k-card k-card-horizontal"><div class="k-vbox k-flex-grow"><div style="margin: auto; width: 130px;"><img class="orig-img" src="https://ehub.portvancouver.com/WebCams/Photos/FSTruckInGate?rnd=27-04-35-30" alt="Fraser Surrey" /></div>
+
+
+<Style>
+    .orig-img {
+        width: 120px;
+        height: 90px;
+    }
+    .orig-img:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .zoom-img {
+        width: 360px;
+        height: 270px;
+        position: fixed;
+        z-index: 1001;
+        overflow: visible;
+        border: 1px solid white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: zoom-anim;
+        animation-duration: 2s;
+    }
+
+    .zoom-out {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        z-index: 1001;
+        overflow: visible;
+        border: 1px solid white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: zoom-out-anim;
+        animation-duration: 1s;
+    }
+
+    @keyframes zoom-anim {
+        from {width: 120px; height: 90px; margin-left: -120px;}
+        to {width: 360px; height: 270px; margin-left: 0px;}
+    }
+
+    @keyframes zoom-out-anim {
+        from {width: 360px; height: 270px; margin-left: 0px;}
+        to {width: 120px; height: 90px; margin-left: -120px;}
+    }
+</Style></div>
+  <div class="k-vbox k-flex-grow-4"><h4>Fraser Surrey</h4>
+    <h5>Today&#x27;s total average wait time: 13 min</h5>
+    <h5>Current total average wait time: Trucks in transit</h5>
+    <div class="k-card-subtitle">Terminal pre-gate: Trucks in transit</div>
+    <div class="k-card-subtitle">Terminal: Trucks in transit</div></div>
+  <div class="k-vbox k-flex-grow-3"><div style="margin: auto;"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="60"><rect x="20" y="20" width="86" height="10" style="fill:green"></rect>
+        <rect x="106" y="20" width="43" height="10" style="fill:yellow"></rect>
+        <rect x="150" y="20" width="130" height="10" style="fill:red"></rect>
+        <rect x="20" y="0" width="0" height="10" style="fill:Green"><animate attributeName="width" from="0" to="0" dur="0.5s" fill="freeze"></animate></rect><line x1="20" x2="20" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="34" x2="34" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="48" x2="48" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="63" x2="63" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="77" x2="77" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="92" x2="92" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="106" x2="106" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="121" x2="121" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="135" x2="135" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="150" x2="150" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="164" x2="164" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="178" x2="178" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="193" x2="193" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="207" x2="207" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="222" x2="222" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="236" x2="236" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="251" x2="251" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="265" x2="265" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="280" x2="280" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><text x="15" y="52" fill="black">0</text><text x="53" y="52" fill="black">30</text><text x="96" y="52" fill="black">60</text><text x="140" y="52" fill="black">90</text><text x="183" y="52" fill="black">120</text><text x="226" y="52" fill="black">150</text><text x="270" y="52" fill="black">180</text></svg></div></div>
+  <div class="k-vbox k-flex-grow-2" style="margin-right: 4px;"><div class="k-card telerik-blazor k-card-vertical" dir="ltr" data-id="924a2d57-8d16-4cb0-8fa2-c3606a5cf1e0">
+    <div class="k-card-header ">
+    <h5>Operating status:</h5>
+</div>
+      <div class="k-card-body ">
+    <p>Operating normally</p>
+</div>
+</div></div></div>
+
+
+<style>
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 800;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .k-card {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        column-gap: 6px;
+    }
+
+    .k-vbox {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .k-card-subtitle {
+        padding-left: 8px;
+    }
+
+    .k-flex-grow {
+        flex-basis: 10px;
+        flex-grow: 1 !important;
+    }
+
+    .k-flex-grow-2 {
+        flex-basis: 20px;
+        flex-grow: 3 !important;
+    }
+
+    .k-flex-grow-3 {
+        flex-basis: 30px;
+        flex-grow: 3 !important;
+    }
+
+    .k-flex-grow-4 {
+        flex-basis:40px;
+        flex-grow: 4 !important;
+    }
+</style>
+        </div>
+
+
+                
+        <div class="k-listview-item" role="listitem" tabindex="-1" aria-setsize="4" aria-posinset="4">
+            <div class="k-card k-card-horizontal"><div class="k-vbox k-flex-grow"><div style="margin: auto; width: 130px;"><img class="orig-img" src="https://ehub.portvancouver.com/WebCams/Photos/VantermGates?rnd=27-04-35-30" alt="Vanterm" /></div>
+
+
+<Style>
+    .orig-img {
+        width: 120px;
+        height: 90px;
+    }
+    .orig-img:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .zoom-img {
+        width: 360px;
+        height: 270px;
+        position: fixed;
+        z-index: 1001;
+        overflow: visible;
+        border: 1px solid white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: zoom-anim;
+        animation-duration: 2s;
+    }
+
+    .zoom-out {
+        width: 0px;
+        height: 0px;
+        position: fixed;
+        z-index: 1001;
+        overflow: visible;
+        border: 1px solid white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        animation-name: zoom-out-anim;
+        animation-duration: 1s;
+    }
+
+    @keyframes zoom-anim {
+        from {width: 120px; height: 90px; margin-left: -120px;}
+        to {width: 360px; height: 270px; margin-left: 0px;}
+    }
+
+    @keyframes zoom-out-anim {
+        from {width: 360px; height: 270px; margin-left: 0px;}
+        to {width: 120px; height: 90px; margin-left: -120px;}
+    }
+</Style></div>
+  <div class="k-vbox k-flex-grow-4"><h4>Vanterm</h4>
+    <h5>Today&#x27;s total average wait time: 55 min</h5>
+    <h5>Current total average wait time: 1hr 23 min</h5>
+    <div class="k-card-subtitle">Terminal pre-gate: &#x2264; 5 min</div>
+    <div class="k-card-subtitle">Terminal: 1hr 19 min</div></div>
+  <div class="k-vbox k-flex-grow-3"><div style="margin: auto;"><svg xmlns="http://www.w3.org/2000/svg" width="300" height="60"><rect x="20" y="20" width="86" height="10" style="fill:green"></rect>
+        <rect x="106" y="20" width="43" height="10" style="fill:yellow"></rect>
+        <rect x="150" y="20" width="130" height="10" style="fill:red"></rect>
+        <rect x="20" y="0" width="119" height="10" style="fill:Yellow"><animate attributeName="width" from="0" to="119" dur="0.5s" fill="freeze"></animate></rect><line x1="20" x2="20" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="34" x2="34" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="48" x2="48" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="63" x2="63" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="77" x2="77" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="92" x2="92" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="106" x2="106" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="121" x2="121" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="135" x2="135" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="150" x2="150" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="164" x2="164" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="178" x2="178" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="193" x2="193" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="207" x2="207" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="222" x2="222" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="236" x2="236" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><line x1="251" x2="251" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="265" x2="265" y1="30" y2="35" style="stroke:black;stroke-width:0.5"></line><line x1="280" x2="280" y1="30" y2="40" style="stroke:black;stroke-width:0.5"></line><text x="15" y="52" fill="black">0</text><text x="53" y="52" fill="black">30</text><text x="96" y="52" fill="black">60</text><text x="140" y="52" fill="black">90</text><text x="183" y="52" fill="black">120</text><text x="226" y="52" fill="black">150</text><text x="270" y="52" fill="black">180</text></svg></div></div>
+  <div class="k-vbox k-flex-grow-2" style="margin-right: 4px;"><div class="k-card telerik-blazor k-card-vertical" dir="ltr" data-id="39be2a6f-4bbd-4513-9bd5-d2f3f0a1a954">
+    <div class="k-card-header ">
+    <h5>Operating status:</h5>
+</div>
+      <div class="k-card-body ">
+    <p>Operating normally</p>
+</div>
+</div></div></div>
+
+
+<style>
+    h4 {
+        font-size: 1.1rem;
+        font-weight: 800;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .k-card {
+        display: flex;
+        flex: 1;
+        flex-wrap: wrap;
+        column-gap: 6px;
+    }
+
+    .k-vbox {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+
+    .k-card-subtitle {
+        padding-left: 8px;
+    }
+
+    .k-flex-grow {
+        flex-basis: 10px;
+        flex-grow: 1 !important;
+    }
+
+    .k-flex-grow-2 {
+        flex-basis: 20px;
+        flex-grow: 3 !important;
+    }
+
+    .k-flex-grow-3 {
+        flex-basis: 30px;
+        flex-grow: 3 !important;
+    }
+
+    .k-flex-grow-4 {
+        flex-basis:40px;
+        flex-grow: 4 !important;
+    }
+</style>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<br>
+<p>This chart shows the estimated wait times for terminal pre-gates and within terminal yards.</p>
+<ul><li>Current average wait times are updated once per minute and reflect the average waiting time of transactions which have completed their trips in the last 30 minutes.</li>
+    <li>Total average wait times are updated once per minute and reflect the total average waiting times of transactions which have completed their trips today.</li></ul>
+<p><strong>Download the Port Van eHub App for real time updates &#x2013; available for <a href="https://itunes.apple.com/us/app/portvan-ehub/id1136366396?mt=8">iOS</a> & 
+    <a href="https://play.google.com/store/apps/details?id=com.portvancouver.eHub&hl=en">Android</a>.</strong></p>
+<br>
+
+<h4>Port&#x27;s rail crossings status:</h4>
+
+    
+    
+        
+        
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-header k-justify-items-stretch k-align-items-stretch" style="row-gap: 2px;column-gap: 5px;grid-template-rows: 50px;grid-template-columns: 25% 25% 25% 25%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <h4>Crossing</h4>
+</div>
+        <div style="grid-row: 1;grid-column: 2">
+    <h4 Column="2">Status</h4>
+</div>
+        <div style="grid-row: 1;grid-column: 3">
+    <h4>Crossing</h4>
+</div>
+        <div style="grid-row: 1;grid-column: 4">
+    <h4 Column="2">Status</h4>
+</div>
+</div>
+
+
+    
+    
+            
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 50px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>Columbia</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Commissioner Street</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div><div style="grid-row: 2;grid-column: 1">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>Viterra</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Stewart Street</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div><div style="grid-row: 3;grid-column: 1">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>Vanterm East</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Stewart Street</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div><div style="grid-row: 4;grid-column: 1">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>Vanterm West</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Stewart Street</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div><div style="grid-row: 5;grid-column: 1">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>AGT</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Stewart Street</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div><div style="grid-row: 6;grid-column: 1">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>Rogers St</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Rogers Street</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div><div style="grid-row: 1;grid-column: 2">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>Centerm</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Waterfront Road</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div><div style="grid-row: 2;grid-column: 2">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>Fraser Surrey #1</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Robson @ Elevator Rd</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div><div style="grid-row: 3;grid-column: 2">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>Fraser Surrey #2</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Robson @ Plywood Rd</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div><div style="grid-row: 4;grid-column: 2">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>Fraser Surrey #3</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Timberland (5) Track Crossing</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div><div style="grid-row: 5;grid-column: 2">
+    
+    
+        
+    
+        
+
+
+<div class="k-grid-layout telerik-blazor grid-layout grid-content k-justify-items-stretch k-align-items-stretch" style="row-gap: 6px;column-gap: 10px;grid-template-rows: 20px 20px;grid-template-columns: 50% 50%" dir="ltr">
+    <div style="grid-row: 1;grid-column: 1">
+    <strong>Fraser Surrey #4</strong>
+</div>
+        <div style="grid-row: 2;grid-column: 1">
+    <span style="padding-left: 4px;">Timberland Road North</span>
+</div>
+        <div style="grid-row: 1/ span 2;grid-column: 2">
+    <div style="display: inline-block; width: 16px; height: 16px; border-radius: 8px; margin: 1px; vertical-align: middle; &#xD;&#xA;                background-color: green;"></div>
+</div>
+</div>
+
+
+<style>
+    .grid-content {
+        padding-left: 2px;
+        padding-top: 4px;
+    }
+</style>
+</div>
+</div>
+
+
+<style>
+    .k-card-horizontal {
+        margin-top: 4px;
+    }
+    .grid-header div {
+        background-color: #888;
+        color: #FFF;
+        padding-left: 2px;
+        padding-top: 12px;
+    }
+</style></div></div>
+        </div>
+</div>
+
+<style>
+  .k-tabstrip {
+  height: 98%;
+  }
+
+  .k-tabstrip-content, .k-tabstrip > .k-content {
+  overflow-x:hidden;
+  }
+</style></article></main></div>
+
+<style b-yow7y3sakv>
+    .page {
+        max-width: 1560px;
+        margin: 0 auto;
+    }
+</style>
+
+            
+
+            
+    
+
+
+
+
+
+
+
+        <!--Blazor:{"prerenderId":"ef68a2e83ee94de2b8b1334bef408110"}-->
+
+
+    <div id="blazor-error-ui">
+        
+            An error has occurred. This application may no longer respond until reloaded.
+        
+        
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
