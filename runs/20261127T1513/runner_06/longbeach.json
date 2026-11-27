@@ -1,0 +1,193 @@
+{
+  "port": "longbeach",
+  "name": "長灘 POLB",
+  "protection": "Akamai",
+  "timestamp": "2026-11-27T15:16:13.807178+00:00",
+  "urls": [
+    {
+      "url": "https://polb.com/port-info/vessel-schedule/",
+      "label": "vessel_schedule",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://polb.com/port-info/vessel-schedule/",
+          "status": 403,
+          "size": 400,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "2cb0d216c19b1a14",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;polb&#46;com&#47;port&#45;info&#47;vessel&#45;schedule&#47;\" on this server.<P> Reference&#32;&#35;18&#46;570c3417&#46;1795792577&#46;8c61500f <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;570c3417&#46;1795792577&#46;8c61500f</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://polb.com/port-info/vessel-schedule/",
+          "status": 403,
+          "size": 400,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "bd4acc88974e24f6",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;polb&#46;com&#47;port&#45;info&#47;vessel&#45;schedule&#47;\" on this server.<P> Reference&#32;&#35;18&#46;530c3417&#46;1795792581&#46;5f3af257 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;530c3417&#46;1795792581&#46;5f3af257</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://polb.com/port-info/vessel-schedule/",
+          "status": 403,
+          "size": 400,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "ef03e036a3396b0a",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;polb&#46;com&#47;port&#45;info&#47;vessel&#45;schedule&#47;\" on this server.<P> Reference&#32;&#35;18&#46;530c3417&#46;1795792586&#46;5f3b985a <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;530c3417&#46;1795792586&#46;5f3b985a</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://polb.com/port-info/vessel-schedule/",
+          "status": 403,
+          "size": 400,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "e69a18a73dd24f8a",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;polb&#46;com&#47;port&#45;info&#47;vessel&#45;schedule&#47;\" on this server.<P> Reference&#32;&#35;18&#46;530c3417&#46;1795792591&#46;5f3c4222 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;530c3417&#46;1795792591&#46;5f3c4222</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://polb.com/port-info/vessel-schedule/",
+          "status": 403,
+          "size": 400,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "c1bf60e257ed0ccf",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;polb&#46;com&#47;port&#45;info&#47;vessel&#45;schedule&#47;\" on this server.<P> Reference&#32;&#35;18&#46;570c3417&#46;1795792596&#46;8c640595 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;570c3417&#46;1795792596&#46;8c640595</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "https://polb.com/port-info/vessel-schedule/",
+          "status": 403,
+          "size": 400,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "c12a2a56c372e471",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;polb&#46;com&#47;port&#45;info&#47;vessel&#45;schedule&#47;\" on this server.<P> Reference&#32;&#35;18&#46;530c3417&#46;1795792600&#46;5f3d54b1 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;530c3417&#46;1795792600&#46;5f3d54b1</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "https://polb.com/port-info/vessel-schedule/",
+          "status": 403,
+          "size": 400,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "03b552824414c60f",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;polb&#46;com&#47;port&#45;info&#47;vessel&#45;schedule&#47;\" on this server.<P> Reference&#32;&#35;18&#46;530c3417&#46;1795792604&#46;5f3dda1d <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;530c3417&#46;1795792604&#46;5f3dda1d</P> </BODY> </HTML>"
+        }
+      ],
+      "success": false
+    },
+    {
+      "url": "https://www.polb.com/port-info/anchorages/",
+      "label": "anchorages",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.polb.com/port-info/anchorages/",
+          "status": 403,
+          "size": 399,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "ce735d059d990834",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;www&#46;polb&#46;com&#47;port&#45;info&#47;anchorages&#47;\" on this server.<P> Reference&#32;&#35;18&#46;570c3417&#46;1795792609&#46;8c659b3c <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;570c3417&#46;1795792609&#46;8c659b3c</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://www.polb.com/port-info/anchorages/",
+          "status": 403,
+          "size": 399,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "0f703eb7d2216365",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;www&#46;polb&#46;com&#47;port&#45;info&#47;anchorages&#47;\" on this server.<P> Reference&#32;&#35;18&#46;530c3417&#46;1795792615&#46;5f3f62f7 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;530c3417&#46;1795792615&#46;5f3f62f7</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://www.polb.com/port-info/anchorages/",
+          "status": 403,
+          "size": 399,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "bd9deb6a7ead897c",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;www&#46;polb&#46;com&#47;port&#45;info&#47;anchorages&#47;\" on this server.<P> Reference&#32;&#35;18&#46;530c3417&#46;1795792618&#46;5f3fc8c2 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;530c3417&#46;1795792618&#46;5f3fc8c2</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://www.polb.com/port-info/anchorages/",
+          "status": 403,
+          "size": 399,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "88a8bdda2235dfae",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;www&#46;polb&#46;com&#47;port&#45;info&#47;anchorages&#47;\" on this server.<P> Reference&#32;&#35;18&#46;530c3417&#46;1795792624&#46;5f4057d9 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;530c3417&#46;1795792624&#46;5f4057d9</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://www.polb.com/port-info/anchorages/",
+          "status": 403,
+          "size": 399,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "f180ca4f76bc2a61",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;www&#46;polb&#46;com&#47;port&#45;info&#47;anchorages&#47;\" on this server.<P> Reference&#32;&#35;18&#46;530c3417&#46;1795792629&#46;5f40c115 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;530c3417&#46;1795792629&#46;5f40c115</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "https://www.polb.com/port-info/anchorages/",
+          "status": 403,
+          "size": 399,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "e04fb8a9146e7558",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;www&#46;polb&#46;com&#47;port&#45;info&#47;anchorages&#47;\" on this server.<P> Reference&#32;&#35;18&#46;530c3417&#46;1795792633&#46;5f4133b8 <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;530c3417&#46;1795792633&#46;5f4133b8</P> </BODY> </HTML>"
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "https://www.polb.com/port-info/anchorages/",
+          "status": 403,
+          "size": 399,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "16a68d674369ab57",
+          "snippet": "<HTML><HEAD> <TITLE>Access Denied</TITLE> </HEAD><BODY> <H1>Access Denied</H1> You don't have permission to access \"http&#58;&#47;&#47;www&#46;polb&#46;com&#47;port&#45;info&#47;anchorages&#47;\" on this server.<P> Reference&#32;&#35;18&#46;570c3417&#46;1795792637&#46;8c68ebae <P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;570c3417&#46;1795792637&#46;8c68ebae</P> </BODY> </HTML>"
+        }
+      ],
+      "success": false
+    }
+  ],
+  "success": false,
+  "winning_strategy": null,
+  "data_saved": false
+}
