@@ -1,0 +1,193 @@
+{
+  "port": "felixstowe",
+  "name": "費利克斯托 Hutchison",
+  "protection": "Cloudflare",
+  "timestamp": "2026-11-28T07:59:35.774636+00:00",
+  "urls": [
+    {
+      "url": "https://www.portoffelixstowe.co.uk/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.portoffelixstowe.co.uk/",
+          "status": 403,
+          "size": 6045,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "bd983700bd396336",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-cN3PGAjmriQlktzixigEXt&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://www.portoffelixstowe.co.uk/",
+          "status": 403,
+          "size": 6045,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "6bfef552c1d75085",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-Q0BzTZQ5aVvZfAkzXfmBBU&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://www.portoffelixstowe.co.uk/",
+          "status": 403,
+          "size": 6088,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "b95ea4c5306194e8",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-Dw6OwJwh6CMD1AJJ5jTi8t&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://www.portoffelixstowe.co.uk/",
+          "status": 403,
+          "size": 6088,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "7cbbe16c4883ffcb",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-uE5JUFUHlDSKPMr4qSB4HA&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://www.portoffelixstowe.co.uk/",
+          "status": 403,
+          "size": 5769,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "99583596d2cdd149",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-TekIewaVVwGHQYx4UGHuZo&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "https://www.portoffelixstowe.co.uk/",
+          "status": 403,
+          "size": 6089,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "344682095254784e",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-Gc5yq4yB1oiKwamUPN9xqA&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "https://www.portoffelixstowe.co.uk/",
+          "status": 403,
+          "size": 5853,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "3585c5b0fe2b69a0",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-ornWn5orOK7Tuv9qvciMDs&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        }
+      ],
+      "success": false
+    },
+    {
+      "url": "https://www.portoffelixstowe.co.uk/shipping/vessel-schedule/",
+      "label": "vessel_schedule",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.portoffelixstowe.co.uk/shipping/vessel-schedule/",
+          "status": 403,
+          "size": 6142,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "4e221547688c31a2",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-N0ENFp3dFvZb3Qc9T6IePd&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://www.portoffelixstowe.co.uk/shipping/vessel-schedule/",
+          "status": 403,
+          "size": 6142,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "e914911f0057e25a",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-9U447zMnLOco9SX0CLktFX&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://www.portoffelixstowe.co.uk/shipping/vessel-schedule/",
+          "status": 403,
+          "size": 6206,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "25d2f1a23a9434ff",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-M1uupJZRDU8PjWs6HVWb5T&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://www.portoffelixstowe.co.uk/shipping/vessel-schedule/",
+          "status": 403,
+          "size": 6185,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "c031c6765a64f24a",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-CGXutwhvzMgc1WTdbaEvvU&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://www.portoffelixstowe.co.uk/shipping/vessel-schedule/",
+          "status": 403,
+          "size": 5886,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "178468afaeea658e",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-NZfIR4zoZYve2BbapWMOO8&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "https://www.portoffelixstowe.co.uk/shipping/vessel-schedule/",
+          "status": 403,
+          "size": 6163,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "fd18c50a188575d3",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-aOKt2Zz2QZQ84LGYT3WIGW&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "https://www.portoffelixstowe.co.uk/shipping/vessel-schedule/",
+          "status": 403,
+          "size": 5971,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "b796f3301af58066",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-cnm9f5ASkjFTr9a0ueODhb&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        }
+      ],
+      "success": false
+    }
+  ],
+  "success": false,
+  "winning_strategy": null,
+  "data_saved": false
+}
