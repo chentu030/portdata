@@ -1,0 +1,33 @@
+{
+  "port": "lcit",
+  "name": "林查班 LCIT (DP World)",
+  "protection": "Cloudflare",
+  "timestamp": "2026-11-28T08:02:22.174519+00:00",
+  "urls": [
+    {
+      "url": "https://www.lcit.com/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.lcit.com/",
+          "status": 200,
+          "size": 51879,
+          "is_challenge": false,
+          "has_content": false,
+          "error": null,
+          "content_hash": "5776561b0a38ee18",
+          "snippet": "<!DOCTYPE html> <html lang=\"en\"> <head> <!-- ============================================== Basic Page Needs =============================================== --> <meta charset=\"utf-8\"> <meta http-equiv=\"x-ua-compatible\" content=\"ie=edge\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <!--[if IE]><meta http-equiv=\"x-ua-compatible\" content=\"IE=9\" /><![endif]--> <title>Laem Chabang Internat"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 51879,
+      "saved_file": "lcit_homepage.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}

@@ -1,0 +1,79 @@
+{
+  "port": "hpt",
+  "name": "林查班 HPT (Hutchison)",
+  "protection": "Cloudflare",
+  "timestamp": "2026-11-28T08:02:33.369177+00:00",
+  "urls": [
+    {
+      "url": "https://hutchisonports.co.th/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://hutchisonports.co.th/",
+          "status": 200,
+          "size": 27587,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "9fb68c5271b99feb",
+          "snippet": "#��\u0010Ei��puD��\u0001�HY8 8��aZ��z�����?��:��Я[V\u000fA\u0002 ��4�m�m��7�<=��^\u0017H�$�$�\u0005@}�W�6z�~�M_\u0010�l�p���i��s~�`��Je�\u001a��*���� �F�m�TH��&$�����Uc��3>\u001a �3�dkd9��lv�k^�?>\u0002�\u0004 �\u0000 y΂�\u0002�`@J����\u000f\u0010d�\u0014����j�U�T�b��)�\u0006$\u0015P�uΪ�kL�:�$�ʙ1�$1�u��F���<�p��M��c,��_*\u0002b\"ݦec�u�Z�\b��6 ڡ2�e��8��( �l�\u001a����X��$�!����Lw *.@��HL�R��w�#\u0011\u0002\u0001\u0002���.��������֩�A$\u0004�e8K�{��\u0000EB�R$��(\u0001��<�/�(�f��v�x!��y\u0001g�i�n�\u000e�[�CO�\u0018�S�D�5\b [ \u0000�\u0002�6%��ʀz�L���ӛ��yq�\u0013B��\u0005\u0007�\u0000���`����$��k�47sK���Y���\u0011�� �s��?B�wfn�,缨���J�|N�\u0014u��s+Kɀ�[�e�\u0004�����\u0014�5|N��X*Ψ\u0017]���u�Ο\b��"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 27587,
+      "saved_file": "hpt_homepage.html"
+    },
+    {
+      "url": "https://online.hutchisonports.co.th",
+      "label": "online_service",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 403,
+          "size": 6063,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "3dba11072271c28c",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-f44sTRPxOqTzBv8UQyToaX&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 403,
+          "size": 6063,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "f6a4cef8c643094e",
+          "snippet": "<!DOCTYPE html><html lang=\"en-US\"><head><title>Just a moment...</title><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\"><meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\"><meta name=\"robots\" content=\"noindex,nofollow\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><meta http-equiv=\"content-security-policy\" content=\"default-src &#39;none&#39;; script-src &#39;nonce-4tFtEUAqhj68Ds7r0hyv00&#39; &#39;unsafe-eval&#39; https://challenges.cloudflare.com; script-s"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 200,
+          "size": 32304,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "60d8247d71e993da",
+          "snippet": "<!DOCTYPE html> <html class=\"no-js page-13 app-HPT-SUPER-APP114\" lang=\"en\" > <head> <meta http-equiv=\"x-ua-compatible\" content=\"IE=edge\" /> <meta charset=\"utf-8\"> <title>HPT Digital Platform</title> <base href=\"/hptpcs/\" /> <link rel=\"stylesheet\" href=\"/i/app_ui/css/Core.min.css?v=24.2.15\" type=\"text/css\" /> <link rel=\"stylesheet\" href=\"/i/app_ui/css/Theme-Standard.min.css?v=24.2.15\" type=\"text/css\" /> <link rel=\"stylesheet\" href=\"/i/libraries/font-apex/2.4/css/font-apex.min.css?v=24"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "referer_google",
+      "response_size": 32304,
+      "saved_file": "hpt_online_service.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "referer_google",
+  "data_saved": true
+}
