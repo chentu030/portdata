@@ -1,0 +1,124 @@
+{
+  "port": "hpt",
+  "name": "林查班 HPT (Hutchison)",
+  "protection": "Cloudflare",
+  "timestamp": "2026-11-28T08:04:22.492085+00:00",
+  "urls": [
+    {
+      "url": "https://hutchisonports.co.th/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://hutchisonports.co.th/",
+          "status": 403,
+          "size": 1489,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "95602bc59bd991f9",
+          "snippet": "\u0013�\u0011\u0000į���}9�a� ���d\u0007m��Ղ��7\u0002-��ф �~�@i��ײ� ��T��\u0003�\u000fQIw�7�\u0012H�\u001aI\u0012\u0011[cA�sj���4gdV\u0006\u0001Z������\u0005_~�� �\u001bi�[��B��2 �!z�>N�A���*0Ռ�c/c\u0000n��>�\u000f��\u0010_���+�K�` �14���\u0017'��\u000fE8��\u0001?���Kl����}�m�)��5ٻeg�P�,\u0007�~�2�\u0011+�T�H�w�,?(k��:���S[3\u0007�\u000e��A!cH�� �`�\u0010[ �\u0019�\b�U8v��\u0001p����mt6����|g�� ����A��\u0018�W\u000e�X��:���A��-�/Z�j�)Ŕ\u0017 GZ\u00168���E6�&\u0007�X��'� �_\u0011l\u0011R�E\u0019������j�ip��8\u001a\u0001�}-�/?�z�Ì�>��8�\u0018\u0001���� �������@�g;��\b\u0000\u0016�6�����E��7�,�)C �R�\u0007�)�x �b����N\u0018h��s��lw\u0007[#��\u0012 0)}4�I�-o�\u0011p \u0006X��hp�b�\u0012�\u0000W��E�$���8Sqe� �\u001a �0�f� #BQ\u0013�\u0001���\u0015P�ʓ�A �%�𒬊 <SfDy�c�"
+        },
+        {
+          "strategy": "session_cookie",
+          "desc": "Session 模式：先拿首頁 cookie 再訪問目標頁",
+          "url": "https://hutchisonports.co.th/",
+          "status": 403,
+          "size": 1494,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "ea0b6b3fd1018c87",
+          "snippet": "\u0013�\u0011\u0000į���}9�a� ���d\u0007m��Ղ��7\u0002-��ф �~�@i��ײ� ��T��\u0003�\u000fQIw�7�\u0012H�\u001aI\u0012\u0011[cA�sj���4gdV\u0006\u0001Z������\u0005_~�� �\u001bi�[��B��2 �!z�>N�A���*0Ռ�c/c\u0000n��>�\u000f��\u0010_���+�K�` �14���\u0017'��\u000fE8��\u0001?���Kl����}�m�)��5ٻeg�P�,\u0007�~�2�\u0011+�T�H�w�,?(k��:���S[3\u0007�\u000e��A!cH�� �`�\u0010[ �\u0019�\b�U8v��\u0001p����mt6����|g�� ����A��\u0018�W\u000e�X��:���A��-�/Z�j�)Ŕ\u0017 GZ\u00168���E6�&\u0007�X��'� �_\u0011l\u0011R�E\u0019������j�ip��8\u001a\u0001�}-�/?�z�Ì�>��8�\u0018\u0001���� �������@�g;��\b\u0000\u0016�6�����E��7�,�)C �R�\u0007�)�x �b����N\u0018h��s��lw\u0007[#��\u0012 0)}4�I�-o�\u0011p \u0006X��hp�b�\u0012�\u0000W��E�$���8Sqe� �\u001a �0�f� #BQ\u0013�\u0001���\u0015P�ʓ�A �%�𒬊 <SfDy�c�"
+        },
+        {
+          "strategy": "referer_google",
+          "desc": "帶 Google Referer",
+          "url": "https://hutchisonports.co.th/",
+          "status": 403,
+          "size": 1479,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "755fad202b95391b",
+          "snippet": "\u0013�\u0011\u0000į���}9�a� ���d\u0007m��Ղ��7\u0002-��ф �~�@i��ײ� ��T��\u0003�\u000fQIw�7�\u0012H�\u001aI\u0012\u0011[cA�sj���4gdV\u0006\u0001Z������\u0005_~�� �\u001bi�[��B��2 �!z�>N�A���*0Ռ�c/c\u0000n��>�\u000f��\u0010_���+�K�` �14���\u0017'��\u000fE8��\u0001?���Kl����}�m�)��5ٻeg�P�,\u0007�~�2�\u0011+�T�H�w�,?(k��:���S[3\u0007�\u000e��A!cH�� �`�\u0010[ �\u0019�\b�U8v��\u0001p����mt6����|g�� ����A��\u0018�W\u000e�X��:���A��-�/Z�j�)Ŕ\u0017 GZ\u00168���E6�&\u0007�X��'� �_\u0011l\u0011R�E\u0019������j�ip��8\u001a\u0001�}-�/?�z�Ì�>��8�\u0018\u0001���� �������@�g;��\b\u0000\u0016�6�����E��7�,�)C �R�\u0007�)�x �b����N\u0018h��s��lw\u0007[#��\u0012 0)}4�I�-o�\u0011p \u0006X��hp�b�\u0012�\u0000W��E�$���8Sqe� �\u001a �0�f� #BQ\u0013�\u0001���\u0015P�ʓ�A �%�𒬊 <SfDy�c�"
+        },
+        {
+          "strategy": "referer_self",
+          "desc": "帶自身站台 Referer",
+          "url": "https://hutchisonports.co.th/",
+          "status": 403,
+          "size": 1496,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "2ad54c40985c0e05",
+          "snippet": "\u0013�\u0011\u0000į���}9�a� ���d\u0007m��Ղ��7\u0002-��ф �~�@i��ײ� ��T��\u0003�\u000fQIw�7�\u0012H�\u001aI\u0012\u0011[cA�sj���4gdV\u0006\u0001Z������\u0005_~�� �\u001bi�[��B��2 �!z�>N�A���*0Ռ�c/c\u0000n��>�\u000f��\u0010_���+�K�` �14���\u0017'��\u000fE8��\u0001?���Kl����}�m�)��5ٻeg�P�,\u0007�~�2�\u0011+�T�H�w�,?(k��:���S[3\u0007�\u000e��A!cH�� �`�\u0010[ �\u0019�\b�U8v��\u0001p����mt6����|g�� ����A��\u0018�W\u000e�X��:���A��-�/Z�j�)Ŕ\u0017 GZ\u00168���E6�&\u0007�X��'� �_\u0011l\u0011R�E\u0019������j�ip��8\u001a\u0001�}-�/?�z�Ì�>��8�\u0018\u0001���� �������@�g;��\b\u0000\u0016�6�����E��7�,�)C �R�\u0007�)�x �b����N\u0018h��s��lw\u0007[#��\u0012 0)}4�I�-o�\u0011p \u0006X��hp�b�\u0012�\u0000W��E�$���8Sqe� �\u001a �0�f� #BQ\u0013�\u0001���\u0015P�ʓ�A �%�𒬊 <SfDy�c�"
+        },
+        {
+          "strategy": "firefox_ua",
+          "desc": "Firefox UA＋基礎標頭",
+          "url": "https://hutchisonports.co.th/",
+          "status": 403,
+          "size": 1507,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "9a2fe5a671e58630",
+          "snippet": "\u0013�\u0011\u0000�>���}9�h� �,�����\u0018\\Bz����J\u000f3L�q�\u0017 �F x-���;Le{;`�\u0010�t�x3-�T��$\u0011�5\u0016�?���+JsFfe\u0010��k�� �\u001a��姸��ġ�ι5|�\u0007�.�� �3���\u0014��?�\u0012S�89�2\u0006�6\u0018�\u0003�\u0010\\\u000f� ��z���� �\u0010\u0019C��/\u0007�����<���\u0013�?�H� ��؅��NE�&{��[\u0015\u0013�Q����j�J=U�ܹ=)�\u000f�ڧ��_~z��4������(�1ć�\u000fP��\u000f�\u0006� T��* ;��\b8m}t�62i���|gg�\u0019��k�Q��\u0014�!W\u000e�X\u001b�>�\\\u001b/uc��r]g\u0014c�)K8R^�x������Z �%�SZ�&XzE�EH9�U0����3wž��*7q6\u0003t�� _~�M�Ì�!��8��\u0001��� ��\u000e�l�S�*Gf��\u0019\u0000,� m����'�� �o�2d� %`I� pQ\u0011���\u0014C���/�r�@{� E^��w�5�o.�\u0011��\u0005}^���\u0001�a�\u0015\u000foI�\u0006�+'+Q\bp\u0015 ^�LbY;��5W\u0006�\u0011.��\u000f]K� 2\"\u00045�\u00180_N\\\u0001宜b:�òD�\u0012^�D��#�"
+        },
+        {
+          "strategy": "edge_ua",
+          "desc": "Edge UA＋Chrome sec 標頭",
+          "url": "https://hutchisonports.co.th/",
+          "status": 403,
+          "size": 1479,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "d15a001c3df5733c",
+          "snippet": "\u0013�\u0011\u0000į���}9�a� ���d\u0007m��Ղ��7\u0002-��ф �~�@i��ײ� ��T��\u0003�\u000fQIw�7�\u0012H�\u001aI\u0012\u0011[cA�sj���4gdV\u0006\u0001Z������\u0005_~�� �\u001bi�[��B��2 �!z�>N�A���*0Ռ�c/c\u0000n��>�\u000f��\u0010_���+�K�` �14���\u0017'��\u000fE8��\u0001?���Kl����}�m�)��5ٻeg�P�,\u0007�~�2�\u0011+�T�H�w�,?(k��:���S[3\u0007�\u000e��A!cH�� �`�\u0010[ �\u0019�\b�U8v��\u0001p����mt6����|g�� ����A��\u0018�W\u000e�X��:���A��-�/Z�j�)Ŕ\u0017 GZ\u00168���E6�&\u0007�X��'� �_\u0011l\u0011R�E\u0019������j�ip��8\u001a\u0001�}-�/?�z�Ì�>��8�\u0018\u0001���� �������@�g;��\b\u0000\u0016�6�����E��7�,�)C �R�\u0007�)�x �b����N\u0018h��s��lw\u0007[#��\u0012 0)}4�I�-o�\u0011p \u0006X��hp�b�\u0012�\u0000W��E�$���8Sqe� �\u001a �0�f� #BQ\u0013�\u0001���\u0015P�ʓ�A �%�𒬊 <SfDy�c�"
+        },
+        {
+          "strategy": "safari_ua",
+          "desc": "Safari UA＋基礎標頭",
+          "url": "https://hutchisonports.co.th/",
+          "status": 403,
+          "size": 1494,
+          "is_challenge": true,
+          "has_content": false,
+          "error": null,
+          "content_hash": "d43d2eec4e3b025f",
+          "snippet": "\u0013�\u0011\u0000į���}9�a� ���d\u0007m��Ղ��7\u0002-��ф �~�@i��ײ� ��T��\u0003�\u000fQIw�7�\u0012H�\u001aI\u0012\u0011[cA�sj���4gdV\u0006\u0001Z������\u0005_~�� �\u001bi�[��B��2 �!z�>N�A���*0Ռ�c/c\u0000n��>�\u000f��\u0010_���+�K�` �14���\u0017'��\u000fE8��\u0001?���Kl����}�m�)��5ٻeg�P�,\u0007�~�2�\u0011+�T�H�w�,?(k��:���S[3\u0007�\u000e��A!cH�� �`�\u0010[ �\u0019�\b�U8v��\u0001p����mt6����|g�� ����A��\u0018�W\u000e�X��:���A��-�/Z�j�)Ŕ\u0017 GZ\u00168���E6�&\u0007�X��'� �_\u0011l\u0011R�E\u0019������j�ip��8\u001a\u0001�}-�/?�z�Ì�>��8�\u0018\u0001���� �������@�g;��\b\u0000\u0016�6�����E��7�,�)C �R�\u0007�)�x �b����N\u0018h��s��lw\u0007[#��\u0012 0)}4�I�-o�\u0011p \u0006X��hp�b�\u0012�\u0000W��E�$���8Sqe� �\u001a �0�f� #BQ\u0013�\u0001���\u0015P�ʓ�A �%�𒬊 <SfDy�c�"
+        }
+      ],
+      "success": false
+    },
+    {
+      "url": "https://online.hutchisonports.co.th",
+      "label": "online_service",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://online.hutchisonports.co.th",
+          "status": 200,
+          "size": 32312,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "a1f4439fdd87d69e",
+          "snippet": "<!DOCTYPE html> <html class=\"no-js page-13 app-HPT-SUPER-APP114\" lang=\"en\" > <head> <meta http-equiv=\"x-ua-compatible\" content=\"IE=edge\" /> <meta charset=\"utf-8\"> <title>HPT Digital Platform</title> <base href=\"/hptpcs/\" /> <link rel=\"stylesheet\" href=\"/i/app_ui/css/Core.min.css?v=24.2.15\" type=\"text/css\" /> <link rel=\"stylesheet\" href=\"/i/app_ui/css/Theme-Standard.min.css?v=24.2.15\" type=\"text/css\" /> <link rel=\"stylesheet\" href=\"/i/libraries/font-apex/2.4/css/font-apex.min.css?v=24"
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 32312,
+      "saved_file": "hpt_online_service.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
