@@ -1,0 +1,33 @@
+{
+  "port": "dubai",
+  "name": "杜拜 Dubai Trade",
+  "protection": "WAF",
+  "timestamp": "2026-11-28T17:01:44.206167+00:00",
+  "urls": [
+    {
+      "url": "https://www.dubaitrade.ae/",
+      "label": "homepage",
+      "attempts": [
+        {
+          "strategy": "direct_chrome",
+          "desc": "直連 Chrome UA＋完整標頭",
+          "url": "https://www.dubaitrade.ae/",
+          "status": 200,
+          "size": 301755,
+          "is_challenge": false,
+          "has_content": true,
+          "error": null,
+          "content_hash": "b503c2e369c229c9",
+          "snippet": "<!doctype html> <html lang=\"en-gb\" dir=\"ltr\"> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\"> <meta charset=\"utf-8\"> <meta name=\"robots\" content=\"index, follow\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"> <meta name=\"generator\" content=\"Joomla! - Open Source Content Management\"> <title>Home</title> <link href=\"//dtcmsnew.cachefly.net/images/favicon.png\" rel=\"icon\" type=\"image/png\"> <link href="
+        }
+      ],
+      "success": true,
+      "winning_strategy": "direct_chrome",
+      "response_size": 301755,
+      "saved_file": "dubai_homepage.html"
+    }
+  ],
+  "success": true,
+  "winning_strategy": "direct_chrome",
+  "data_saved": true
+}
